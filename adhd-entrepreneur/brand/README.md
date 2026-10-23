@@ -6,7 +6,7 @@ Profile picture fix (Job #1), banner audit and X header (Job #2). Everything her
 
 | Item | State |
 |---|---|
-| Avatar masters | **Draft.** Built from the copy YouTube serves (980 px). Final masters get rebuilt from `logo-final-perfect.jpg` once Wil uploads it, with one command (below). |
+| Avatar masters | **Wil picked A (full-bleed), Oct 23.** Still a draft built from the copy YouTube serves (980 px). Final masters get rebuilt from `logo-final-perfect.jpg` once Wil uploads it, with one command (below). |
 | Avatar previews (IG / YT / TikTok / X, light + dark) | Ready for approval, in `previews/` |
 | YouTube banner audit | Done. Passes on every device. One stray hairline, TV only. |
 | Clean YouTube banner | Ready for approval, in `banner/` |

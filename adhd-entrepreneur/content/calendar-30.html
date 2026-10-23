@@ -1,0 +1,1332 @@
+<title>ADHD Entrepreneur 30-Day Calendar</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one column of days, each a tweet-card preview beside its schedule data; the brand's black/white only. */
+:root {
+  --paper: #FFFFFF; --ink: #0B0B0B; --muted: #5F5F5F; --rule: #E2E2E2; --wash: #F2F2F2; --card: #FFFFFF;
+  --mid: #8C8C8C;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #000000; --ink: #F2F2F2; --muted: #A0A0A0; --rule: #262626; --wash: #141414; --card: #0B0B0B; --mid: #6E6E6E; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --paper: #000000; --ink: #F2F2F2; --muted: #A0A0A0; --rule: #262626; --wash: #141414; --card: #0B0B0B; --mid: #6E6E6E; color-scheme: dark; }
+body { background: var(--paper); color: var(--ink); font: 15px/1.5 var(--body); }
+.wrap { max-width: 980px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.mono { font-family: var(--mono); font-size: 12px; letter-spacing: .01em; }
+h1 { font: 800 clamp(28px, 6vw, 44px)/1.05 var(--display); letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+.lede { color: var(--muted); max-width: 62ch; margin: 10px 0 0; }
+.top { display: grid; gap: 22px; border-bottom: 2px solid var(--ink); padding-bottom: 26px; }
+.label { font: 700 11px/1 var(--display); text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 8px; }
+.mix { display: flex; height: 34px; border: 1.5px solid var(--ink); }
+.mix > div { display: flex; align-items: center; padding: 0 8px; font: 700 12px var(--display); white-space: nowrap; overflow: hidden; min-width: 0; }
+.mix .R { flex: 12; background: var(--ink); color: var(--paper); }
+.mix .T { flex: 9; background: var(--mid); color: var(--paper); }
+.mix .A { flex: 6; background: var(--wash); }
+.mix .F { flex: 3; background: var(--paper); border-left: 1.5px solid var(--ink); }
+.strip { display: grid; grid-template-columns: repeat(15, minmax(0, 1fr)); gap: 3px; }
+.cell { display: grid; place-items: center; aspect-ratio: 1; max-width: 100%; font: 500 12px var(--mono);
+  color: var(--ink); text-decoration: none; border: 1.5px solid var(--ink); position: relative; }
+.cell.t-she { background: var(--ink); color: var(--paper); }
+.cell.t-potato { background: var(--mid); color: var(--paper); border-color: var(--mid); }
+.cell.t-louise { background: var(--paper); }
+.cell.on::after { content: ""; position: absolute; left: 3px; right: 3px; bottom: -6px; height: 2px; background: var(--ink); }
+.cell.today { outline: 2px solid var(--ink); outline-offset: 2px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 12px; color: var(--muted); }
+.legend i { display: inline-block; width: 12px; height: 12px; border: 1.5px solid var(--ink); vertical-align: -2px; margin-right: 6px; }
+.legend .she { background: var(--ink); } .legend .potato { background: var(--mid); border-color: var(--mid); }
+.legend .ai { background: var(--wash); }
+.legend .bar { border: 0; height: 2px; background: var(--ink); vertical-align: 3px; }
+.rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px 28px; margin: 0; padding: 0; list-style: none; }
+.rules li { min-width: 0; color: var(--muted); }
+.rules b { color: var(--ink); display: block; font: 700 14px var(--display); }
+.tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; position: sticky; top: env(safe-area-inset-top, 0px);
+  background: var(--paper); padding-block: 12px; z-index: 5; border-bottom: 1px solid var(--rule); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); }
+button { font: 600 13px var(--display); color: var(--ink); background: var(--paper); border: 1.5px solid var(--ink);
+  padding: 7px 12px; cursor: pointer; border-radius: 0; }
+button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+button:focus-visible, summary:focus-visible, .cell:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.tools .spacer { flex: 1; }
+.status { color: var(--muted); min-height: 1em; }
+.week { margin-top: 34px; }
+.week-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; border-bottom: 1px solid var(--ink); padding-bottom: 8px; }
+.week-head h2 { font: 800 22px var(--display); margin: 0; letter-spacing: -.01em; }
+.week-head .mono { color: var(--muted); }
+.day { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 20px; padding-block: 22px; border-bottom: 1px solid var(--rule); }
+.day.today .num::after { content: "today"; font: 500 11px var(--mono); margin-left: 8px; padding: 2px 6px; background: var(--ink); color: var(--paper); vertical-align: 4px; }
+.day-side { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; min-width: 0; }
+.num { font: 800 26px/1 var(--display); letter-spacing: -.02em; }
+.chip { font: 600 11px/1 var(--display); text-transform: uppercase; letter-spacing: .08em; padding: 5px 7px; border: 1.5px solid var(--ink); }
+.chip-F { background: var(--ink); color: var(--paper); }
+.chip-A { border-style: dashed; }
+.chip-new { border-color: var(--mid); color: var(--muted); }
+.chip-src, .chip-status { border: 0; padding-left: 0; color: var(--muted); }
+.meta { display: grid; gap: 3px; color: var(--muted); }
+.meta .track { font: 600 13px var(--display); color: var(--ink); }
+.meta .track::before { content: ""; display: inline-block; width: 9px; height: 9px; border: 1.5px solid var(--ink); margin-right: 6px; }
+.meta .t-she::before { background: var(--ink); } .meta .t-potato::before { background: var(--mid); border-color: var(--mid); }
+.day-main { display: grid; gap: 12px; min-width: 0; }
+.card { margin: 0; background: var(--card); border: 1px solid var(--rule); padding: 18px 20px 14px; max-width: 560px; }
+.card-head { display: flex; align-items: center; gap: 10px; }
+.card-head .av { width: 40px; height: 40px; border-radius: 50%; flex: none; background: url(data:image/png;base64,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) center / cover; }
+.card-head div { display: grid; line-height: 1.2; }
+.card-head b { font: 700 15px var(--display); }
+.card-head span { color: var(--muted); font-size: 14px; }
+blockquote { margin: 16px 0 12px; font: 700 clamp(19px, 3.6vw, 23px)/1.3 var(--display); letter-spacing: -.01em; }
+figcaption { color: var(--muted); }
+.flag { margin: 0; max-width: 62ch; padding-left: 12px; border-left: 2px solid var(--ink); }
+details { max-width: 680px; }
+summary { cursor: pointer; font: 600 14px var(--display); padding: 4px 0; }
+.copies { display: grid; gap: 12px; margin-top: 10px; }
+.copy { border: 1px solid var(--rule); background: var(--wash); min-width: 0; }
+.copy-head { display: flex; justify-content: space-between; align-items: center; padding: 6px 6px 6px 12px; border-bottom: 1px solid var(--rule);
+  font: 700 11px var(--display); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+.copy-head button { padding: 4px 10px; font-size: 12px; }
+pre { margin: 0; padding: 12px; font: 13px/1.5 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+.variants span { font: 700 11px var(--display); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+.variants ul { margin: 6px 0 0; padding-left: 18px; }
+.done { color: var(--muted); margin: 0; }
+#all-md { position: absolute; left: -9999px; }
+@media (max-width: 640px) {
+  .day { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .day-side { flex-direction: row; flex-wrap: wrap; align-items: center; }
+  .meta { width: 100%; grid-auto-flow: column; justify-content: start; gap: 12px; }
+  .strip { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+html { scroll-behavior: smooth; }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="label">ADHD Entrepreneur · content calendar</div>
+      <h1>30 days, one line a day</h1>
+      <p class="lede">Day 1 was Thu Oct 22. Day 30 is Fri Nov 20, 2026. All 13 bank lines are used, plus 15 new lines for Wil's OK. Zucc builds and posts. Wil approves each post.</p>
+    </div>
+    <div>
+      <div class="label">Content mix</div>
+      <div class="mix" role="img" aria-label="Reminders 12, tips 9, AI 6, founder 3">
+        <div class="R">12</div><div class="T">9</div><div class="A">6</div><div class="F">3</div>
+      </div>
+      <div class="legend mono"><span><i class="she"></i>Reminders 12</span><span><i class="potato"></i>Tips 9</span><span><i class="ai"></i>AI 6</span><span><i></i>Founder 3</span></div>
+    </div>
+    <div>
+      <div class="label">Music rotation · tap a day to jump</div>
+      <nav class="strip" aria-label="Days"><a href="#day-1" class="cell t-she" data-date="2026-10-22" title="Day 1: She">1</a><a href="#day-2" class="cell t-she" data-date="2026-10-23" title="Day 2: She">2</a><a href="#day-3" class="cell t-she" data-date="2026-10-24" title="Day 3: She">3</a><a href="#day-4" class="cell t-potato" data-date="2026-10-25" title="Day 4: Potato Salad">4</a><a href="#day-5" class="cell t-potato" data-date="2026-10-26" title="Day 5: Potato Salad">5</a><a href="#day-6" class="cell t-potato" data-date="2026-10-27" title="Day 6: Potato Salad">6</a><a href="#day-7" class="cell t-louise" data-date="2026-10-28" title="Day 7: Louise">7</a><a href="#day-8" class="cell t-louise" data-date="2026-10-29" title="Day 8: Louise">8</a><a href="#day-9" class="cell t-louise" data-date="2026-10-30" title="Day 9: Louise">9</a><a href="#day-10" class="cell t-she" data-date="2026-10-31" title="Day 10: She">10</a><a href="#day-11" class="cell t-she" data-date="2026-11-01" title="Day 11: She">11</a><a href="#day-12" class="cell t-she" data-date="2026-11-02" title="Day 12: She">12</a><a href="#day-13" class="cell t-potato" data-date="2026-11-03" title="Day 13: Potato Salad">13</a><a href="#day-14" class="cell t-potato" data-date="2026-11-04" title="Day 14: Potato Salad">14</a><a href="#day-15" class="cell t-potato on" data-date="2026-11-05" title="Day 15: Potato Salad">15</a><a href="#day-16" class="cell t-louise on" data-date="2026-11-06" title="Day 16: Louise">16</a><a href="#day-17" class="cell t-louise on" data-date="2026-11-07" title="Day 17: Louise">17</a><a href="#day-18" class="cell t-louise on" data-date="2026-11-08" title="Day 18: Louise">18</a><a href="#day-19" class="cell t-she on" data-date="2026-11-09" title="Day 19: She">19</a><a href="#day-20" class="cell t-she on" data-date="2026-11-10" title="Day 20: She">20</a><a href="#day-21" class="cell t-she on" data-date="2026-11-11" title="Day 21: She">21</a><a href="#day-22" class="cell t-potato on" data-date="2026-11-12" title="Day 22: Potato Salad">22</a><a href="#day-23" class="cell t-potato on" data-date="2026-11-13" title="Day 23: Potato Salad">23</a><a href="#day-24" class="cell t-potato on" data-date="2026-11-14" title="Day 24: Potato Salad">24</a><a href="#day-25" class="cell t-louise on" data-date="2026-11-15" title="Day 25: Louise">25</a><a href="#day-26" class="cell t-louise on" data-date="2026-11-16" title="Day 26: Louise">26</a><a href="#day-27" class="cell t-louise on" data-date="2026-11-17" title="Day 27: Louise">27</a><a href="#day-28" class="cell t-she on" data-date="2026-11-18" title="Day 28: She">28</a><a href="#day-29" class="cell t-she on" data-date="2026-11-19" title="Day 29: She">29</a><a href="#day-30" class="cell t-she on" data-date="2026-11-20" title="Day 30: She">30</a></nav>
+      <div class="legend mono">
+        <span><i class="she"></i>She · from 0:35</span>
+        <span><i class="potato"></i>Potato Salad · from 0:10</span>
+        <span><i></i>Louise · from 0:53</span>
+        <span><i class="bar"></i>links allowed (Nov 5 on)</span>
+      </div>
+    </div>
+    <ul class="rules">
+      <li><b>Same sentence everywhere</b>Card video on IG, TikTok and YouTube Shorts. X gets the line as plain text, with no music and no hashtags.</li>
+      <li><b>No links before Day 15</b>From Nov 5, the "Quiz in bio" line goes on Day 15 and on the AI days. If the link hub isn't live yet, leave it off.</li>
+      <li><b>AI news swap</b>On an AI day, the scout can swap in a fresh AI-news line if it comes from the primary source, is under 7 days old, is one 5–15 word law with no hype, and Wil approves it. The planned line becomes a spare.</li>
+      <li><b>Founder posts carry conditions</b>Days 7, 15 and 30 state facts. Each one goes out only if the fact is true that day. Every condition is written on its day.</li>
+    </ul>
+  </header>
+
+  <div class="tools" role="toolbar" aria-label="Filter days">
+    <button type="button" id="f-all" data-filter="all" aria-pressed="true">All</button>
+    <button type="button" id="f-new" data-filter="new" aria-pressed="false">New lines</button>
+    <button type="button" id="f-R" data-filter="R" aria-pressed="false">Reminders</button>
+    <button type="button" id="f-T" data-filter="T" aria-pressed="false">Tips</button>
+    <button type="button" id="f-A" data-filter="A" aria-pressed="false">AI</button>
+    <button type="button" id="f-F" data-filter="F" aria-pressed="false">Founder</button>
+    <span class="spacer"></span>
+    <span class="status mono" id="status" aria-live="polite"></span>
+    <button type="button" id="copy-all">Copy all for Zucc</button>
+  </div>
+
+  <section class="week"><header class="week-head"><h2>Days 1–7</h2><span class="mono">Launch week · no links</span></header>
+<article class="day" id="day-1" data-slot="R" data-new="0" data-date="2026-10-22"><div class="day-side"><div class="num">Day 1</div><span class="chip chip-R">Reminder</span><span class="chip chip-status">Live</span><div class="meta"><span class="mono">Thu Oct 22</span><span class="track t-she">She <span class="mono">0:35</span></span><span class="mono links">no links</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Life gets a lot simpler when you stop breaking promises to yourself.</blockquote><figcaption class="mono">12 words</figcaption></figure><p class="done mono">Captions already written by Zucc.</p></div></article>
+<article class="day" id="day-2" data-slot="R" data-new="0" data-date="2026-10-23"><div class="day-side"><div class="num">Day 2</div><span class="chip chip-R">Reminder</span><span class="chip chip-status">Scheduled</span><div class="meta"><span class="mono">Fri Oct 23</span><span class="track t-she">She <span class="mono">0:35</span></span><span class="mono links">no links</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>You don&#x27;t need another idea.<br>You need to finish the last one you were excited about.</blockquote><figcaption class="mono">16 words</figcaption></figure><p class="done mono">Captions already written by Zucc.</p></div></article>
+<article class="day" id="day-3" data-slot="R" data-new="0" data-date="2026-10-24"><div class="day-side"><div class="num">Day 3</div><span class="chip chip-R">Reminder</span><span class="chip chip-src">Bank #7</span><div class="meta"><span class="mono">Sat Oct 24</span><span class="track t-she">She <span class="mono">0:35</span></span><span class="mono links">no links</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>You were never lazy.<br>You were unscheduled.</blockquote><figcaption class="mono">7 words · negation reframe</figcaption></figure><details id="det-3"><summary>Captions for Day 3</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d3-ig">Copy</button></div><pre id="d3-ig">You were never lazy.
+You were unscheduled.
+
+Day 3. One simple idea a day.
+What&#x27;s one thing you keep meaning to put on the calendar?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d3-tt">Copy</button></div><pre id="d3-tt">You were never lazy. You were unscheduled. Day 3. What&#x27;s one thing you keep meaning to put on the calendar? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d3-yt">Copy</button></div><pre id="d3-yt">You were never lazy. You were unscheduled.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d3-x">Copy</button></div><pre id="d3-x">You were never lazy.
+You were unscheduled.</pre></div><div class="variants"><span>Hook variants</span><ul><li>Not lazy. Unscheduled.</li><li>Lazy was never the problem. No schedule was.</li></ul></div></div></details></div></article>
+<article class="day" id="day-4" data-slot="R" data-new="0" data-date="2026-10-25"><div class="day-side"><div class="num">Day 4</div><span class="chip chip-R">Reminder</span><span class="chip chip-src">Bank #1</span><div class="meta"><span class="mono">Sun Oct 25</span><span class="track t-potato">Potato Salad <span class="mono">0:10</span></span><span class="mono links">no links</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Starting is your superpower.<br>Finishing is the skill.<br>Practice the skill.</blockquote><figcaption class="mono">11 words · identity mirror</figcaption></figure><details id="det-4"><summary>Captions for Day 4</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d4-ig">Copy</button></div><pre id="d4-ig">Starting is your superpower.
+Finishing is the skill.
+Practice the skill.
+
+Day 4. One simple idea a day.
+What&#x27;s the last thing you started and actually finished?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d4-tt">Copy</button></div><pre id="d4-tt">Starting is your superpower. Finishing is the skill. Practice the skill. Day 4. What&#x27;s the last thing you started and actually finished? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d4-yt">Copy</button></div><pre id="d4-yt">Starting is your superpower. Finishing is the skill. Practice the skill.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d4-x">Copy</button></div><pre id="d4-x">Starting is your superpower.
+Finishing is the skill.
+Practice the skill.</pre></div></div></details></div></article>
+<article class="day" id="day-5" data-slot="T" data-new="0" data-date="2026-10-26"><div class="day-side"><div class="num">Day 5</div><span class="chip chip-T">Tip</span><span class="chip chip-src">Bank #11</span><div class="meta"><span class="mono">Mon Oct 26</span><span class="track t-potato">Potato Salad <span class="mono">0:10</span></span><span class="mono links">no links</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>The business doesn&#x27;t pay for what you started this week.<br>It pays for what you shipped.</blockquote><figcaption class="mono">16 words · negation reframe</figcaption></figure><details id="det-5"><summary>Captions for Day 5</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d5-ig">Copy</button></div><pre id="d5-ig">The business doesn&#x27;t pay for what you started this week.
+It pays for what you shipped.
+
+Day 5. One simple idea a day.
+What&#x27;s one thing you can ship this week, even if it&#x27;s small?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d5-tt">Copy</button></div><pre id="d5-tt">The business doesn&#x27;t pay for what you started this week. It pays for what you shipped. Day 5. What&#x27;s one thing you can ship this week, even if it&#x27;s small? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d5-yt">Copy</button></div><pre id="d5-yt">The business doesn&#x27;t pay for what you started this week. It pays for what you shipped.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d5-x">Copy</button></div><pre id="d5-x">The business doesn&#x27;t pay for what you started this week.
+It pays for what you shipped.</pre></div><div class="variants"><span>Hook variants</span><ul><li>Nobody pays for started. They pay for shipped.</li><li>Customers can&#x27;t buy what&#x27;s 90% done.</li></ul></div></div></details></div></article>
+<article class="day" id="day-6" data-slot="T" data-new="0" data-date="2026-10-27"><div class="day-side"><div class="num">Day 6</div><span class="chip chip-T">Tip</span><span class="chip chip-src">Bank #9</span><div class="meta"><span class="mono">Tue Oct 27</span><span class="track t-potato">Potato Salad <span class="mono">0:10</span></span><span class="mono links">no links</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Old way: wait until you feel focused.<br>New way: start for 10 minutes and let focus catch up.</blockquote><figcaption class="mono">18 words · old way / new way</figcaption></figure><details id="det-6"><summary>Captions for Day 6</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d6-ig">Copy</button></div><pre id="d6-ig">Old way: wait until you feel focused.
+New way: start for 10 minutes and let focus catch up.
+
+Day 6. One simple idea a day.
+What&#x27;s the task you&#x27;ve been waiting to feel ready for?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d6-tt">Copy</button></div><pre id="d6-tt">Old way: wait until you feel focused. New way: start for 10 minutes and let focus catch up. Day 6. What&#x27;s the task you&#x27;ve been waiting to feel ready for? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d6-yt">Copy</button></div><pre id="d6-yt">Old way: wait until you feel focused. New way: start for 10 minutes and let focus catch up.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d6-x">Copy</button></div><pre id="d6-x">Old way: wait until you feel focused.
+New way: start for 10 minutes and let focus catch up.</pre></div></div></details></div></article>
+<article class="day" id="day-7" data-slot="F" data-new="1" data-date="2026-10-28"><div class="day-side"><div class="num">Day 7</div><span class="chip chip-F">Founder</span><span class="chip chip-new">New line</span><div class="meta"><span class="mono">Wed Oct 28</span><span class="track t-louise">Louise <span class="mono">0:53</span></span><span class="mono links">no links</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>One week in. Seven posts.<br>None felt ready. All of them went out.</blockquote><figcaption class="mono">13 words · story (first person)</figcaption></figure><p class="flag"><b>Condition.</b> Post only if Days 1-7 all went out. If one was missed, swap with Day 8 and rewrite the count before posting.</p><details id="det-7"><summary>Captions for Day 7</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d7-ig">Copy</button></div><pre id="d7-ig">One week in. Seven posts.
+None felt ready. All of them went out.
+
+Day 7. One simple idea a day.
+What are you shipping this week, ready or not?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d7-tt">Copy</button></div><pre id="d7-tt">One week in. Seven posts. None felt ready. All of them went out. Day 7. What are you shipping this week, ready or not? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d7-yt">Copy</button></div><pre id="d7-yt">One week in. Seven posts. None felt ready. All of them went out.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d7-x">Copy</button></div><pre id="d7-x">One week in. Seven posts.
+None felt ready. All of them went out.</pre></div></div></details></div></article>
+</section>
+<section class="week"><header class="week-head"><h2>Days 8–14</h2><span class="mono">Week 2 · no links</span></header>
+<article class="day" id="day-8" data-slot="R" data-new="0" data-date="2026-10-29"><div class="day-side"><div class="num">Day 8</div><span class="chip chip-R">Reminder</span><span class="chip chip-src">Bank #4</span><div class="meta"><span class="mono">Thu Oct 29</span><span class="track t-louise">Louise <span class="mono">0:53</span></span><span class="mono links">no links</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Your head is a terrible filing cabinet.<br>Paper remembers so you can build.</blockquote><figcaption class="mono">13 words · identity mirror</figcaption></figure><details id="det-8"><summary>Captions for Day 8</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d8-ig">Copy</button></div><pre id="d8-ig">Your head is a terrible filing cabinet.
+Paper remembers so you can build.
+
+Day 8. One simple idea a day.
+Paper, notes app, or voice memos? Where do your ideas go?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d8-tt">Copy</button></div><pre id="d8-tt">Your head is a terrible filing cabinet. Paper remembers so you can build. Day 8. Paper, notes app, or voice memos? Where do your ideas go? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d8-yt">Copy</button></div><pre id="d8-yt">Your head is a terrible filing cabinet. Paper remembers so you can build.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d8-x">Copy</button></div><pre id="d8-x">Your head is a terrible filing cabinet.
+Paper remembers so you can build.</pre></div></div></details></div></article>
+<article class="day" id="day-9" data-slot="A" data-new="0" data-date="2026-10-30"><div class="day-side"><div class="num">Day 9</div><span class="chip chip-A">AI</span><span class="chip chip-src">Bank #13</span><div class="meta"><span class="mono">Fri Oct 30</span><span class="track t-louise">Louise <span class="mono">0:53</span></span><span class="mono links">no links</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>AI won&#x27;t replace the entrepreneur.<br>It replaces the excuse &quot;I don&#x27;t have a team.&quot;</blockquote><figcaption class="mono">14 words · negation reframe</figcaption></figure><details id="det-9"><summary>Captions for Day 9</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d9-ig">Copy</button></div><pre id="d9-ig">AI won&#x27;t replace the entrepreneur.
+It replaces the excuse &quot;I don&#x27;t have a team.&quot;
+
+Day 9. One simple idea a day.
+What&#x27;s the first job you&#x27;d hand off if you had a team?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d9-tt">Copy</button></div><pre id="d9-tt">AI won&#x27;t replace the entrepreneur. It replaces the excuse &quot;I don&#x27;t have a team.&quot; Day 9. What&#x27;s the first job you&#x27;d hand off if you had a team? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d9-yt">Copy</button></div><pre id="d9-yt">AI won&#x27;t replace the entrepreneur. It replaces the excuse &quot;I don&#x27;t have a team.&quot;</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d9-x">Copy</button></div><pre id="d9-x">AI won&#x27;t replace the entrepreneur.
+It replaces the excuse &quot;I don&#x27;t have a team.&quot;</pre></div><div class="variants"><span>Hook variants</span><ul><li>AI didn&#x27;t replace you. It replaced your best excuse.</li><li>&quot;I don&#x27;t have a team&quot; stopped being a reason.</li></ul></div></div></details></div></article>
+<article class="day" id="day-10" data-slot="R" data-new="0" data-date="2026-10-31"><div class="day-side"><div class="num">Day 10</div><span class="chip chip-R">Reminder</span><span class="chip chip-src">Bank #3</span><div class="meta"><span class="mono">Sat Oct 31</span><span class="track t-she">She <span class="mono">0:35</span></span><span class="mono links">no links</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Busy is easy.<br>Done is rare.<br>Be rare.</blockquote><figcaption class="mono">8 words · setup / kicker</figcaption></figure><details id="det-10"><summary>Captions for Day 10</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d10-ig">Copy</button></div><pre id="d10-ig">Busy is easy.
+Done is rare.
+Be rare.
+
+Day 10. One simple idea a day.
+What&#x27;s one thing you got done today? Not worked on. Done.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d10-tt">Copy</button></div><pre id="d10-tt">Busy is easy. Done is rare. Be rare. Day 10. What&#x27;s one thing you got done today? Not worked on. Done. #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d10-yt">Copy</button></div><pre id="d10-yt">Busy is easy. Done is rare. Be rare.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d10-x">Copy</button></div><pre id="d10-x">Busy is easy.
+Done is rare.
+Be rare.</pre></div><div class="variants"><span>Hook variants</span><ul><li>Anyone can be busy. Be done.</li><li>Busy is a feeling. Done is a fact.</li></ul></div></div></details></div></article>
+<article class="day" id="day-11" data-slot="R" data-new="0" data-date="2026-11-01"><div class="day-side"><div class="num">Day 11</div><span class="chip chip-R">Reminder</span><span class="chip chip-src">Bank #5</span><div class="meta"><span class="mono">Sun Nov 1</span><span class="track t-she">She <span class="mono">0:35</span></span><span class="mono links">no links</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Every unfinished project charges you rent in your head.<br>Finish one. Evict the noise.</blockquote><figcaption class="mono">14 words · setup / kicker</figcaption></figure><details id="det-11"><summary>Captions for Day 11</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d11-ig">Copy</button></div><pre id="d11-ig">Every unfinished project charges you rent in your head.
+Finish one. Evict the noise.
+
+Day 11. One simple idea a day.
+Which unfinished project is living rent-free in your head right now?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d11-tt">Copy</button></div><pre id="d11-tt">Every unfinished project charges you rent in your head. Finish one. Evict the noise. Day 11. Which unfinished project is living rent-free in your head right now? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d11-yt">Copy</button></div><pre id="d11-yt">Every unfinished project charges you rent in your head. Finish one. Evict the noise.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d11-x">Copy</button></div><pre id="d11-x">Every unfinished project charges you rent in your head.
+Finish one. Evict the noise.</pre></div><div class="variants"><span>Hook variants</span><ul><li>Unfinished projects don&#x27;t sit quietly. They charge rent.</li><li>Half-done projects are the loudest thing in your head.</li></ul></div></div></details></div></article>
+<article class="day" id="day-12" data-slot="T" data-new="1" data-date="2026-11-02"><div class="day-side"><div class="num">Day 12</div><span class="chip chip-T">Tip</span><span class="chip chip-new">New line</span><div class="meta"><span class="mono">Mon Nov 2</span><span class="track t-she">She <span class="mono">0:35</span></span><span class="mono links">no links</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Posting daily beats building in secret.<br>Nobody buys what they never saw.</blockquote><figcaption class="mono">12 words · X beats Y</figcaption></figure><details id="det-12"><summary>Captions for Day 12</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d12-ig">Copy</button></div><pre id="d12-ig">Posting daily beats building in secret.
+Nobody buys what they never saw.
+
+Day 12. One simple idea a day.
+What have you been building in secret?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d12-tt">Copy</button></div><pre id="d12-tt">Posting daily beats building in secret. Nobody buys what they never saw. Day 12. What have you been building in secret? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d12-yt">Copy</button></div><pre id="d12-yt">Posting daily beats building in secret. Nobody buys what they never saw.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d12-x">Copy</button></div><pre id="d12-x">Posting daily beats building in secret.
+Nobody buys what they never saw.</pre></div></div></details></div></article>
+<article class="day" id="day-13" data-slot="R" data-new="1" data-date="2026-11-03"><div class="day-side"><div class="num">Day 13</div><span class="chip chip-R">Reminder</span><span class="chip chip-new">New line</span><div class="meta"><span class="mono">Tue Nov 3</span><span class="track t-potato">Potato Salad <span class="mono">0:10</span></span><span class="mono links">no links</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Mood decides if you feel like it.<br>The plan decides if you do it.</blockquote><figcaption class="mono">14 words · setup / kicker</figcaption></figure><details id="det-13"><summary>Captions for Day 13</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d13-ig">Copy</button></div><pre id="d13-ig">Mood decides if you feel like it.
+The plan decides if you do it.
+
+Day 13. One simple idea a day.
+What&#x27;s one thing you&#x27;ll do tomorrow whether you feel like it or not?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d13-tt">Copy</button></div><pre id="d13-tt">Mood decides if you feel like it. The plan decides if you do it. Day 13. What&#x27;s one thing you&#x27;ll do tomorrow whether you feel like it or not? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d13-yt">Copy</button></div><pre id="d13-yt">Mood decides if you feel like it. The plan decides if you do it.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d13-x">Copy</button></div><pre id="d13-x">Mood decides if you feel like it.
+The plan decides if you do it.</pre></div></div></details></div></article>
+<article class="day" id="day-14" data-slot="A" data-new="1" data-date="2026-11-04"><div class="day-side"><div class="num">Day 14</div><span class="chip chip-A">AI</span><span class="chip chip-new">New line</span><div class="meta"><span class="mono">Wed Nov 4</span><span class="track t-potato">Potato Salad <span class="mono">0:10</span></span><span class="mono links">no links</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Give AI the boring jobs.<br>Keep the decisions.</blockquote><figcaption class="mono">8 words · setup / kicker</figcaption></figure><details id="det-14"><summary>Captions for Day 14</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d14-ig">Copy</button></div><pre id="d14-ig">Give AI the boring jobs.
+Keep the decisions.
+
+Day 14. One simple idea a day.
+What&#x27;s the most boring task in your business?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d14-tt">Copy</button></div><pre id="d14-tt">Give AI the boring jobs. Keep the decisions. Day 14. What&#x27;s the most boring task in your business? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d14-yt">Copy</button></div><pre id="d14-yt">Give AI the boring jobs. Keep the decisions.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d14-x">Copy</button></div><pre id="d14-x">Give AI the boring jobs.
+Keep the decisions.</pre></div></div></details></div></article>
+</section>
+<section class="week"><header class="week-head"><h2>Days 15–21</h2><span class="mono">Links go live on Day 15 (Thu Nov 5)</span></header>
+<article class="day" id="day-15" data-slot="F" data-new="1" data-date="2026-11-05"><div class="day-side"><div class="num">Day 15</div><span class="chip chip-F">Founder</span><span class="chip chip-new">New line</span><div class="meta"><span class="mono">Thu Nov 5</span><span class="track t-potato">Potato Salad <span class="mono">0:10</span></span><span class="mono links">links on</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Two weeks of posts with no link.<br>Today I&#x27;m showing what I&#x27;m building.</blockquote><figcaption class="mono">13 words · story (first person)</figcaption></figure><p class="flag"><b>Condition.</b> Tied to the link hub going live. If the hub isn&#x27;t live today, swap with Day 16 and post this on go-live day.</p><details id="det-15"><summary>Captions for Day 15</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d15-ig">Copy</button></div><pre id="d15-ig">Two weeks of posts with no link.
+Today I&#x27;m showing what I&#x27;m building.
+
+Day 15. One simple idea a day.
+What kind of business are you building? One word.
+Quiz in bio: which AI business fits how you work.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d15-tt">Copy</button></div><pre id="d15-tt">Two weeks of posts with no link. Today I&#x27;m showing what I&#x27;m building. Day 15. What kind of business are you building? One word. Quiz in bio. #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d15-yt">Copy</button></div><pre id="d15-yt">Two weeks of posts with no link. Today I&#x27;m showing what I&#x27;m building.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d15-x">Copy</button></div><pre id="d15-x">Two weeks of posts with no link.
+Today I&#x27;m showing what I&#x27;m building.</pre></div></div></details></div></article>
+<article class="day" id="day-16" data-slot="T" data-new="0" data-date="2026-11-06"><div class="day-side"><div class="num">Day 16</div><span class="chip chip-T">Tip</span><span class="chip chip-src">Bank #10</span><div class="meta"><span class="mono">Fri Nov 6</span><span class="track t-louise">Louise <span class="mono">0:53</span></span><span class="mono links">links on</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Old way: another app, another system, another reset.<br>New way: one list, one priority, one finish.</blockquote><figcaption class="mono">16 words · old way / new way</figcaption></figure><details id="det-16"><summary>Captions for Day 16</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d16-ig">Copy</button></div><pre id="d16-ig">Old way: another app, another system, another reset.
+New way: one list, one priority, one finish.
+
+Day 16. One simple idea a day.
+How many to-do apps have you tried? Be honest.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d16-tt">Copy</button></div><pre id="d16-tt">Old way: another app, another system, another reset. New way: one list, one priority, one finish. Day 16. How many to-do apps have you tried? Be honest. #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d16-yt">Copy</button></div><pre id="d16-yt">Old way: another app, another system, another reset. New way: one list, one priority, one finish.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d16-x">Copy</button></div><pre id="d16-x">Old way: another app, another system, another reset.
+New way: one list, one priority, one finish.</pre></div></div></details></div></article>
+<article class="day" id="day-17" data-slot="R" data-new="0" data-date="2026-11-07"><div class="day-side"><div class="num">Day 17</div><span class="chip chip-R">Reminder</span><span class="chip chip-src">Bank #6</span><div class="meta"><span class="mono">Sat Nov 7</span><span class="track t-louise">Louise <span class="mono">0:53</span></span><span class="mono links">links on</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Ideas are cheap for people like us.<br>Follow-through is the flex.</blockquote><figcaption class="mono">11 words · identity mirror</figcaption></figure><details id="det-17"><summary>Captions for Day 17</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d17-ig">Copy</button></div><pre id="d17-ig">Ideas are cheap for people like us.
+Follow-through is the flex.
+
+Day 17. One simple idea a day.
+How many ideas are sitting in your notes app right now?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d17-tt">Copy</button></div><pre id="d17-tt">Ideas are cheap for people like us. Follow-through is the flex. Day 17. How many ideas are sitting in your notes app right now? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d17-yt">Copy</button></div><pre id="d17-yt">Ideas are cheap for people like us. Follow-through is the flex.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d17-x">Copy</button></div><pre id="d17-x">Ideas are cheap for people like us.
+Follow-through is the flex.</pre></div></div></details></div></article>
+<article class="day" id="day-18" data-slot="R" data-new="0" data-date="2026-11-08"><div class="day-side"><div class="num">Day 18</div><span class="chip chip-R">Reminder</span><span class="chip chip-src">Bank #8</span><div class="meta"><span class="mono">Sun Nov 8</span><span class="track t-louise">Louise <span class="mono">0:53</span></span><span class="mono links">links on</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Discipline for a fast brain isn&#x27;t working harder.<br>It&#x27;s making the list shorter.</blockquote><figcaption class="mono">13 words · negation reframe</figcaption></figure><details id="det-18"><summary>Captions for Day 18</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d18-ig">Copy</button></div><pre id="d18-ig">Discipline for a fast brain isn&#x27;t working harder.
+It&#x27;s making the list shorter.
+
+Day 18. One simple idea a day.
+What can come off your list today?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d18-tt">Copy</button></div><pre id="d18-tt">Discipline for a fast brain isn&#x27;t working harder. It&#x27;s making the list shorter. Day 18. What can come off your list today? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d18-yt">Copy</button></div><pre id="d18-yt">Discipline for a fast brain isn&#x27;t working harder. It&#x27;s making the list shorter.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d18-x">Copy</button></div><pre id="d18-x">Discipline for a fast brain isn&#x27;t working harder.
+It&#x27;s making the list shorter.</pre></div></div></details></div></article>
+<article class="day" id="day-19" data-slot="A" data-new="1" data-date="2026-11-09"><div class="day-side"><div class="num">Day 19</div><span class="chip chip-A">AI</span><span class="chip chip-new">New line</span><div class="meta"><span class="mono">Mon Nov 9</span><span class="track t-she">She <span class="mono">0:35</span></span><span class="mono links">links on</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>You don&#x27;t need ten AI tools.<br>You need one set up for your business.</blockquote><figcaption class="mono">14 words · you don&#x27;t need more A</figcaption></figure><details id="det-19"><summary>Captions for Day 19</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d19-ig">Copy</button></div><pre id="d19-ig">You don&#x27;t need ten AI tools.
+You need one set up for your business.
+
+Day 19. One simple idea a day.
+How many AI tools are you paying for right now?
+Quiz in bio: which AI business fits how you work.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d19-tt">Copy</button></div><pre id="d19-tt">You don&#x27;t need ten AI tools. You need one set up for your business. Day 19. How many AI tools are you paying for right now? Quiz in bio. #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d19-yt">Copy</button></div><pre id="d19-yt">You don&#x27;t need ten AI tools. You need one set up for your business.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d19-x">Copy</button></div><pre id="d19-x">You don&#x27;t need ten AI tools.
+You need one set up for your business.</pre></div></div></details></div></article>
+<article class="day" id="day-20" data-slot="T" data-new="1" data-date="2026-11-10"><div class="day-side"><div class="num">Day 20</div><span class="chip chip-T">Tip</span><span class="chip chip-new">New line</span><div class="meta"><span class="mono">Tue Nov 10</span><span class="track t-she">She <span class="mono">0:35</span></span><span class="mono links">links on</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Strategy isn&#x27;t what you add.<br>It&#x27;s what you refuse.</blockquote><figcaption class="mono">9 words · negation reframe</figcaption></figure><details id="det-20"><summary>Captions for Day 20</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d20-ig">Copy</button></div><pre id="d20-ig">Strategy isn&#x27;t what you add.
+It&#x27;s what you refuse.
+
+Day 20. One simple idea a day.
+What&#x27;s one thing you said no to this month?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d20-tt">Copy</button></div><pre id="d20-tt">Strategy isn&#x27;t what you add. It&#x27;s what you refuse. Day 20. What&#x27;s one thing you said no to this month? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d20-yt">Copy</button></div><pre id="d20-yt">Strategy isn&#x27;t what you add. It&#x27;s what you refuse.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d20-x">Copy</button></div><pre id="d20-x">Strategy isn&#x27;t what you add.
+It&#x27;s what you refuse.</pre></div></div></details></div></article>
+<article class="day" id="day-21" data-slot="R" data-new="0" data-date="2026-11-11"><div class="day-side"><div class="num">Day 21</div><span class="chip chip-R">Reminder</span><span class="chip chip-src">Bank #2</span><div class="meta"><span class="mono">Wed Nov 11</span><span class="track t-she">She <span class="mono">0:35</span></span><span class="mono links">links on</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Motivation gets you a new project.<br>A schedule gets you a finished one.</blockquote><figcaption class="mono">13 words · X beats Y</figcaption></figure><details id="det-21"><summary>Captions for Day 21</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d21-ig">Copy</button></div><pre id="d21-ig">Motivation gets you a new project.
+A schedule gets you a finished one.
+
+Day 21. One simple idea a day.
+What&#x27;s on your calendar this week that used to be &quot;someday&quot;?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d21-tt">Copy</button></div><pre id="d21-tt">Motivation gets you a new project. A schedule gets you a finished one. Day 21. What&#x27;s on your calendar this week that used to be &quot;someday&quot;? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d21-yt">Copy</button></div><pre id="d21-yt">Motivation gets you a new project. A schedule gets you a finished one.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d21-x">Copy</button></div><pre id="d21-x">Motivation gets you a new project.
+A schedule gets you a finished one.</pre></div><div class="variants"><span>Hook variants</span><ul><li>Motivation starts projects. Schedules finish them.</li><li>Feelings start things. Calendars finish them.</li></ul></div></div></details></div></article>
+</section>
+<section class="week"><header class="week-head"><h2>Days 22–28</h2><span class="mono">Week 4</span></header>
+<article class="day" id="day-22" data-slot="A" data-new="1" data-date="2026-11-12"><div class="day-side"><div class="num">Day 22</div><span class="chip chip-A">AI</span><span class="chip chip-new">New line</span><div class="meta"><span class="mono">Thu Nov 12</span><span class="track t-potato">Potato Salad <span class="mono">0:10</span></span><span class="mono links">links on</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>AI doesn&#x27;t fix a messy business.<br>It makes the mess faster.</blockquote><figcaption class="mono">11 words · negation reframe</figcaption></figure><details id="det-22"><summary>Captions for Day 22</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d22-ig">Copy</button></div><pre id="d22-ig">AI doesn&#x27;t fix a messy business.
+It makes the mess faster.
+
+Day 22. One simple idea a day.
+What&#x27;s one process you&#x27;d clean up before handing it to AI?
+Quiz in bio: which AI business fits how you work.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d22-tt">Copy</button></div><pre id="d22-tt">AI doesn&#x27;t fix a messy business. It makes the mess faster. Day 22. What&#x27;s one process you&#x27;d clean up before handing it to AI? Quiz in bio. #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d22-yt">Copy</button></div><pre id="d22-yt">AI doesn&#x27;t fix a messy business. It makes the mess faster.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d22-x">Copy</button></div><pre id="d22-x">AI doesn&#x27;t fix a messy business.
+It makes the mess faster.</pre></div></div></details></div></article>
+<article class="day" id="day-23" data-slot="T" data-new="0" data-date="2026-11-13"><div class="day-side"><div class="num">Day 23</div><span class="chip chip-T">Tip</span><span class="chip chip-src">Bank #12</span><div class="meta"><span class="mono">Fri Nov 13</span><span class="track t-potato">Potato Salad <span class="mono">0:10</span></span><span class="mono links">links on</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Nobody is coming to organize your ideas for you.<br>Write them down, pick one, finish it.<br>That&#x27;s the whole system.</blockquote><figcaption class="mono">20 words · setup / kicker</figcaption></figure><p class="flag"><b>Note.</b> Original is 19 words, over the 15-word house max. The variant is the tight version; Wil&#x27;s pick.</p><details id="det-23"><summary>Captions for Day 23</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d23-ig">Copy</button></div><pre id="d23-ig">Nobody is coming to organize your ideas for you.
+Write them down, pick one, finish it.
+That&#x27;s the whole system.
+
+Day 23. One simple idea a day.
+Which idea are you picking? Put it in the comments to make it real.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d23-tt">Copy</button></div><pre id="d23-tt">Nobody is coming to organize your ideas for you. Write them down, pick one, finish it. That&#x27;s the whole system. Day 23. Which idea are you picking? Put it in the comments to make it real. #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d23-yt">Copy</button></div><pre id="d23-yt">Nobody is coming to organize your ideas for you. Write them down, pick one, finish it.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d23-x">Copy</button></div><pre id="d23-x">Nobody is coming to organize your ideas for you.
+Write them down, pick one, finish it.
+That&#x27;s the whole system.</pre></div><div class="variants"><span>Hook variants</span><ul><li>Write it down. Pick one. Finish it. That&#x27;s the whole system.</li></ul></div></div></details></div></article>
+<article class="day" id="day-24" data-slot="R" data-new="1" data-date="2026-11-14"><div class="day-side"><div class="num">Day 24</div><span class="chip chip-R">Reminder</span><span class="chip chip-new">New line</span><div class="meta"><span class="mono">Sat Nov 14</span><span class="track t-potato">Potato Salad <span class="mono">0:10</span></span><span class="mono links">links on</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>If you can&#x27;t be bad at it in public,<br>you can&#x27;t get good at it.</blockquote><figcaption class="mono">15 words · the gate</figcaption></figure><details id="det-24"><summary>Captions for Day 24</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d24-ig">Copy</button></div><pre id="d24-ig">If you can&#x27;t be bad at it in public,
+you can&#x27;t get good at it.
+
+Day 24. One simple idea a day.
+What are you willing to be bad at in public this month?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d24-tt">Copy</button></div><pre id="d24-tt">If you can&#x27;t be bad at it in public, you can&#x27;t get good at it. Day 24. What are you willing to be bad at in public this month? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d24-yt">Copy</button></div><pre id="d24-yt">If you can&#x27;t be bad at it in public, you can&#x27;t get good at it.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d24-x">Copy</button></div><pre id="d24-x">If you can&#x27;t be bad at it in public,
+you can&#x27;t get good at it.</pre></div></div></details></div></article>
+<article class="day" id="day-25" data-slot="T" data-new="1" data-date="2026-11-15"><div class="day-side"><div class="num">Day 25</div><span class="chip chip-T">Tip</span><span class="chip chip-new">New line</span><div class="meta"><span class="mono">Sun Nov 15</span><span class="track t-louise">Louise <span class="mono">0:53</span></span><span class="mono links">links on</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Talent is a head start.<br>Reps are the race.</blockquote><figcaption class="mono">9 words · setup / kicker</figcaption></figure><details id="det-25"><summary>Captions for Day 25</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d25-ig">Copy</button></div><pre id="d25-ig">Talent is a head start.
+Reps are the race.
+
+Day 25. One simple idea a day.
+What are you counting reps on right now?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d25-tt">Copy</button></div><pre id="d25-tt">Talent is a head start. Reps are the race. Day 25. What are you counting reps on right now? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d25-yt">Copy</button></div><pre id="d25-yt">Talent is a head start. Reps are the race.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d25-x">Copy</button></div><pre id="d25-x">Talent is a head start.
+Reps are the race.</pre></div></div></details></div></article>
+<article class="day" id="day-26" data-slot="A" data-new="1" data-date="2026-11-16"><div class="day-side"><div class="num">Day 26</div><span class="chip chip-A">AI</span><span class="chip chip-new">New line</span><div class="meta"><span class="mono">Mon Nov 16</span><span class="track t-louise">Louise <span class="mono">0:53</span></span><span class="mono links">links on</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>AI can&#x27;t choose your one thing.<br>It can help you finish it.</blockquote><figcaption class="mono">12 words · negation reframe</figcaption></figure><details id="det-26"><summary>Captions for Day 26</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d26-ig">Copy</button></div><pre id="d26-ig">AI can&#x27;t choose your one thing.
+It can help you finish it.
+
+Day 26. One simple idea a day.
+What&#x27;s your one thing this week?
+Quiz in bio: which AI business fits how you work.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d26-tt">Copy</button></div><pre id="d26-tt">AI can&#x27;t choose your one thing. It can help you finish it. Day 26. What&#x27;s your one thing this week? Quiz in bio. #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d26-yt">Copy</button></div><pre id="d26-yt">AI can&#x27;t choose your one thing. It can help you finish it.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d26-x">Copy</button></div><pre id="d26-x">AI can&#x27;t choose your one thing.
+It can help you finish it.</pre></div></div></details></div></article>
+<article class="day" id="day-27" data-slot="T" data-new="1" data-date="2026-11-17"><div class="day-side"><div class="num">Day 27</div><span class="chip chip-T">Tip</span><span class="chip chip-new">New line</span><div class="meta"><span class="mono">Tue Nov 17</span><span class="track t-louise">Louise <span class="mono">0:53</span></span><span class="mono links">links on</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>You don&#x27;t need a big audience.<br>You need the right hundred people.</blockquote><figcaption class="mono">12 words · you don&#x27;t need more A</figcaption></figure><details id="det-27"><summary>Captions for Day 27</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d27-ig">Copy</button></div><pre id="d27-ig">You don&#x27;t need a big audience.
+You need the right hundred people.
+
+Day 27. One simple idea a day.
+Describe your right hundred people in five words.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d27-tt">Copy</button></div><pre id="d27-tt">You don&#x27;t need a big audience. You need the right hundred people. Day 27. Describe your right hundred people in five words. #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d27-yt">Copy</button></div><pre id="d27-yt">You don&#x27;t need a big audience. You need the right hundred people.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d27-x">Copy</button></div><pre id="d27-x">You don&#x27;t need a big audience.
+You need the right hundred people.</pre></div></div></details></div></article>
+<article class="day" id="day-28" data-slot="A" data-new="1" data-date="2026-11-18"><div class="day-side"><div class="num">Day 28</div><span class="chip chip-A">AI</span><span class="chip chip-new">New line</span><div class="meta"><span class="mono">Wed Nov 18</span><span class="track t-she">She <span class="mono">0:35</span></span><span class="mono links">links on</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Do it once by hand.<br>Write it down.<br>Then hand it to AI.</blockquote><figcaption class="mono">13 words · setup / kicker</figcaption></figure><details id="det-28"><summary>Captions for Day 28</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d28-ig">Copy</button></div><pre id="d28-ig">Do it once by hand.
+Write it down.
+Then hand it to AI.
+
+Day 28. One simple idea a day.
+What&#x27;s a task you&#x27;ve done by hand enough times to write down?
+Quiz in bio: which AI business fits how you work.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d28-tt">Copy</button></div><pre id="d28-tt">Do it once by hand. Write it down. Then hand it to AI. Day 28. What&#x27;s a task you&#x27;ve done by hand enough times to write down? Quiz in bio. #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d28-yt">Copy</button></div><pre id="d28-yt">Do it once by hand. Write it down. Then hand it to AI.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d28-x">Copy</button></div><pre id="d28-x">Do it once by hand.
+Write it down.
+Then hand it to AI.</pre></div></div></details></div></article>
+</section>
+<section class="week"><header class="week-head"><h2>Days 29–30</h2><span class="mono">Final two days</span></header>
+<article class="day" id="day-29" data-slot="T" data-new="1" data-date="2026-11-19"><div class="day-side"><div class="num">Day 29</div><span class="chip chip-T">Tip</span><span class="chip chip-new">New line</span><div class="meta"><span class="mono">Thu Nov 19</span><span class="track t-she">She <span class="mono">0:35</span></span><span class="mono links">links on</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>One offer, sold well,<br>beats five offers explained badly.</blockquote><figcaption class="mono">9 words · X beats Y</figcaption></figure><details id="det-29"><summary>Captions for Day 29</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d29-ig">Copy</button></div><pre id="d29-ig">One offer, sold well,
+beats five offers explained badly.
+
+Day 29. One simple idea a day.
+If you could only sell one thing, what would it be?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d29-tt">Copy</button></div><pre id="d29-tt">One offer, sold well, beats five offers explained badly. Day 29. If you could only sell one thing, what would it be? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d29-yt">Copy</button></div><pre id="d29-yt">One offer, sold well, beats five offers explained badly.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d29-x">Copy</button></div><pre id="d29-x">One offer, sold well,
+beats five offers explained badly.</pre></div></div></details></div></article>
+<article class="day" id="day-30" data-slot="F" data-new="1" data-date="2026-11-20"><div class="day-side"><div class="num">Day 30</div><span class="chip chip-F">Founder</span><span class="chip chip-new">New line</span><div class="meta"><span class="mono">Fri Nov 20</span><span class="track t-she">She <span class="mono">0:35</span></span><span class="mono links">links on</span></div></div><div class="day-main"><figure class="card"><div class="card-head"><span class="av" aria-hidden="true"></span><div><b>ADHD Entrepreneur</b><span>@adhdentrepreneurhq</span></div></div><blockquote>Thirty days ago I promised myself one post a day.<br>Promise kept.</blockquote><figcaption class="mono">12 words · story (first person)</figcaption></figure><p class="flag"><b>Condition.</b> Callback to Day 1. Post only if all 30 went out. If not, use: &quot;Thirty days in. I missed [N]. I didn&#x27;t quit. That&#x27;s the whole trick.&quot;</p><details id="det-30"><summary>Captions for Day 30</summary><div class="copies"><div class="copy"><div class="copy-head"><span>Instagram caption</span><button type="button" class="btn-copy" data-copy="d30-ig">Copy</button></div><pre id="d30-ig">Thirty days ago I promised myself one post a day.
+Promise kept.
+
+Day 30. One simple idea a day.
+What promise to yourself are you keeping this month?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>TikTok caption</span><button type="button" class="btn-copy" data-copy="d30-tt">Copy</button></div><pre id="d30-tt">Thirty days ago I promised myself one post a day. Promise kept. Day 30. What promise to yourself are you keeping this month? #entrepreneur #adhd #businessowner #mindset #smallbusiness</pre></div><div class="copy"><div class="copy-head"><span>YouTube Short title</span><button type="button" class="btn-copy" data-copy="d30-yt">Copy</button></div><pre id="d30-yt">Thirty days ago I promised myself one post a day. Promise kept.</pre></div><div class="copy"><div class="copy-head"><span>X post (plain text)</span><button type="button" class="btn-copy" data-copy="d30-x">Copy</button></div><pre id="d30-x">Thirty days ago I promised myself one post a day.
+Promise kept.</pre></div></div></details></div></article>
+</section>
+
+  <textarea id="all-md" readonly aria-hidden="true" tabindex="-1"># ADHD Entrepreneur: 30-day calendar (Day 1 Oct 22 to Day 30 Nov 20, 2026)
+
+Built from calendar-30.json by build_calendar.py. Card text line breaks are real line breaks.
+X = the line as plain text, no music, no hashtags. Links stay out of everything until Day 15 (Nov 5).
+
+## Day 1 · Thu Oct 22 · Reminder / relatable truth
+
+**LIVE** · Music: She (instrumental) from 0:35 · Links: no
+
+**Card / X**
+
+&gt; Life gets a lot simpler when you stop breaking promises to yourself.
+
+## Day 2 · Fri Oct 23 · Reminder / relatable truth
+
+**SCHEDULED** · Music: She (instrumental) from 0:35 · Links: no
+
+**Card / X**
+
+&gt; You don&#x27;t need another idea.
+&gt; You need to finish the last one you were excited about.
+
+## Day 3 · Sat Oct 24 · Reminder / relatable truth
+
+Source: bank 7 · Music: She (instrumental) from 0:35 · Links: no · Pattern: negation reframe
+
+**Card / X**
+
+&gt; You were never lazy.
+&gt; You were unscheduled.
+
+**Instagram caption**
+
+```
+You were never lazy.
+You were unscheduled.
+
+Day 3. One simple idea a day.
+What&#x27;s one thing you keep meaning to put on the calendar?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+You were never lazy. You were unscheduled. Day 3. What&#x27;s one thing you keep meaning to put on the calendar? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `You were never lazy. You were unscheduled.` · description: `Day 3. One simple idea a day.`
+
+**Hook variants** (reruns after Day 30 or a swap if Wil prefers; never both in one week)
+
+- Not lazy. Unscheduled.
+- Lazy was never the problem. No schedule was.
+
+## Day 4 · Sun Oct 25 · Reminder / relatable truth
+
+Source: bank 1 · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: identity mirror
+
+**Card / X**
+
+&gt; Starting is your superpower.
+&gt; Finishing is the skill.
+&gt; Practice the skill.
+
+**Instagram caption**
+
+```
+Starting is your superpower.
+Finishing is the skill.
+Practice the skill.
+
+Day 4. One simple idea a day.
+What&#x27;s the last thing you started and actually finished?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Starting is your superpower. Finishing is the skill. Practice the skill. Day 4. What&#x27;s the last thing you started and actually finished? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Starting is your superpower. Finishing is the skill. Practice the skill.` · description: `Day 4. One simple idea a day.`
+
+## Day 5 · Mon Oct 26 · Business tip
+
+Source: bank 11 · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: negation reframe
+
+**Card / X**
+
+&gt; The business doesn&#x27;t pay for what you started this week.
+&gt; It pays for what you shipped.
+
+**Instagram caption**
+
+```
+The business doesn&#x27;t pay for what you started this week.
+It pays for what you shipped.
+
+Day 5. One simple idea a day.
+What&#x27;s one thing you can ship this week, even if it&#x27;s small?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+The business doesn&#x27;t pay for what you started this week. It pays for what you shipped. Day 5. What&#x27;s one thing you can ship this week, even if it&#x27;s small? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `The business doesn&#x27;t pay for what you started this week. It pays for what you shipped.` · description: `Day 5. One simple idea a day.`
+
+**Hook variants** (reruns after Day 30 or a swap if Wil prefers; never both in one week)
+
+- Nobody pays for started. They pay for shipped.
+- Customers can&#x27;t buy what&#x27;s 90% done.
+
+## Day 6 · Tue Oct 27 · Business tip
+
+Source: bank 9 · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: old way / new way
+
+**Card / X**
+
+&gt; Old way: wait until you feel focused.
+&gt; New way: start for 10 minutes and let focus catch up.
+
+**Instagram caption**
+
+```
+Old way: wait until you feel focused.
+New way: start for 10 minutes and let focus catch up.
+
+Day 6. One simple idea a day.
+What&#x27;s the task you&#x27;ve been waiting to feel ready for?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Old way: wait until you feel focused. New way: start for 10 minutes and let focus catch up. Day 6. What&#x27;s the task you&#x27;ve been waiting to feel ready for? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Old way: wait until you feel focused. New way: start for 10 minutes and let focus catch up.` · description: `Day 6. One simple idea a day.`
+
+## Day 7 · Wed Oct 28 · Founder story
+
+Source: new · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: story (first person)
+
+**Card / X**
+
+&gt; One week in. Seven posts.
+&gt; None felt ready. All of them went out.
+
+**Instagram caption**
+
+```
+One week in. Seven posts.
+None felt ready. All of them went out.
+
+Day 7. One simple idea a day.
+What are you shipping this week, ready or not?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+One week in. Seven posts. None felt ready. All of them went out. Day 7. What are you shipping this week, ready or not? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `One week in. Seven posts. None felt ready. All of them went out.` · description: `Day 7. One simple idea a day.`
+
+**Condition:** Post only if Days 1-7 all went out. If one was missed, swap with Day 8 and rewrite the count before posting.
+
+## Day 8 · Thu Oct 29 · Reminder / relatable truth
+
+Source: bank 4 · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: identity mirror
+
+**Card / X**
+
+&gt; Your head is a terrible filing cabinet.
+&gt; Paper remembers so you can build.
+
+**Instagram caption**
+
+```
+Your head is a terrible filing cabinet.
+Paper remembers so you can build.
+
+Day 8. One simple idea a day.
+Paper, notes app, or voice memos? Where do your ideas go?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Your head is a terrible filing cabinet. Paper remembers so you can build. Day 8. Paper, notes app, or voice memos? Where do your ideas go? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Your head is a terrible filing cabinet. Paper remembers so you can build.` · description: `Day 8. One simple idea a day.`
+
+## Day 9 · Fri Oct 30 · AI use-case
+
+Source: bank 13 · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: negation reframe
+
+**Card / X**
+
+&gt; AI won&#x27;t replace the entrepreneur.
+&gt; It replaces the excuse &quot;I don&#x27;t have a team.&quot;
+
+**Instagram caption**
+
+```
+AI won&#x27;t replace the entrepreneur.
+It replaces the excuse &quot;I don&#x27;t have a team.&quot;
+
+Day 9. One simple idea a day.
+What&#x27;s the first job you&#x27;d hand off if you had a team?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+AI won&#x27;t replace the entrepreneur. It replaces the excuse &quot;I don&#x27;t have a team.&quot; Day 9. What&#x27;s the first job you&#x27;d hand off if you had a team? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `AI won&#x27;t replace the entrepreneur. It replaces the excuse &quot;I don&#x27;t have a team.&quot;` · description: `Day 9. One simple idea a day.`
+
+**Hook variants** (reruns after Day 30 or a swap if Wil prefers; never both in one week)
+
+- AI didn&#x27;t replace you. It replaced your best excuse.
+- &quot;I don&#x27;t have a team&quot; stopped being a reason.
+
+## Day 10 · Sat Oct 31 · Reminder / relatable truth
+
+Source: bank 3 · Music: She (instrumental) from 0:35 · Links: no · Pattern: setup / kicker
+
+**Card / X**
+
+&gt; Busy is easy.
+&gt; Done is rare.
+&gt; Be rare.
+
+**Instagram caption**
+
+```
+Busy is easy.
+Done is rare.
+Be rare.
+
+Day 10. One simple idea a day.
+What&#x27;s one thing you got done today? Not worked on. Done.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Busy is easy. Done is rare. Be rare. Day 10. What&#x27;s one thing you got done today? Not worked on. Done. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Busy is easy. Done is rare. Be rare.` · description: `Day 10. One simple idea a day.`
+
+**Hook variants** (reruns after Day 30 or a swap if Wil prefers; never both in one week)
+
+- Anyone can be busy. Be done.
+- Busy is a feeling. Done is a fact.
+
+## Day 11 · Sun Nov 1 · Reminder / relatable truth
+
+Source: bank 5 · Music: She (instrumental) from 0:35 · Links: no · Pattern: setup / kicker
+
+**Card / X**
+
+&gt; Every unfinished project charges you rent in your head.
+&gt; Finish one. Evict the noise.
+
+**Instagram caption**
+
+```
+Every unfinished project charges you rent in your head.
+Finish one. Evict the noise.
+
+Day 11. One simple idea a day.
+Which unfinished project is living rent-free in your head right now?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Every unfinished project charges you rent in your head. Finish one. Evict the noise. Day 11. Which unfinished project is living rent-free in your head right now? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Every unfinished project charges you rent in your head. Finish one. Evict the noise.` · description: `Day 11. One simple idea a day.`
+
+**Hook variants** (reruns after Day 30 or a swap if Wil prefers; never both in one week)
+
+- Unfinished projects don&#x27;t sit quietly. They charge rent.
+- Half-done projects are the loudest thing in your head.
+
+## Day 12 · Mon Nov 2 · Business tip
+
+Source: new · Music: She (instrumental) from 0:35 · Links: no · Pattern: X beats Y
+
+**Card / X**
+
+&gt; Posting daily beats building in secret.
+&gt; Nobody buys what they never saw.
+
+**Instagram caption**
+
+```
+Posting daily beats building in secret.
+Nobody buys what they never saw.
+
+Day 12. One simple idea a day.
+What have you been building in secret?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Posting daily beats building in secret. Nobody buys what they never saw. Day 12. What have you been building in secret? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Posting daily beats building in secret. Nobody buys what they never saw.` · description: `Day 12. One simple idea a day.`
+
+## Day 13 · Tue Nov 3 · Reminder / relatable truth
+
+Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: setup / kicker
+
+**Card / X**
+
+&gt; Mood decides if you feel like it.
+&gt; The plan decides if you do it.
+
+**Instagram caption**
+
+```
+Mood decides if you feel like it.
+The plan decides if you do it.
+
+Day 13. One simple idea a day.
+What&#x27;s one thing you&#x27;ll do tomorrow whether you feel like it or not?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Mood decides if you feel like it. The plan decides if you do it. Day 13. What&#x27;s one thing you&#x27;ll do tomorrow whether you feel like it or not? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Mood decides if you feel like it. The plan decides if you do it.` · description: `Day 13. One simple idea a day.`
+
+## Day 14 · Wed Nov 4 · AI use-case
+
+Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: setup / kicker
+
+**Card / X**
+
+&gt; Give AI the boring jobs.
+&gt; Keep the decisions.
+
+**Instagram caption**
+
+```
+Give AI the boring jobs.
+Keep the decisions.
+
+Day 14. One simple idea a day.
+What&#x27;s the most boring task in your business?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Give AI the boring jobs. Keep the decisions. Day 14. What&#x27;s the most boring task in your business? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Give AI the boring jobs. Keep the decisions.` · description: `Day 14. One simple idea a day.`
+
+## Day 15 · Thu Nov 5 · Founder story
+
+Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: yes · Pattern: story (first person)
+
+**Card / X**
+
+&gt; Two weeks of posts with no link.
+&gt; Today I&#x27;m showing what I&#x27;m building.
+
+**Instagram caption**
+
+```
+Two weeks of posts with no link.
+Today I&#x27;m showing what I&#x27;m building.
+
+Day 15. One simple idea a day.
+What kind of business are you building? One word.
+Quiz in bio: which AI business fits how you work.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Two weeks of posts with no link. Today I&#x27;m showing what I&#x27;m building. Day 15. What kind of business are you building? One word. Quiz in bio. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Two weeks of posts with no link. Today I&#x27;m showing what I&#x27;m building.` · description: `Day 15. One simple idea a day.`
+
+**Condition:** Tied to the link hub going live. If the hub isn&#x27;t live today, swap with Day 16 and post this on go-live day.
+
+## Day 16 · Fri Nov 6 · Business tip
+
+Source: bank 10 · Music: Louise (instrumental) from 0:53 · Links: yes · Pattern: old way / new way
+
+**Card / X**
+
+&gt; Old way: another app, another system, another reset.
+&gt; New way: one list, one priority, one finish.
+
+**Instagram caption**
+
+```
+Old way: another app, another system, another reset.
+New way: one list, one priority, one finish.
+
+Day 16. One simple idea a day.
+How many to-do apps have you tried? Be honest.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Old way: another app, another system, another reset. New way: one list, one priority, one finish. Day 16. How many to-do apps have you tried? Be honest. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Old way: another app, another system, another reset. New way: one list, one priority, one finish.` · description: `Day 16. One simple idea a day.`
+
+## Day 17 · Sat Nov 7 · Reminder / relatable truth
+
+Source: bank 6 · Music: Louise (instrumental) from 0:53 · Links: yes · Pattern: identity mirror
+
+**Card / X**
+
+&gt; Ideas are cheap for people like us.
+&gt; Follow-through is the flex.
+
+**Instagram caption**
+
+```
+Ideas are cheap for people like us.
+Follow-through is the flex.
+
+Day 17. One simple idea a day.
+How many ideas are sitting in your notes app right now?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Ideas are cheap for people like us. Follow-through is the flex. Day 17. How many ideas are sitting in your notes app right now? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Ideas are cheap for people like us. Follow-through is the flex.` · description: `Day 17. One simple idea a day.`
+
+## Day 18 · Sun Nov 8 · Reminder / relatable truth
+
+Source: bank 8 · Music: Louise (instrumental) from 0:53 · Links: yes · Pattern: negation reframe
+
+**Card / X**
+
+&gt; Discipline for a fast brain isn&#x27;t working harder.
+&gt; It&#x27;s making the list shorter.
+
+**Instagram caption**
+
+```
+Discipline for a fast brain isn&#x27;t working harder.
+It&#x27;s making the list shorter.
+
+Day 18. One simple idea a day.
+What can come off your list today?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Discipline for a fast brain isn&#x27;t working harder. It&#x27;s making the list shorter. Day 18. What can come off your list today? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Discipline for a fast brain isn&#x27;t working harder. It&#x27;s making the list shorter.` · description: `Day 18. One simple idea a day.`
+
+## Day 19 · Mon Nov 9 · AI use-case
+
+Source: new · Music: She (instrumental) from 0:35 · Links: yes · Pattern: you don&#x27;t need more A
+
+**Card / X**
+
+&gt; You don&#x27;t need ten AI tools.
+&gt; You need one set up for your business.
+
+**Instagram caption**
+
+```
+You don&#x27;t need ten AI tools.
+You need one set up for your business.
+
+Day 19. One simple idea a day.
+How many AI tools are you paying for right now?
+Quiz in bio: which AI business fits how you work.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+You don&#x27;t need ten AI tools. You need one set up for your business. Day 19. How many AI tools are you paying for right now? Quiz in bio. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `You don&#x27;t need ten AI tools. You need one set up for your business.` · description: `Day 19. One simple idea a day.`
+
+## Day 20 · Tue Nov 10 · Business tip
+
+Source: new · Music: She (instrumental) from 0:35 · Links: yes · Pattern: negation reframe
+
+**Card / X**
+
+&gt; Strategy isn&#x27;t what you add.
+&gt; It&#x27;s what you refuse.
+
+**Instagram caption**
+
+```
+Strategy isn&#x27;t what you add.
+It&#x27;s what you refuse.
+
+Day 20. One simple idea a day.
+What&#x27;s one thing you said no to this month?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Strategy isn&#x27;t what you add. It&#x27;s what you refuse. Day 20. What&#x27;s one thing you said no to this month? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Strategy isn&#x27;t what you add. It&#x27;s what you refuse.` · description: `Day 20. One simple idea a day.`
+
+## Day 21 · Wed Nov 11 · Reminder / relatable truth
+
+Source: bank 2 · Music: She (instrumental) from 0:35 · Links: yes · Pattern: X beats Y
+
+**Card / X**
+
+&gt; Motivation gets you a new project.
+&gt; A schedule gets you a finished one.
+
+**Instagram caption**
+
+```
+Motivation gets you a new project.
+A schedule gets you a finished one.
+
+Day 21. One simple idea a day.
+What&#x27;s on your calendar this week that used to be &quot;someday&quot;?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Motivation gets you a new project. A schedule gets you a finished one. Day 21. What&#x27;s on your calendar this week that used to be &quot;someday&quot;? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Motivation gets you a new project. A schedule gets you a finished one.` · description: `Day 21. One simple idea a day.`
+
+**Hook variants** (reruns after Day 30 or a swap if Wil prefers; never both in one week)
+
+- Motivation starts projects. Schedules finish them.
+- Feelings start things. Calendars finish them.
+
+## Day 22 · Thu Nov 12 · AI use-case
+
+Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: yes · Pattern: negation reframe
+
+**Card / X**
+
+&gt; AI doesn&#x27;t fix a messy business.
+&gt; It makes the mess faster.
+
+**Instagram caption**
+
+```
+AI doesn&#x27;t fix a messy business.
+It makes the mess faster.
+
+Day 22. One simple idea a day.
+What&#x27;s one process you&#x27;d clean up before handing it to AI?
+Quiz in bio: which AI business fits how you work.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+AI doesn&#x27;t fix a messy business. It makes the mess faster. Day 22. What&#x27;s one process you&#x27;d clean up before handing it to AI? Quiz in bio. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `AI doesn&#x27;t fix a messy business. It makes the mess faster.` · description: `Day 22. One simple idea a day.`
+
+## Day 23 · Fri Nov 13 · Business tip
+
+Source: bank 12 · Music: Potato Salad (instrumental) from 0:10 · Links: yes · Pattern: setup / kicker
+
+**Card / X**
+
+&gt; Nobody is coming to organize your ideas for you.
+&gt; Write them down, pick one, finish it.
+&gt; That&#x27;s the whole system.
+
+**Instagram caption**
+
+```
+Nobody is coming to organize your ideas for you.
+Write them down, pick one, finish it.
+That&#x27;s the whole system.
+
+Day 23. One simple idea a day.
+Which idea are you picking? Put it in the comments to make it real.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Nobody is coming to organize your ideas for you. Write them down, pick one, finish it. That&#x27;s the whole system. Day 23. Which idea are you picking? Put it in the comments to make it real. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Nobody is coming to organize your ideas for you. Write them down, pick one, finish it.` · description: `Day 23. One simple idea a day.`
+
+**Hook variants** (reruns after Day 30 or a swap if Wil prefers; never both in one week)
+
+- Write it down. Pick one. Finish it. That&#x27;s the whole system.
+
+**Note:** Original is 19 words, over the 15-word house max. The variant is the tight version; Wil&#x27;s pick.
+
+## Day 24 · Sat Nov 14 · Reminder / relatable truth
+
+Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: yes · Pattern: the gate
+
+**Card / X**
+
+&gt; If you can&#x27;t be bad at it in public,
+&gt; you can&#x27;t get good at it.
+
+**Instagram caption**
+
+```
+If you can&#x27;t be bad at it in public,
+you can&#x27;t get good at it.
+
+Day 24. One simple idea a day.
+What are you willing to be bad at in public this month?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+If you can&#x27;t be bad at it in public, you can&#x27;t get good at it. Day 24. What are you willing to be bad at in public this month? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `If you can&#x27;t be bad at it in public, you can&#x27;t get good at it.` · description: `Day 24. One simple idea a day.`
+
+## Day 25 · Sun Nov 15 · Business tip
+
+Source: new · Music: Louise (instrumental) from 0:53 · Links: yes · Pattern: setup / kicker
+
+**Card / X**
+
+&gt; Talent is a head start.
+&gt; Reps are the race.
+
+**Instagram caption**
+
+```
+Talent is a head start.
+Reps are the race.
+
+Day 25. One simple idea a day.
+What are you counting reps on right now?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Talent is a head start. Reps are the race. Day 25. What are you counting reps on right now? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Talent is a head start. Reps are the race.` · description: `Day 25. One simple idea a day.`
+
+## Day 26 · Mon Nov 16 · AI use-case
+
+Source: new · Music: Louise (instrumental) from 0:53 · Links: yes · Pattern: negation reframe
+
+**Card / X**
+
+&gt; AI can&#x27;t choose your one thing.
+&gt; It can help you finish it.
+
+**Instagram caption**
+
+```
+AI can&#x27;t choose your one thing.
+It can help you finish it.
+
+Day 26. One simple idea a day.
+What&#x27;s your one thing this week?
+Quiz in bio: which AI business fits how you work.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+AI can&#x27;t choose your one thing. It can help you finish it. Day 26. What&#x27;s your one thing this week? Quiz in bio. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `AI can&#x27;t choose your one thing. It can help you finish it.` · description: `Day 26. One simple idea a day.`
+
+## Day 27 · Tue Nov 17 · Business tip
+
+Source: new · Music: Louise (instrumental) from 0:53 · Links: yes · Pattern: you don&#x27;t need more A
+
+**Card / X**
+
+&gt; You don&#x27;t need a big audience.
+&gt; You need the right hundred people.
+
+**Instagram caption**
+
+```
+You don&#x27;t need a big audience.
+You need the right hundred people.
+
+Day 27. One simple idea a day.
+Describe your right hundred people in five words.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+You don&#x27;t need a big audience. You need the right hundred people. Day 27. Describe your right hundred people in five words. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `You don&#x27;t need a big audience. You need the right hundred people.` · description: `Day 27. One simple idea a day.`
+
+## Day 28 · Wed Nov 18 · AI use-case
+
+Source: new · Music: She (instrumental) from 0:35 · Links: yes · Pattern: setup / kicker
+
+**Card / X**
+
+&gt; Do it once by hand.
+&gt; Write it down.
+&gt; Then hand it to AI.
+
+**Instagram caption**
+
+```
+Do it once by hand.
+Write it down.
+Then hand it to AI.
+
+Day 28. One simple idea a day.
+What&#x27;s a task you&#x27;ve done by hand enough times to write down?
+Quiz in bio: which AI business fits how you work.
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Do it once by hand. Write it down. Then hand it to AI. Day 28. What&#x27;s a task you&#x27;ve done by hand enough times to write down? Quiz in bio. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Do it once by hand. Write it down. Then hand it to AI.` · description: `Day 28. One simple idea a day.`
+
+## Day 29 · Thu Nov 19 · Business tip
+
+Source: new · Music: She (instrumental) from 0:35 · Links: yes · Pattern: X beats Y
+
+**Card / X**
+
+&gt; One offer, sold well,
+&gt; beats five offers explained badly.
+
+**Instagram caption**
+
+```
+One offer, sold well,
+beats five offers explained badly.
+
+Day 29. One simple idea a day.
+If you could only sell one thing, what would it be?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+One offer, sold well, beats five offers explained badly. Day 29. If you could only sell one thing, what would it be? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `One offer, sold well, beats five offers explained badly.` · description: `Day 29. One simple idea a day.`
+
+## Day 30 · Fri Nov 20 · Founder story
+
+Source: new · Music: She (instrumental) from 0:35 · Links: yes · Pattern: story (first person)
+
+**Card / X**
+
+&gt; Thirty days ago I promised myself one post a day.
+&gt; Promise kept.
+
+**Instagram caption**
+
+```
+Thirty days ago I promised myself one post a day.
+Promise kept.
+
+Day 30. One simple idea a day.
+What promise to yourself are you keeping this month?
+
+#entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**TikTok caption**
+
+```
+Thirty days ago I promised myself one post a day. Promise kept. Day 30. What promise to yourself are you keeping this month? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+```
+
+**YouTube Short** title: `Thirty days ago I promised myself one post a day. Promise kept.` · description: `Day 30. One simple idea a day.`
+
+**Condition:** Callback to Day 1. Post only if all 30 went out. If not, use: &quot;Thirty days in. I missed [N]. I didn&#x27;t quit. That&#x27;s the whole trick.&quot;
+</textarea>
+</div>
+
+<script>
+(function () {
+  var status = document.getElementById("status");
+  function say(msg) { status.textContent = msg; clearTimeout(say.t); say.t = setTimeout(function () { status.textContent = ""; }, 2500); }
+  function copyText(text, fallbackEl) {
+    function fallback() {
+      try {
+        var r = document.createRange(); r.selectNodeContents(fallbackEl);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        say("Selected. Press copy.");
+      } catch (e) { say("Copy blocked here. Select the text by hand."); }
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { say("Copied"); }, fallback);
+    } else { fallback(); }
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-copy]");
+    if (b) { var el = document.getElementById(b.getAttribute("data-copy")); copyText(el.textContent, el); }
+  });
+  document.getElementById("copy-all").addEventListener("click", function () {
+    var ta = document.getElementById("all-md"); copyText(ta.value, ta);
+  });
+  var buttons = document.querySelectorAll("[data-filter]");
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var f = btn.getAttribute("data-filter");
+      buttons.forEach(function (x) { x.setAttribute("aria-pressed", x === btn ? "true" : "false"); });
+      document.querySelectorAll(".day").forEach(function (d) {
+        var show = f === "all" || (f === "new" ? d.dataset.new === "1" : d.dataset.slot === f);
+        d.hidden = !show;
+      });
+      document.querySelectorAll(".week").forEach(function (w) {
+        w.hidden = !w.querySelector(".day:not([hidden])");
+      });
+    });
+  });
+  var t = new Date(), iso = t.getFullYear() + "-" + String(t.getMonth() + 1).padStart(2, "0") + "-" + String(t.getDate()).padStart(2, "0");
+  document.querySelectorAll('[data-date="' + iso + '"]').forEach(function (el) { el.classList.add("today"); });
+})();
+</script>
