@@ -6,6 +6,8 @@ Profile picture fix (Job #1), banner audit and X header (Job #2). Everything her
 
 **Approved by Wil:** full-bleed avatar (A) with a **bold color split on the whole A**, and a **bold split on "ADHD"** in the YouTube banner and X header. The upload set is in `upload/`.
 
+**Design lock (Oct 23):** the black/white base plus the bold RGB split is the official look. The split appears only on the logo's A and on "ADHD" in the banners. Quote text on cards stays plain. See `../DECISIONS.md`.
+
 | Item | State |
 |---|---|
 | Upload set (`upload/`) | **Final.** Since Oct 23 the avatar is built from the true master, `source/logo-final-perfect.jpg` (1290×1290 original). Its white circle is 1009 px across, perfectly centered, so filling the 1080 canvas takes a single ×1.070 scale straight from the original. The old YouTube-copy chain (980 px source, ×1.103) is gone. Both banners are unchanged; they never depended on the logo file. |

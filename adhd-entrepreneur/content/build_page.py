@@ -234,7 +234,7 @@ html {{ scroll-behavior: smooth; }}
     <div>
       <div class="label">ADHD Entrepreneur · content calendar</div>
       <h1>30 days, one line a day</h1>
-      <p class="lede">Day 1 was Thu Oct 22. Day 30 is Fri Nov 20, 2026. All 13 bank lines are used, plus {new} new lines for Wil's OK. Zucc builds and posts. Wil approves each post.</p>
+      <p class="lede">Day 1 was Thu Oct 22. Day 30 is Fri Nov 20, 2026. All 13 bank lines are used, plus {new} new lines, approved Oct 23. Zucc builds and posts. Wil approves each post.</p>
     </div>
     <div>
       <div class="label">Content mix</div>
