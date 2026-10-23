@@ -1,7 +1,7 @@
 # ADHD Entrepreneur: 30-day calendar (Day 1 Oct 22 to Day 30 Nov 20, 2026)
 
 Built from calendar-30.json by build_calendar.py. Card text line breaks are real line breaks.
-X = the line as plain text, no music, no hashtags. Links stay out of everything until Day 15 (Nov 5).
+X = the line as plain text, no music, no hashtags. Links: On hold since Oct 23: the website is paused until Wil says go.
 
 ## Day 1 · Thu Oct 22 · Reminder / relatable truth
 
@@ -401,7 +401,7 @@ Give AI the boring jobs. Keep the decisions. Day 14. What's the most boring task
 
 ## Day 15 · Thu Nov 5 · Founder story
 
-Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: yes · Pattern: story (first person)
+Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: story (first person)
 
 **Card / X**
 
@@ -416,7 +416,6 @@ Today I'm showing what I'm building.
 
 Day 15. One simple idea a day.
 What kind of business are you building? One word.
-Quiz in bio: which AI business fits how you work.
 
 #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
@@ -424,16 +423,16 @@ Quiz in bio: which AI business fits how you work.
 **TikTok caption**
 
 ```
-Two weeks of posts with no link. Today I'm showing what I'm building. Day 15. What kind of business are you building? One word. Quiz in bio. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+Two weeks of posts with no link. Today I'm showing what I'm building. Day 15. What kind of business are you building? One word. #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
 
 **YouTube Short** title: `Two weeks of posts with no link. Today I'm showing what I'm building.` · description: `Day 15. One simple idea a day.`
 
-**Condition:** Tied to the link hub going live. If the hub isn't live today, swap with Day 16 and post this on go-live day.
+**Condition:** Website on hold since Oct 23, so this line no longer fits. Zucc and Claude bring a replacement founder line to the Nov 4 pre-post for Wil's OK.
 
 ## Day 16 · Fri Nov 6 · Business tip
 
-Source: bank 10 · Music: Louise (instrumental) from 0:53 · Links: yes · Pattern: old way / new way
+Source: bank 10 · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: old way / new way
 
 **Card / X**
 
@@ -462,7 +461,7 @@ Old way: another app, another system, another reset. New way: one list, one prio
 
 ## Day 17 · Sat Nov 7 · Reminder / relatable truth
 
-Source: bank 6 · Music: Louise (instrumental) from 0:53 · Links: yes · Pattern: identity mirror
+Source: bank 6 · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: identity mirror
 
 **Card / X**
 
@@ -491,7 +490,7 @@ Ideas are cheap for people like us. Follow-through is the flex. Day 17. How many
 
 ## Day 18 · Sun Nov 8 · Reminder / relatable truth
 
-Source: bank 8 · Music: Louise (instrumental) from 0:53 · Links: yes · Pattern: negation reframe
+Source: bank 8 · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: negation reframe
 
 **Card / X**
 
@@ -520,7 +519,7 @@ Discipline for a fast brain isn't working harder. It's making the list shorter. 
 
 ## Day 19 · Mon Nov 9 · AI use-case
 
-Source: new · Music: She (instrumental) from 0:35 · Links: yes · Pattern: you don't need more A
+Source: new · Music: She (instrumental) from 0:35 · Links: no · Pattern: you don't need more A
 
 **Card / X**
 
@@ -535,7 +534,6 @@ You need one set up for your business.
 
 Day 19. One simple idea a day.
 How many AI tools are you paying for right now?
-Quiz in bio: which AI business fits how you work.
 
 #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
@@ -543,14 +541,14 @@ Quiz in bio: which AI business fits how you work.
 **TikTok caption**
 
 ```
-You don't need ten AI tools. You need one set up for your business. Day 19. How many AI tools are you paying for right now? Quiz in bio. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+You don't need ten AI tools. You need one set up for your business. Day 19. How many AI tools are you paying for right now? #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
 
 **YouTube Short** title: `You don't need ten AI tools. You need one set up for your business.` · description: `Day 19. One simple idea a day.`
 
 ## Day 20 · Tue Nov 10 · Business tip
 
-Source: new · Music: She (instrumental) from 0:35 · Links: yes · Pattern: negation reframe
+Source: new · Music: She (instrumental) from 0:35 · Links: no · Pattern: negation reframe
 
 **Card / X**
 
@@ -579,7 +577,7 @@ Strategy isn't what you add. It's what you refuse. Day 20. What's one thing you 
 
 ## Day 21 · Wed Nov 11 · Reminder / relatable truth
 
-Source: bank 2 · Music: She (instrumental) from 0:35 · Links: yes · Pattern: X beats Y
+Source: bank 2 · Music: She (instrumental) from 0:35 · Links: no · Pattern: X beats Y
 
 **Card / X**
 
@@ -613,7 +611,7 @@ Motivation gets you a new project. A schedule gets you a finished one. Day 21. W
 
 ## Day 22 · Thu Nov 12 · AI use-case
 
-Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: yes · Pattern: negation reframe
+Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: negation reframe
 
 **Card / X**
 
@@ -628,7 +626,6 @@ It makes the mess faster.
 
 Day 22. One simple idea a day.
 What's one process you'd clean up before handing it to AI?
-Quiz in bio: which AI business fits how you work.
 
 #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
@@ -636,14 +633,14 @@ Quiz in bio: which AI business fits how you work.
 **TikTok caption**
 
 ```
-AI doesn't fix a messy business. It makes the mess faster. Day 22. What's one process you'd clean up before handing it to AI? Quiz in bio. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+AI doesn't fix a messy business. It makes the mess faster. Day 22. What's one process you'd clean up before handing it to AI? #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
 
 **YouTube Short** title: `AI doesn't fix a messy business. It makes the mess faster.` · description: `Day 22. One simple idea a day.`
 
 ## Day 23 · Fri Nov 13 · Business tip
 
-Source: bank 12 · Music: Potato Salad (instrumental) from 0:10 · Links: yes · Pattern: setup / kicker
+Source: bank 12 · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: setup / kicker
 
 **Card / X**
 
@@ -680,7 +677,7 @@ Nobody is coming to organize your ideas for you. Write them down, pick one, fini
 
 ## Day 24 · Sat Nov 14 · Reminder / relatable truth
 
-Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: yes · Pattern: the gate
+Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: the gate
 
 **Card / X**
 
@@ -709,7 +706,7 @@ If you can't be bad at it in public, you can't get good at it. Day 24. What are 
 
 ## Day 25 · Sun Nov 15 · Business tip
 
-Source: new · Music: Louise (instrumental) from 0:53 · Links: yes · Pattern: setup / kicker
+Source: new · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: setup / kicker
 
 **Card / X**
 
@@ -738,7 +735,7 @@ Talent is a head start. Reps are the race. Day 25. What are you counting reps on
 
 ## Day 26 · Mon Nov 16 · AI use-case
 
-Source: new · Music: Louise (instrumental) from 0:53 · Links: yes · Pattern: negation reframe
+Source: new · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: negation reframe
 
 **Card / X**
 
@@ -753,7 +750,6 @@ It can help you finish it.
 
 Day 26. One simple idea a day.
 What's your one thing this week?
-Quiz in bio: which AI business fits how you work.
 
 #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
@@ -761,14 +757,14 @@ Quiz in bio: which AI business fits how you work.
 **TikTok caption**
 
 ```
-AI can't choose your one thing. It can help you finish it. Day 26. What's your one thing this week? Quiz in bio. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+AI can't choose your one thing. It can help you finish it. Day 26. What's your one thing this week? #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
 
 **YouTube Short** title: `AI can't choose your one thing. It can help you finish it.` · description: `Day 26. One simple idea a day.`
 
 ## Day 27 · Tue Nov 17 · Business tip
 
-Source: new · Music: Louise (instrumental) from 0:53 · Links: yes · Pattern: you don't need more A
+Source: new · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: you don't need more A
 
 **Card / X**
 
@@ -797,7 +793,7 @@ You don't need a big audience. You need the right hundred people. Day 27. Descri
 
 ## Day 28 · Wed Nov 18 · AI use-case
 
-Source: new · Music: She (instrumental) from 0:35 · Links: yes · Pattern: setup / kicker
+Source: new · Music: She (instrumental) from 0:35 · Links: no · Pattern: setup / kicker
 
 **Card / X**
 
@@ -814,7 +810,6 @@ Then hand it to AI.
 
 Day 28. One simple idea a day.
 What's a task you've done by hand enough times to write down?
-Quiz in bio: which AI business fits how you work.
 
 #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
@@ -822,14 +817,14 @@ Quiz in bio: which AI business fits how you work.
 **TikTok caption**
 
 ```
-Do it once by hand. Write it down. Then hand it to AI. Day 28. What's a task you've done by hand enough times to write down? Quiz in bio. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+Do it once by hand. Write it down. Then hand it to AI. Day 28. What's a task you've done by hand enough times to write down? #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
 
 **YouTube Short** title: `Do it once by hand. Write it down. Then hand it to AI.` · description: `Day 28. One simple idea a day.`
 
 ## Day 29 · Thu Nov 19 · Business tip
 
-Source: new · Music: She (instrumental) from 0:35 · Links: yes · Pattern: X beats Y
+Source: new · Music: She (instrumental) from 0:35 · Links: no · Pattern: X beats Y
 
 **Card / X**
 
@@ -858,7 +853,7 @@ One offer, sold well, beats five offers explained badly. Day 29. If you could on
 
 ## Day 30 · Fri Nov 20 · Founder story
 
-Source: new · Music: She (instrumental) from 0:35 · Links: yes · Pattern: story (first person)
+Source: new · Music: She (instrumental) from 0:35 · Links: no · Pattern: story (first person)
 
 **Card / X**
 

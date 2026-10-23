@@ -1,6 +1,7 @@
 {
   "start": "2026-10-22",
-  "links_live": "2026-11-05",
+  "links_live": null,
+  "links_note": "On hold since Oct 23: the website is paused until Wil says go.",
   "music": [
     {"track": "She (instrumental)", "start": "0:35"},
     {"track": "Potato Salad (instrumental)", "start": "0:10"},
@@ -68,7 +69,7 @@
      "line": "Two weeks of posts with no link.\nToday I'm showing what I'm building.",
      "question": "What kind of business are you building? One word.",
      "cta": true,
-     "condition": "Tied to the link hub going live. If the hub isn't live today, swap with Day 16 and post this on go-live day."},
+     "condition": "Website on hold since Oct 23, so this line no longer fits. Zucc and Claude bring a replacement founder line to the Nov 4 pre-post for Wil's OK."},
     {"day": 16, "slot": "T", "source": "bank 10", "pattern": "old way / new way",
      "line": "Old way: another app, another system, another reset.\nNew way: one list, one priority, one finish.",
      "question": "How many to-do apps have you tried? Be honest."},

@@ -53,7 +53,8 @@ def yt_title(line):
 
 def expand(cal):
     start = dt.date.fromisoformat(cal["start"])
-    live = dt.date.fromisoformat(cal["links_live"])
+    # links_live is null while the website is on hold: no links, no "Quiz in bio" lines
+    live = dt.date.fromisoformat(cal["links_live"]) if cal.get("links_live") else dt.date.max
     rows = []
     for d in cal["days"]:
         n = d["day"]
@@ -122,7 +123,7 @@ def lint(cal, rows):
 def write_md(cal, rows, path):
     o = ["# ADHD Entrepreneur: 30-day calendar (Day 1 Oct 22 to Day 30 Nov 20, 2026)", "",
          "Built from calendar-30.json by build_calendar.py. Card text line breaks are real line breaks.",
-         "X = the line as plain text, no music, no hashtags. Links stay out of everything until Day 15 (Nov 5).", ""]
+         "X = the line as plain text, no music, no hashtags. Links: " + (cal.get("links_note") or f'from {cal["links_live"]}') + "", ""]
     for r in rows:
         o.append(f'## Day {r["day"]} · {r["date_label"]} · {r["slot_name"]}')
         o.append("")

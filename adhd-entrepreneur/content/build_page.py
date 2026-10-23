@@ -108,7 +108,7 @@ def main():
     body = []
     for a, b in weeks:
         title = f"Days {a}–{b}"
-        sub = {1: "Launch week · no links", 8: "Week 2 · no links", 15: "Links go live on Day 15 (Thu Nov 5)",
+        sub = {1: "Launch week · no links", 8: "Week 2 · no links", 15: "Week 3 · no links (website on hold)",
                22: "Week 4", 29: "Final two days"}[a]
         body.append(f'<section class="week"><header class="week-head"><h2>{title}</h2>'
                     f'<span class="mono">{sub}</span></header>')
@@ -256,13 +256,12 @@ html {{ scroll-behavior: smooth; }}
         <span><i class="she"></i>She · from 0:35</span>
         <span><i class="potato"></i>Potato Salad · from 0:10</span>
         <span><i></i>Louise · from 0:53</span>
-        <span><i class="bar"></i>links allowed (Nov 5 on)</span>
       </div>
     </div>
     <ul class="rules">
       <li><b>One reel everywhere</b>The same card video goes to IG, TikTok and YouTube Shorts. X gets the line as plain text, with no music and no hashtags. Wil posts X from his phone for at least the first week.</li>
       <li><b>Daily 6-slide collage</b>IG and TikTok also get a swipe collage with music, built for saves and shares. Zucc and Claude write the six lines together each morning, and Claude checks them against this calendar so none repeats a reel line.</li>
-      <li><b>No links before Day 15</b>From Nov 5, the "Quiz in bio" line goes on Day 15 and on the AI days. If the link hub isn't live yet, leave it off.</li>
+      <li><b>No links for now</b>The website is on hold until Wil says go, so no caption gets a link or a "Quiz in bio" line.</li>
       <li><b>AI news swap</b>On an AI day, the scout can swap in a fresh AI-news line if it comes from the primary source, is under 7 days old, is one 5–15 word law with no hype, and Wil approves it. The planned line becomes a spare.</li>
       <li><b>Founder posts carry conditions</b>Days 7, 15 and 30 state facts. Each one goes out only if the fact is true that day. Every condition is written on its day.</li>
     </ul>

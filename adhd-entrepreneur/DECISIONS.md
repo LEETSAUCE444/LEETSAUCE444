@@ -2,6 +2,20 @@
 
 Locked decisions only, newest first. Claude and Zucc build on these and don't reopen them unless Wil does. Anything still open is listed at the bottom.
 
+## Oct 23, 2026 (evening): starter kits and website (Wil)
+
+- **Claude is in charge** of the website, the tools and the AI starter kits. **Zucc helps** with research. **Wil oversees** and has the final say.
+- **Nothing goes up yet.** The website, link hub, quiz and checkout are on hold until Wil says go. Calendar captions carry no links or "Quiz in bio" lines.
+- **Offer direction** (details in `kits/PLAN.md`):
+  - It's a challenge offer in the style of Gym Launch: the buyer pays up front.
+  - Hit the agreed build goal by the deadline and get a full refund.
+  - Miss it, and we keep the payment and give them 50% off the next kit that covers what stopped them.
+  - A smart branching quiz, in the style of the Hims & Hers quiz, picks the kit and sets the goal.
+- **Kit ideas by niche** live in `kits/IDEAS.md`. Zucc feeds research, and Claude fact-checks it.
+- **Referral links** go to Wil's accounts where a tool offers a program, always disclosed.
+- **Faceless.** Maybe a coaching program or community with a face later.
+- **The 14-day refund question is withdrawn.** The challenge model replaces it.
+
 ## Oct 23, 2026: how Wil wants Zucc and Claude to work (Wil's own words, given to Claude)
 
 - **Formats.**
@@ -28,15 +42,15 @@ Locked decisions only, newest first. Claude and Zucc build on these and don't re
 
 ## Open
 
-- **Website work starts around Fri Oct 30.** Claude reminds Wil and Zucc that day.
-  - Agenda: domain, link hub, the "Which AI business fits you?" quiz, email capture, the 5-email welcome sequence, and UTMs.
-  - Calendar Day 15 (Nov 5) assumes the link hub is live. If it isn't, swap Day 15 with Day 16 (already written into the calendar).
+- **Starter-kit plan check-in, around Fri Oct 30.** Claude reminds Wil and Zucc that day. The open items are in `kits/PLAN.md`:
+  - the price
+  - the deadline length per kit
+  - cash-back vs store-credit option
+  - the Hims & Hers quiz breakdown (Zucc to post)
+  - which AI tools run referral programs
+- **First-$100 goal (brief: by Fri Nov 20).** In the Questions tab (`q-goal`), waiting on Zucc's vote and Wil's pick.
+- **Calendar Day 15 (Nov 5).** Its line assumed a link going live. Zucc and Claude bring a replacement founder line to the Nov 4 pre-post.
 - **Domain.** `adhdentrepreneurhq.com` was unregistered on Oct 23 (.com registry lookup). It isn't held until someone registers it.
-- **Loadout #1 decisions.**
-  - 14-day refund: in the Questions tab (`q-refund`), waiting on Zucc's vote and Wil's pick
-  - support hours per week
-  - launch date
-  - the Loadout #1 spec itself (Claude needs it for the funnel copy)
 - **From Zucc.**
   - his daily analytics log columns, for the scorecard
   - a screenshot of the quote-card template, for the dark and story variants
