@@ -11,6 +11,7 @@ Profile picture fix (Job #1), banner audit and X header (Job #2). Everything her
 | YouTube banner audit | Done. Passes on every device. One stray hairline, TV only. |
 | Clean YouTube banner | Ready for approval, in `banner/` |
 | X header 1500×500 | Ready for approval, in `banner/` |
+| Color split ("light moving fast") | Banners: **bold, whole word "ADHD"**: `banner/*-split-bold-*.jpg`, upload-ready. Avatar: if used, **bold, letter only** (the grey echo strokes stay grey so the hidden "AI" read survives). Wil's call between that and plain. Explorations are in `explorations/color-split/`, built by `tools/colorsplit.py`. |
 
 ## What was wrong with the profile picture
 

@@ -33,8 +33,12 @@ def shift(ch, dx, fill):
     return out
 
 
-def split_first_group(img, d):
-    """Color-split everything left of the widest gap in the ink."""
+def split_first_group(img, d, solid_only=False):
+    """Color-split everything left of the widest gap in the ink.
+
+    solid_only: split just the solid letters; the grey echo strokes stay grey
+    (they carry the hidden "AI" read in the avatar).
+    """
     if d == 0:
         return img.convert("RGB")
     arr = np.asarray(img.convert("RGB")).astype(float)
@@ -58,6 +62,13 @@ def split_first_group(img, d):
     left[:, cut:] = bg
     rest = arr.copy()
     rest[:, :cut] = bg
+    if solid_only:
+        # Soft mask: full-contrast pixels are the letter, everything lighter is echo.
+        a = np.clip((np.abs(lum - bg.mean()) - 150) / 60, 0, 1)[..., None]
+        a[:, cut:] = 0
+        echo = left * (1 - a) + bg * a
+        left = left * a + bg * (1 - a)
+        rest = np.minimum(rest, echo) if dark_on_light else np.maximum(rest, echo)
     moved = np.stack([shift(left[..., 0], -d, bg[0]),     # red trails
                       left[..., 1],                        # green stays
                       shift(left[..., 2], d, bg[2])], -1)  # blue leads
@@ -76,19 +87,19 @@ def disc_on(img, d_pt, bg, pad=14):
     return tile
 
 
-def avatar_sheet(variants, out):
+def avatar_sheet(variants, out, title="Color split on the A - same file, three strengths"):
     cols = [(110, "#000000", "profile, dark"), (88, "#FFFFFF", "profile, light"),
             (32, "#000000", "feed, dark"), (32, "#FFFFFF", "feed, light"),
             (24, "#FFFFFF", "comment, light")]
     g, rowh, head = 30, 2 * 110 + 28 + 60, 110
-    w = 200 + sum(2 * c[0] + 28 + g for c in cols) + g
+    w = 260 + sum(2 * c[0] + 28 + g for c in cols) + g
     im = Image.new("RGB", (w, head + len(variants) * rowh + g), "#1A1A1A")
     d = ImageDraw.Draw(im)
-    label(d, (g, 22), "Color split on the A - same file, three strengths", 34, "#FFFFFF", "Bold")
+    label(d, (g, 22), title, 34, "#FFFFFF", "Bold")
     y = head
     for name, img in variants:
-        label(d, (g, y + rowh // 2 - 30), name, 28)
-        x = 200
+        label(d, (g, y + rowh // 2 - 30), name, 24)
+        x = 260
         for pt, bg, cap in cols:
             t = disc_on(img, pt, bg)
             im.paste(t, (x, y + (2 * 110 + 28 - t.size[1]) // 2))
@@ -149,6 +160,22 @@ def main():
     cu.paste(pair[1], (pair[0].size[0] + 20, 0))
     cu.save(os.path.join(out, "avatar-A-closeup-now-vs-subtle.png"), optimize=True)
     banner_sheet(ban_vars, os.path.join(out, "compare-banner.png"))
+
+    # bold, letters only: the grey echo strokes stay grey
+    a = split_first_group(av, px["avatar"][2], solid_only=True)
+    a.save(os.path.join(out, "avatar-split-bold-letters-only.png"), optimize=True)
+    for key, src, name in (("banner", ban, "youtube-banner"), ("x", xh, "x-header")):
+        split_first_group(src, px[key][2], solid_only=True).save(
+            os.path.join(out, f"{name}-split-bold-letters-only.png"), optimize=True)
+    bold = dict(av_vars)["bold"]
+    avatar_sheet([("now", dict(av_vars)["now"]), ("bold, whole A", bold), ("bold, letter only", a)],
+                 os.path.join(out, "compare-avatar-bold.png"),
+                 "Bold split: whole A vs letter only (echo stays grey)")
+    pair = [bold.crop(box), a.crop(box)]
+    cu = Image.new("RGB", (2 * pair[0].size[0] + 20, pair[0].size[1]), "#FFFFFF")
+    cu.paste(pair[0], (0, 0))
+    cu.paste(pair[1], (pair[0].size[0] + 20, 0))
+    cu.save(os.path.join(out, "avatar-A-closeup-bold-whole-vs-letter-only.png"), optimize=True)
 
 
 if __name__ == "__main__":
