@@ -63,7 +63,8 @@ def main():
     with open(os.path.join(a.outdir, "report.txt"), "w") as fh:
         fh.write(f"source: {os.path.basename(a.source)} {m['size'][0]}x{m['size'][1]}\n"
                  f"circle diameter in source: {2 * m['r']:.1f} px -> scale x{scale:.3f} to {n}px"
-                 f"{' (upscaled)' if scale > 1.02 else ''}\n"
+                 f"{' (upscaled)' if scale > 1.02 else ''}, rendered directly from the source file"
+                 f" (no intermediate copies)\n"
                  f"avatar split: {round(SPLIT_AVATAR * n)} px per channel on the whole A\n"
                  f"banner split: {SPLIT_BANNER} px (2560 wide), X header split: {SPLIT_XHEADER} px (1500 wide)\n")
     print(open(os.path.join(a.outdir, "report.txt")).read(), end="")

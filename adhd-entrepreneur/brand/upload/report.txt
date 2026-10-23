@@ -1,4 +1,4 @@
-source: youtube-avatar-live-980.jpg 980x980
-circle diameter in source: 979.5 px -> scale x1.103 to 1080px (upscaled)
+source: logo-final-perfect.jpg 1290x1290
+circle diameter in source: 1009.1 px -> scale x1.070 to 1080px (upscaled), rendered directly from the source file (no intermediate copies)
 avatar split: 14 px per channel on the whole A
 banner split: 6 px (2560 wide), X header split: 4 px (1500 wide)

@@ -8,7 +8,7 @@ Profile picture fix (Job #1), banner audit and X header (Job #2). Everything her
 
 | Item | State |
 |---|---|
-| Upload set (`upload/`) | **Ready.** The avatar is built from the copy YouTube serves (980 px, upscaled 1.10× to 1080). Every platform displays it at 800 px or less, so it is full quality on screen. When Wil sends `logo-final-perfect.jpg`, one command rebuilds the set from the original (below). |
+| Upload set (`upload/`) | **Final.** Since Oct 23 the avatar is built from the true master, `source/logo-final-perfect.jpg` (1290×1290 original). Its white circle is 1009 px across, perfectly centered, so filling the 1080 canvas takes a single ×1.070 scale straight from the original. The old YouTube-copy chain (980 px source, ×1.103) is gone. Both banners are unchanged; they never depended on the logo file. |
 | YouTube banner audit | Done. Passes on every device. The stray TV-only hairline is removed in the upload version. |
 | Earlier options | A vs B previews in `previews/`, color-split strengths in `explorations/color-split/`. Kept for the record. |
 
@@ -61,12 +61,13 @@ Requires Python 3 with Pillow and NumPy. The mockups use the Inter font.
 
 ## Upload steps for Zucc
 
-1. **Profile picture:** use `upload/ae-avatar-1080.jpg` on all four platforms.
+1. **Profile picture:** use `upload/ae-avatar-1080.jpg` on all four platforms. Swap each platform exactly once, from the final files (built from `logo-final-perfect.jpg`; see `upload/report.txt`).
 2. When the app shows its crop/zoom box, **leave it at full size. Don't zoom and don't drag.** The file is already exact, so any zoom cuts into it.
 3. Go one platform per run, signed-in account verified first, as usual. TikTok: confirm it is **@adhdentrepreneurhq** and not the trap account.
 4. **YouTube banner:** `upload/youtube-banner-2560x1440.jpg`. When YouTube shows its device preview, the wordmark should sit centered in every crop.
 5. **X header:** `upload/x-header-1500x500.jpg`. X is phone-only for Wil right now, so send him both X files (header + profile picture).
 6. After each swap, check the profile on a phone in light and dark mode against `upload/preview-all-platforms.png`.
+7. **Quote-card template:** swap the card's avatar to `upload/ae-avatar-1080.png` so cards match the profile picture.
 
 ## YouTube banner audit, from the live 2560×1440 file
 
