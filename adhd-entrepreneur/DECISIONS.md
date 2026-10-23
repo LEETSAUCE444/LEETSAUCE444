@@ -2,6 +2,20 @@
 
 Locked decisions only, newest first. Claude and Zucc build on these and don't reopen them unless Wil does. Anything still open is listed at the bottom.
 
+## Oct 23, 2026: how Wil wants Zucc and Claude to work (Wil's own words, given to Claude)
+
+- **Formats.**
+  - **Reel:** one video goes to Instagram, TikTok and YouTube Shorts.
+  - **X:** the line as plain text. Wil posts it from his phone for at least the first week, so the account doesn't get flagged; Zucc has no X access yet.
+  - **Collage:** Instagram and TikTok also get a daily 6-slide swipe collage with music. It adds variety and shareability: a quote someone likes more than the others gets saved, shared or posted to their story.
+- **Zucc and Claude write the lines together** and agree on what gets made.
+  - **Before posting:** Zucc checks with Claude for a peer edit.
+  - **After posting:** they review the analytics, what to improve, and Zucc's research.
+- **Wil has the final say.**
+  - Anything that needs Wil goes to him through the Zucc chat.
+  - When Claude and Zucc disagree, or need his call, the question goes in the **"Questions for Wil" tab** on Claude's calendar page. The page shows Claude's option, Zucc's option, and an in-between option they both accept. Wil picks one or writes his own.
+  - The page is private to Wil, so Zucc posts his vote on PR #1 as `[Zucc] vote: <question>: <option> because <one line>`. Claude adds it to the page and passes Wil's decision back on PR #1.
+
 ## Oct 23, 2026
 
 - **Faceless brand.** No face on any account, card, video or site page. Founder posts are written in the first person, without a face.
@@ -19,7 +33,7 @@ Locked decisions only, newest first. Claude and Zucc build on these and don't re
   - Calendar Day 15 (Nov 5) assumes the link hub is live. If it isn't, swap Day 15 with Day 16 (already written into the calendar).
 - **Domain.** `adhdentrepreneurhq.com` was unregistered on Oct 23 (.com registry lookup). It isn't held until someone registers it.
 - **Loadout #1 decisions.**
-  - 14-day refund
+  - 14-day refund: in the Questions tab (`q-refund`), waiting on Zucc's vote and Wil's pick
   - support hours per week
   - launch date
   - the Loadout #1 spec itself (Claude needs it for the funnel copy)

@@ -102,14 +102,58 @@ pre { margin: 0; padding: 12px; font: 13px/1.5 var(--mono); white-space: pre-wra
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 html { scroll-behavior: smooth; }
+/* Questions for Wil: tabs + decision cards (same tokens as the calendar) */
+.tabs { display: flex; gap: 0; margin-bottom: 22px; border-bottom: 2px solid var(--ink); }
+.tab { border: 0; border-bottom: 3px solid transparent; background: none; padding: 10px 14px 9px; font: 700 15px var(--display); color: var(--muted); }
+.tab[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); background: none; }
+.tab .count { display: inline-block; min-width: 20px; padding: 2px 6px; margin-left: 6px; font: 600 12px/1.2 var(--mono); background: var(--ink); color: var(--paper); }
+.q-top { border-bottom: 2px solid var(--ink); }
+.q-state { color: var(--muted); margin: 18px 0 0; }
+.q-list { display: grid; gap: 18px; margin-top: 18px; }
+.q-sub { font: 800 22px var(--display); margin: 34px 0 0; border-bottom: 1px solid var(--ink); padding-bottom: 8px; }
+.q { border: 1.5px solid var(--ink); background: var(--card); padding: 18px 20px; display: grid; gap: 12px; max-width: 720px; min-width: 0; }
+.q.done { border-color: var(--rule); }
+.q-meta { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; color: var(--muted); }
+.q h3 { font: 800 21px/1.25 var(--display); margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+.q-ctx { margin: 0; color: var(--muted); max-width: 62ch; }
+.q fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 10px; min-width: 0; }
+.q legend { position: absolute; left: -9999px; }
+.opt { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 12px; align-items: start; padding: 12px 14px; border: 1.5px solid var(--rule); cursor: pointer; }
+.opt:has(input:checked) { border-color: var(--ink); background: var(--wash); }
+.opt input { margin: 4px 0 0; accent-color: var(--ink); width: 18px; height: 18px; grid-row: span 3; }
+.opt b { font: 700 16px/1.3 var(--display); }
+.opt .why { color: var(--muted); font-size: 14px; }
+.by { justify-self: start; font: 600 11px/1 var(--display); text-transform: uppercase; letter-spacing: .08em; padding: 4px 6px; border: 1.5px solid var(--ink); }
+.by-claude { background: var(--ink); color: var(--paper); }
+.by-zucc { border-style: dashed; }
+.by-both { background: var(--mid); color: var(--paper); border-color: var(--mid); }
+.by-alt, .by-own { border-color: var(--mid); color: var(--muted); }
+.q-note { display: grid; gap: 6px; }
+.q-note label { font: 700 11px var(--display); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+.q-note textarea { font: 15px/1.4 var(--body); color: var(--ink); background: var(--paper); border: 1.5px solid var(--rule); padding: 10px; min-height: 64px; resize: vertical; width: 100%; box-sizing: border-box; }
+.q-note textarea:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; }
+.q-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.q-actions .primary { background: var(--ink); color: var(--paper); }
+.q-actions .primary:disabled { opacity: .45; cursor: not-allowed; }
+.q-msg { color: var(--muted); }
+.q-msg.err { color: var(--ink); font-weight: 600; }
+.zucc-wait { margin: 0; color: var(--muted); font-style: italic; }
+.picked { display: grid; gap: 4px; padding: 12px 14px; background: var(--wash); border-left: 3px solid var(--ink); }
+.picked .mono { color: var(--muted); }
+
 </style>
 
 <div class="wrap">
+  <nav class="tabs" aria-label="Page sections">
+    <button type="button" class="tab" id="tab-calendar" data-view="calendar" aria-pressed="true">Calendar</button>
+    <button type="button" class="tab" id="tab-questions" data-view="questions" aria-pressed="false">Questions for Wil <span class="count" id="q-count" hidden></span></button>
+  </nav>
+  <section id="view-calendar">
   <header class="top">
     <div>
       <div class="label">ADHD Entrepreneur · content calendar</div>
       <h1>30 days, one line a day</h1>
-      <p class="lede">Day 1 was Thu Oct 22. Day 30 is Fri Nov 20, 2026. All 13 bank lines are used, plus 15 new lines, approved Oct 23. Zucc builds and posts. Wil approves each post.</p>
+      <p class="lede">Day 1 was Thu Oct 22. Day 30 is Fri Nov 20, 2026. All 13 bank lines are used, plus 15 new lines, approved Oct 23. Zucc builds and posts the reels and collages, Claude peer-edits before anything goes out, and Wil posts X and has the final say.</p>
     </div>
     <div>
       <div class="label">Content mix</div>
@@ -129,7 +173,8 @@ html { scroll-behavior: smooth; }
       </div>
     </div>
     <ul class="rules">
-      <li><b>Same sentence everywhere</b>Card video on IG, TikTok and YouTube Shorts. X gets the line as plain text, with no music and no hashtags.</li>
+      <li><b>One reel everywhere</b>The same card video goes to IG, TikTok and YouTube Shorts. X gets the line as plain text, with no music and no hashtags. Wil posts X from his phone for at least the first week.</li>
+      <li><b>Daily 6-slide collage</b>IG and TikTok also get a swipe collage with music, built for saves and shares. Zucc and Claude write the six lines together each morning, and Claude checks them against this calendar so none repeats a reel line.</li>
       <li><b>No links before Day 15</b>From Nov 5, the "Quiz in bio" line goes on Day 15 and on the AI days. If the link hub isn't live yet, leave it off.</li>
       <li><b>AI news swap</b>On an AI day, the scout can swap in a fresh AI-news line if it comes from the primary source, is under 7 days old, is one 5–15 word law with no hype, and Wil approves it. The planned line becomes a spare.</li>
       <li><b>Founder posts carry conditions</b>Days 7, 15 and 30 state facts. Each one goes out only if the fact is true that day. Every condition is written on its day.</li>
@@ -1287,6 +1332,21 @@ Thirty days ago I promised myself one post a day. Promise kept. Day 30. What pro
 
 **Condition:** Callback to Day 1. Post only if all 30 went out. If not, use: &quot;Thirty days in. I missed [N]. I didn&#x27;t quit. That&#x27;s the whole trick.&quot;
 </textarea>
+  </section>
+
+  <section id="view-questions" hidden>
+    <header class="top q-top">
+      <div>
+        <div class="label">ADHD Entrepreneur · decisions</div>
+        <h1>Questions for Wil</h1>
+        <p class="lede">When Claude and Zucc need your call, or disagree, the question lands here. Each option says who proposed it. "Both agree" marks an in-between that Claude and Zucc can both live with. Pick one, or write your own call. Claude reads your picks and passes them to Zucc on PR #1. You have the final say.</p>
+      </div>
+    </header>
+    <p class="q-state mono" id="q-state">Loading questions…</p>
+    <div class="q-list" id="q-open"></div>
+    <h2 class="q-sub" id="q-done-h" hidden>Decided</h2>
+    <div class="q-list" id="q-done"></div>
+  </section>
 </div>
 
 <script>
@@ -1329,4 +1389,187 @@ Thirty days ago I promised myself one post a day. Promise kept. Day 30. What pro
   var t = new Date(), iso = t.getFullYear() + "-" + String(t.getMonth() + 1).padStart(2, "0") + "-" + String(t.getDate()).padStart(2, "0");
   document.querySelectorAll('[data-date="' + iso + '"]').forEach(function (el) { el.classList.add("today"); });
 })();
+/* Questions for Wil: tabs, plus decision cards stored in the artifact db.
+   questions/<id> = { title, context, topic, created: "YYYY-MM-DD",
+     status: "open" | "decided",
+     options: [{ id, by: "claude" | "zucc" | "both" | "alt", label, why }],
+     zucc: "pending" | "in",
+     pick: { option, label, note, at } }
+   Claude seeds and reads these with ArtifactData; the page only writes `status` and `pick`. */
+(function () {
+  var views = { calendar: document.getElementById("view-calendar"), questions: document.getElementById("view-questions") };
+  var tabs = document.querySelectorAll(".tab");
+  function show(name) {
+    if (!views[name]) name = "calendar";
+    Object.keys(views).forEach(function (k) { views[k].hidden = k !== name; });
+    tabs.forEach(function (t) { t.setAttribute("aria-pressed", t.dataset.view === name ? "true" : "false"); });
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener("click", function () {
+      show(t.dataset.view);
+      try { history.replaceState(null, "", "#" + t.dataset.view); } catch (e) {}
+    });
+  });
+  show((location.hash || "").slice(1));
+
+  var BY = { claude: "Claude's pick", zucc: "Zucc's pick", both: "Both agree", alt: "Other option", own: "You" };
+  var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var stateEl = document.getElementById("q-state");
+  var openEl = document.getElementById("q-open");
+  var doneEl = document.getElementById("q-done");
+  var doneH = document.getElementById("q-done-h");
+  var countEl = document.getElementById("q-count");
+  var drafts = {}, editing = {}, db = null, latest = [];
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  function day(iso) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(iso || ""));
+    return m ? MONTHS[+m[2] - 1] + " " + (+m[3]) : "";
+  }
+
+  function card(id, q) {
+    var c = el("article", "q");
+    var meta = el("div", "q-meta");
+    if (q.topic) meta.appendChild(el("span", "chip", q.topic));
+    if (q.created) meta.appendChild(el("span", "mono", "asked " + day(q.created)));
+    c.appendChild(meta);
+    c.appendChild(el("h3", null, q.title || "Untitled question"));
+    if (q.context) c.appendChild(el("p", "q-ctx", q.context));
+
+    var d = drafts[id] || (drafts[id] = { option: q.pick ? q.pick.option : "", note: q.pick ? q.pick.note || "" : "" });
+    var fs = el("fieldset");
+    fs.appendChild(el("legend", null, "Options"));
+    var opts = (Array.isArray(q.options) ? q.options : []).concat([{ id: "own", by: "own", label: "My own call", why: "Write it in the note below." }]);
+    opts.forEach(function (o) {
+      var lab = el("label", "opt");
+      var inp = document.createElement("input");
+      inp.type = "radio"; inp.name = "q-" + id; inp.value = o.id; inp.id = "q-" + id + "-" + o.id;
+      inp.checked = d.option === o.id;
+      inp.addEventListener("change", function () { d.option = o.id; });
+      lab.appendChild(inp);
+      lab.appendChild(el("span", "by by-" + (BY[o.by] ? o.by : "alt"), BY[o.by] || BY.alt));
+      lab.appendChild(el("b", null, o.label || ""));
+      if (o.why) lab.appendChild(el("span", "why", o.why));
+      fs.appendChild(lab);
+    });
+    c.appendChild(fs);
+    if (q.zucc !== "in") c.appendChild(el("p", "zucc-wait", "Zucc hasn't weighed in yet."));
+
+    var nw = el("div", "q-note");
+    var nl = el("label", null, "Note (optional, required for your own call)");
+    nl.htmlFor = "note-" + id;
+    var ta = document.createElement("textarea");
+    ta.id = "note-" + id; ta.value = d.note;
+    ta.addEventListener("input", function () { d.note = ta.value; });
+    nw.appendChild(nl); nw.appendChild(ta);
+    c.appendChild(nw);
+
+    var act = el("div", "q-actions");
+    var btn = el("button", "primary", "Approve my choice");
+    btn.type = "button";
+    var msg = el("span", "q-msg mono");
+    msg.setAttribute("aria-live", "polite");
+    btn.addEventListener("click", function () { save(id, q, opts, btn, msg); });
+    act.appendChild(btn);
+    if (editing[id]) {
+      var cancel = el("button", null, "Keep my earlier answer");
+      cancel.type = "button";
+      cancel.addEventListener("click", function () { delete editing[id]; delete drafts[id]; render(latest); });
+      act.appendChild(cancel);
+    }
+    act.appendChild(msg);
+    c.appendChild(act);
+    return c;
+  }
+
+  function doneCard(id, q) {
+    var c = el("article", "q done");
+    var meta = el("div", "q-meta");
+    if (q.topic) meta.appendChild(el("span", "chip", q.topic));
+    if (q.pick && q.pick.at) meta.appendChild(el("span", "mono", "decided " + day(q.pick.at)));
+    c.appendChild(meta);
+    c.appendChild(el("h3", null, q.title || "Untitled question"));
+    var p = el("div", "picked");
+    p.appendChild(el("b", null, "You picked: " + ((q.pick && q.pick.label) || "")));
+    if (q.pick && q.pick.note) p.appendChild(el("span", null, q.pick.note));
+    c.appendChild(p);
+    var act = el("div", "q-actions");
+    var b = el("button", null, "Change my answer");
+    b.type = "button";
+    b.addEventListener("click", function () { editing[id] = true; render(latest); });
+    act.appendChild(b);
+    c.appendChild(act);
+    return c;
+  }
+
+  function save(id, q, opts, btn, msg) {
+    var d = drafts[id] || {};
+    msg.classList.remove("err");
+    if (!d.option) { msg.textContent = "Pick an option first."; return; }
+    var note = (d.note || "").trim();
+    if (d.option === "own" && !note) { msg.textContent = "Write your own call in the note."; return; }
+    var chosen = opts.filter(function (o) { return o.id === d.option; })[0];
+    var pick = { option: d.option, label: d.option === "own" ? "My own call" : chosen ? chosen.label : d.option, note: note, at: new Date().toISOString() };
+    btn.disabled = true;
+    msg.textContent = "Saving…";
+    var ref = db.doc("questions/" + id);
+    function attempt(retry) {
+      return ref.update({ status: "decided", pick: pick }).then(function () {
+        delete editing[id]; delete drafts[id];
+        stateEl.textContent = "Saved. Claude will pass it to Zucc on PR #1.";
+      }, function (e) {
+        if (e && e.code === "unavailable" && retry) {
+          return new Promise(function (r) { setTimeout(r, 600 + Math.random() * 900); }).then(function () { return attempt(false); });
+        }
+        btn.disabled = false;
+        msg.classList.add("err");
+        msg.textContent = e && e.code === "invalid_argument" ? "Only Wil's account can vote here." : "Couldn't save. Try again.";
+      });
+    }
+    attempt(true);
+  }
+
+  function render(docs) {
+    latest = docs;
+    var open = [], done = [];
+    docs.forEach(function (s) {
+      var q = s.data() || {};
+      (q.status === "decided" && !editing[s.id] ? done : open).push([s.id, q]);
+    });
+    open.sort(function (a, b) { return String(a[1].created || "").localeCompare(String(b[1].created || "")); });
+    done.sort(function (a, b) { return String((b[1].pick || {}).at || "").localeCompare(String((a[1].pick || {}).at || "")); });
+    openEl.replaceChildren.apply(openEl, open.map(function (x) { return card(x[0], x[1]); }));
+    doneEl.replaceChildren.apply(doneEl, done.map(function (x) { return doneCard(x[0], x[1]); }));
+    doneH.hidden = done.length === 0;
+    var n = open.filter(function (x) { return x[1].status !== "decided"; }).length;
+    countEl.textContent = String(n);
+    countEl.hidden = n === 0;
+    if (!docs.length) stateEl.textContent = "No questions right now. New ones show up here when Claude or Zucc need your call.";
+    else if (!n) stateEl.textContent = stateEl.textContent.indexOf("Saved") === 0 ? stateEl.textContent : "Nothing waiting on you.";
+    else stateEl.textContent = n === 1 ? "1 question waiting on you." : n + " questions waiting on you.";
+  }
+
+  if (!window.claude || typeof window.claude.use !== "function") {
+    stateEl.textContent = "Voting works when this page is open in claude.ai while you're signed in.";
+    return;
+  }
+  window.claude.use("db").then(function (handle) {
+    if (!handle) {
+      stateEl.textContent = "Voting works when this page is open in claude.ai while you're signed in.";
+      return;
+    }
+    db = handle;
+    db.collection("questions").onSnapshot(function (snap) { render(snap.docs); }, function () {
+      stateEl.textContent = "Questions couldn't load. Reload the page.";
+    });
+  }, function () {
+    stateEl.textContent = "Voting works when this page is open in claude.ai while you're signed in.";
+  });
+})();
+
 </script>

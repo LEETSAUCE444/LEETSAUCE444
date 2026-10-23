@@ -117,7 +117,7 @@ def main():
     page = TEMPLATE.format(
         strip=strip_html(rows), days="\n".join(body), md=esc(md), av=av,
         r=counts["R"], t=counts["T"], a=counts["A"], f=counts["F"],
-        new=sum(r["source"] == "new" for r in rows))
+        new=sum(r["source"] == "new" for r in rows), qcss=QCSS, qjs=QJS)
     with open(os.path.join(HERE, "calendar-30.html"), "w") as fh:
         fh.write(page)
     print("wrote calendar-30.html", len(page) // 1024, "KB")
@@ -227,14 +227,20 @@ pre {{ margin: 0; padding: 12px; font: 13px/1.5 var(--mono); white-space: pre-wr
 }}
 @media (prefers-reduced-motion: reduce) {{ * {{ scroll-behavior: auto !important; }} }}
 html {{ scroll-behavior: smooth; }}
+{qcss}
 </style>
 
 <div class="wrap">
+  <nav class="tabs" aria-label="Page sections">
+    <button type="button" class="tab" id="tab-calendar" data-view="calendar" aria-pressed="true">Calendar</button>
+    <button type="button" class="tab" id="tab-questions" data-view="questions" aria-pressed="false">Questions for Wil <span class="count" id="q-count" hidden></span></button>
+  </nav>
+  <section id="view-calendar">
   <header class="top">
     <div>
       <div class="label">ADHD Entrepreneur · content calendar</div>
       <h1>30 days, one line a day</h1>
-      <p class="lede">Day 1 was Thu Oct 22. Day 30 is Fri Nov 20, 2026. All 13 bank lines are used, plus {new} new lines, approved Oct 23. Zucc builds and posts. Wil approves each post.</p>
+      <p class="lede">Day 1 was Thu Oct 22. Day 30 is Fri Nov 20, 2026. All 13 bank lines are used, plus {new} new lines, approved Oct 23. Zucc builds and posts the reels and collages, Claude peer-edits before anything goes out, and Wil posts X and has the final say.</p>
     </div>
     <div>
       <div class="label">Content mix</div>
@@ -254,7 +260,8 @@ html {{ scroll-behavior: smooth; }}
       </div>
     </div>
     <ul class="rules">
-      <li><b>Same sentence everywhere</b>Card video on IG, TikTok and YouTube Shorts. X gets the line as plain text, with no music and no hashtags.</li>
+      <li><b>One reel everywhere</b>The same card video goes to IG, TikTok and YouTube Shorts. X gets the line as plain text, with no music and no hashtags. Wil posts X from his phone for at least the first week.</li>
+      <li><b>Daily 6-slide collage</b>IG and TikTok also get a swipe collage with music, built for saves and shares. Zucc and Claude write the six lines together each morning, and Claude checks them against this calendar so none repeats a reel line.</li>
       <li><b>No links before Day 15</b>From Nov 5, the "Quiz in bio" line goes on Day 15 and on the AI days. If the link hub isn't live yet, leave it off.</li>
       <li><b>AI news swap</b>On an AI day, the scout can swap in a fresh AI-news line if it comes from the primary source, is under 7 days old, is one 5–15 word law with no hype, and Wil approves it. The planned line becomes a spare.</li>
       <li><b>Founder posts carry conditions</b>Days 7, 15 and 30 state facts. Each one goes out only if the fact is true that day. Every condition is written on its day.</li>
@@ -276,6 +283,21 @@ html {{ scroll-behavior: smooth; }}
   {days}
 
   <textarea id="all-md" readonly aria-hidden="true" tabindex="-1">{md}</textarea>
+  </section>
+
+  <section id="view-questions" hidden>
+    <header class="top q-top">
+      <div>
+        <div class="label">ADHD Entrepreneur · decisions</div>
+        <h1>Questions for Wil</h1>
+        <p class="lede">When Claude and Zucc need your call, or disagree, the question lands here. Each option says who proposed it. "Both agree" marks an in-between that Claude and Zucc can both live with. Pick one, or write your own call. Claude reads your picks and passes them to Zucc on PR #1. You have the final say.</p>
+      </div>
+    </header>
+    <p class="q-state mono" id="q-state">Loading questions…</p>
+    <div class="q-list" id="q-open"></div>
+    <h2 class="q-sub" id="q-done-h" hidden>Decided</h2>
+    <div class="q-list" id="q-done"></div>
+  </section>
 </div>
 
 <script>
@@ -318,8 +340,12 @@ html {{ scroll-behavior: smooth; }}
   var t = new Date(), iso = t.getFullYear() + "-" + String(t.getMonth() + 1).padStart(2, "0") + "-" + String(t.getDate()).padStart(2, "0");
   document.querySelectorAll('[data-date="' + iso + '"]').forEach(function (el) {{ el.classList.add("today"); }});
 }})();
+{qjs}
 </script>
 """
+
+QCSS = open(os.path.join(HERE, "questions.css")).read()
+QJS = open(os.path.join(HERE, "questions.js")).read()
 
 if __name__ == "__main__":
     main()
