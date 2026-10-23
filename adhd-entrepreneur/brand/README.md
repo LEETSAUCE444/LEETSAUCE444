@@ -4,14 +4,13 @@ Profile picture fix (Job #1), banner audit and X header (Job #2). Everything her
 
 ## Status (Oct 23, 2026)
 
+**Approved by Wil:** full-bleed avatar (A) with a **bold color split on the whole A**, and a **bold split on "ADHD"** in the YouTube banner and X header. The upload set is in `upload/`.
+
 | Item | State |
 |---|---|
-| Avatar masters | **Wil picked A (full-bleed), Oct 23.** Still a draft built from the copy YouTube serves (980 px). Final masters get rebuilt from `logo-final-perfect.jpg` once Wil uploads it, with one command (below). |
-| Avatar previews (IG / YT / TikTok / X, light + dark) | Ready for approval, in `previews/` |
-| YouTube banner audit | Done. Passes on every device. One stray hairline, TV only. |
-| Clean YouTube banner | Ready for approval, in `banner/` |
-| X header 1500×500 | Ready for approval, in `banner/` |
-| Color split ("light moving fast") | Banners: **bold, whole word "ADHD"**: `banner/*-split-bold-*.jpg`, upload-ready. Avatar: if used, **bold, letter only** (the grey echo strokes stay grey so the hidden "AI" read survives). Wil's call between that and plain. Explorations are in `explorations/color-split/`, built by `tools/colorsplit.py`. |
+| Upload set (`upload/`) | **Ready.** The avatar is built from the copy YouTube serves (980 px, upscaled 1.10× to 1080). Every platform displays it at 800 px or less, so it is full quality on screen. When Wil sends `logo-final-perfect.jpg`, one command rebuilds the set from the original (below). |
+| YouTube banner audit | Done. Passes on every device. The stray TV-only hairline is removed in the upload version. |
+| Earlier options | A vs B previews in `previews/`, color-split strengths in `explorations/color-split/`. Kept for the record. |
 
 ## What was wrong with the profile picture
 
@@ -28,7 +27,11 @@ The AE letters and echo strokes are the original pixels, scaled with the circle.
 ## Files
 
 ```
-avatar/draft/  ae-avatar-fullbleed-1080.png/.jpg   A. upload this everywhere
+upload/        ae-avatar-1080.png/.jpg             THE profile picture, all four platforms
+               youtube-banner-2560x1440.jpg        THE YouTube banner
+               x-header-1500x500.jpg               THE X header
+               preview-all-platforms.png           the set on IG / YouTube / TikTok / X, light + dark
+avatar/draft/  ae-avatar-fullbleed-1080.png/.jpg   A without the split
                ae-avatar-safe4-1080.png/.jpg       B. fallback: circle at 92%, thin black ring
                ae-avatar-circle-on-black-1080.png  square places only (website, favicon). NOT for profiles
                report.txt                          every measurement
@@ -41,7 +44,7 @@ banner/        youtube-banner-audit.png            safe zones drawn on the live 
 previews/      preview-{instagram,youtube,tiktok,x}.png   A vs B, light + dark mode
                edge-check-before-after.png         live crops vs new, all 4 edges magnified
 source/        the live files pulled from YouTube and TikTok (for the record)
-tools/         avatar.py, banner.py, mockups.py
+tools/         avatar.py, banner.py, mockups.py, colorsplit.py, final.py
 ```
 
 ## Rebuild from the original logo (one command)
@@ -49,20 +52,21 @@ tools/         avatar.py, banner.py, mockups.py
 ```bash
 cd adhd-entrepreneur/brand
 cp /path/to/logo-final-perfect.jpg source/
-python3 tools/avatar.py source/logo-final-perfect.jpg avatar/final
-python3 tools/mockups.py avatar/final banner previews \
-  --before source/youtube-avatar-live-980.jpg source/tiktok-avatar-live-968.jpg
+python3 tools/final.py source/logo-final-perfect.jpg banner upload
 ```
+
+`final.py` runs the whole approved recipe: fit the circle, center the letters, go full-bleed, apply the bold split to the whole A, split "ADHD" on both banners, and render the preview sheet.
 
 Requires Python 3 with Pillow and NumPy. The mockups use the Inter font.
 
-## Upload steps for Zucc (only after Wil approves A or B)
+## Upload steps for Zucc
 
-1. Use the same file on all four platforms: `ae-avatar-fullbleed-1080.jpg`, or the `safe4` file if Wil picks B.
+1. **Profile picture:** use `upload/ae-avatar-1080.jpg` on all four platforms.
 2. When the app shows its crop/zoom box, **leave it at full size. Don't zoom and don't drag.** The file is already exact, so any zoom cuts into it.
 3. Go one platform per run, signed-in account verified first, as usual. TikTok: confirm it is **@adhdentrepreneurhq** and not the trap account.
-4. The X banner goes in X's header slot, `x-header-1500x500.jpg`. X is phone-only for Wil right now, so send him the file.
-5. YouTube banner (optional): `youtube-banner-clean-2560x1440.jpg`. It only matters on TV, where it removes the hairline, and it centers the wordmark 26 px lower.
+4. **YouTube banner:** `upload/youtube-banner-2560x1440.jpg`. When YouTube shows its device preview, the wordmark should sit centered in every crop.
+5. **X header:** `upload/x-header-1500x500.jpg`. X is phone-only for Wil right now, so send him both X files (header + profile picture).
+6. After each swap, check the profile on a phone in light and dark mode against `upload/preview-all-platforms.png`.
 
 ## YouTube banner audit, from the live 2560×1440 file
 
