@@ -7,7 +7,13 @@
 
 **Faceless.** The brand stands behind every kit, and Wil's name appears nowhere.
 
-**Goal (Wil, Oct 24):** the first $100 earned within 30 days after the first kit goes on sale.
+**Goal (Wil, Oct 24):** the first $100 earned within 30 days after the first kit is live and Stripe can take payment.
+
+**Direction (Wil, via Zucc, Oct 24):**
+- About 4 kits for 4 scenarios under the AI-automated-business umbrella, some leaning toward physical businesses, automation-first throughout.
+- Stacks: Claude plus Meta AI tools.
+- "Duet-aware": to be defined.
+- No Grokbot kit until there's real data on it.
 
 **Status (Oct 23, 2026):** planning only. Nothing goes live until Wil says go. That covers the website, checkout, prices and refund mechanics.
 

@@ -2,6 +2,24 @@
 
 Locked decisions only, newest first. Claude and Zucc build on these and don't reopen them unless Wil does. Anything still open is listed at the bottom.
 
+## Oct 24, 2026 (morning): relayed by Zucc from Wil
+
+- **Goal timer.** The 30-day first-$100 clock starts only once a kit is built, live **and** Stripe is connected so buyers can pay.
+- **Website moved up, for Stripe activation.** Stripe setup is paused at the website-URL step. Claude builds a simple brand site:
+  - a home page and a policies page (refund and guarantee, terms, privacy), with no funnel yet
+  - first on a preview URL, moving to the domain later
+  - going public only after Wil approves where it's hosted
+- **Design reference.** The "AuthKit, frosted glass cathedral at midnight" system, adapted with the ADHD Entrepreneur wordmark and none of WorkOS's branding.
+  - The violet accent conflicts with the black-and-white brand lock, so it's a question for Wil (`q-accent`).
+  - Higgsfield is ruled out.
+  - Refero Styles is the candidate inspiration library, awaiting Wil's confirmation.
+- **Kits direction (next week).**
+  - About 4 kits for 4 scenarios under the AI-automated-business umbrella, some leaning toward physical businesses, automation-first throughout.
+  - Stacks are Claude plus Meta AI tools (Meta AI, not Meta ads or social).
+  - "Duet-aware" is still to be defined.
+  - No Grokbot kit until there's real data on it.
+- **Comment-to-quiz path approved.** Once the quiz is live, posts end with "comment QUIZ" and each person who asks gets a reply by hand with the link. There's no automation. Zucc read this as making the quiz and welcome emails a hard Nov 5 deadline, which Claude is confirming with Wil.
+
 ## Oct 24, 2026: first-$100 goal moved (Wil, relayed by Zucc on PR #1)
 
 - **The first-$100 goal now runs from the first kit's launch.** The target is the first $100 earned within 30 days after the first starter kit goes on sale, with the exact date set on launch day.
@@ -48,6 +66,7 @@ Locked decisions only, newest first. Claude and Zucc build on these and don't re
 
 ## Open
 
+- **Website for Stripe.** Draft in `site/`. Waiting on Wil for three things: the accent color (`q-accent`), the legal name on the policies (`q-legal`), and the go-ahead on hosting for the public preview.
 - **Starter-kit plan check-in, around Fri Oct 30.** Claude reminds Wil and Zucc that day. The open items are in `kits/PLAN.md`:
   - the price
   - the deadline length per kit
