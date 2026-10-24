@@ -7,6 +7,8 @@
 
 **Faceless.** The brand stands behind every kit, and Wil's name appears nowhere.
 
+**Goal (Wil, Oct 24):** the first $100 earned within 30 days after the first kit goes on sale.
+
 **Status (Oct 23, 2026):** planning only. Nothing goes live until Wil says go. That covers the website, checkout, prices and refund mechanics.
 
 ---

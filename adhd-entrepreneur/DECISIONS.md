@@ -2,6 +2,12 @@
 
 Locked decisions only, newest first. Claude and Zucc build on these and don't reopen them unless Wil does. Anything still open is listed at the bottom.
 
+## Oct 24, 2026: first-$100 goal moved (Wil, relayed by Zucc on PR #1)
+
+- **The first-$100 goal now runs from the first kit's launch.** The target is the first $100 earned within 30 days after the first starter kit goes on sale, with the exact date set on launch day.
+- **Nov 20 no longer has a goal attached.** The posting calendar is unchanged: Day 30 is still Fri Nov 20.
+- **Until a kit is on sale,** the account is judged by the weekly scorecard (`analytics/SCORECARD.md`).
+
 ## Oct 23, 2026 (evening): starter kits and website (Wil)
 
 - **Claude is in charge** of the website, the tools and the AI starter kits. **Zucc helps** with research. **Wil oversees** and has the final say.
@@ -48,7 +54,6 @@ Locked decisions only, newest first. Claude and Zucc build on these and don't re
   - cash-back vs store-credit option
   - the Hims & Hers quiz breakdown (Zucc to post)
   - which AI tools run referral programs
-- **First-$100 goal (brief: by Fri Nov 20).** In the Questions tab (`q-goal`), waiting on Zucc's vote and Wil's pick.
 - **Calendar Day 15 (Nov 5).** Its line assumed a link going live. Zucc and Claude bring a replacement founder line to the Nov 4 pre-post.
 - **Domain.** `adhdentrepreneurhq.com` was unregistered on Oct 23 (.com registry lookup). It isn't held until someone registers it.
 - **From Zucc.**

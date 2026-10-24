@@ -1,7 +1,7 @@
 # ADHD Entrepreneur — Analytics Log
 Started 2026-10-22 (Day 1). Primary signal: saves + shares per reach. Likes are secondary. One concrete adjustment feeds into the next post every day (per the posting skill).
 
-Validation clock: Day 1 = Thu 2026-10-22 → Day 30 = Fri 2026-11-20. Goal: first $100 earned by Day 30.
+Posting clock: Day 1 = Thu 2026-10-22 → Day 30 = Fri 2026-11-20. Goal (moved Oct 24 by Wil): first $100 earned within 30 days after the first starter kit goes on sale. The date is set on launch day.
 
 ## Day 1 — Thu 2026-10-22
 Quote: "Life gets a lot simpler when you stop breaking promises to yourself." · Song: She (posts 1–3)
