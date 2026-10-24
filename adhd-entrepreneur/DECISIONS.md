@@ -4,6 +4,7 @@ Locked decisions only, newest first. Claude and Zucc build on these and don't re
 
 ## Oct 24, 2026 (morning): relayed by Zucc from Wil
 
+- **Instagram goes to a Creator account** (not Business, and not staying personal), switched in the app with the category Entrepreneur. Zucc checks the music library right after. From then on, the evening numbers come from Insights.
 - **Goal timer.** The 30-day first-$100 clock starts only once a kit is built, live **and** Stripe is connected so buyers can pay.
 - **Website moved up, for Stripe activation.** Stripe setup is paused at the website-URL step. Claude builds a simple brand site:
   - a home page and a policies page (refund and guarantee, terms, privacy), with no funnel yet
