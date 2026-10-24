@@ -100,7 +100,15 @@ Checkout comes only after all of that.
 - No medical or ADHD questions. The brand doesn't diagnose anyone.
 - Every question earns its place by changing the result.
 
-**Needed:** the breakdown of the Hims & Hers quiz flowchart that Wil sent Zucc. Zucc, please post it on PR #1.
+**Build pattern**, from Zucc's breakdown in `research/hims-quiz-funnel-breakdown.md`:
+- **Archetypes first.** Draft buyer types, refined later from real comments, DMs and buyer data, saved as `archetypes.md`.
+- **Question count:** 6–8 questions. Two shared openers, then branches per type built from that type's pain points. Include 2 open questions, and word each question the way that type talks.
+- **Classify after every answer** with a Claude call, not a third-party vendor, so prospect data stays with us. Switch to a type's branch once it is clearly ahead.
+- **One result page per type.**
+- **Log every answer under an anonymous ID** to see which questions lose people.
+- **Price and exact terms shown before submit.**
+
+Note: Zucc's breakdown cites a lawsuit against Hims & Hers over billing, cancellation and data sharing. Claude hasn't verified the case details. Its lessons are already in our rules either way.
 
 ---
 
