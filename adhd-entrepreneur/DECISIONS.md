@@ -19,7 +19,8 @@ Locked decisions only, newest first. Claude and Zucc build on these and don't re
   - Stacks are Claude plus Meta AI tools (Meta AI, not Meta ads or social).
   - "Duet-aware" is still to be defined.
   - No Grokbot kit until there's real data on it.
-- **Comment-to-quiz path approved.** Once the quiz is live, posts end with "comment QUIZ" and each person who asks gets a reply by hand with the link. There's no automation. Zucc read this as making the quiz and welcome emails a hard Nov 5 deadline, which Claude is confirming with Wil.
+- **Comment-to-quiz path approved.** Once the quiz is live, posts end with "comment QUIZ" and each person who asks gets a reply by hand with the link. There's no automation. Nov 5 (Day 15) is only the calendar's link date. Zucc corrected his own "hard deadline" wording on Oct 24, and Wil hasn't set a quiz deadline.
+- **"Duet-aware" kits.** Duet is Claude's new product, announced Oct 21 as a research preview. Wil is on the waitlist. What "Duet-aware" means for the kits is still Wil's to define.
 
 ## Oct 24, 2026: first-$100 goal moved (Wil, relayed by Zucc on PR #1)
 
