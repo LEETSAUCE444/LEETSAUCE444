@@ -102,6 +102,6 @@ Every goal is a **draft until Wil approves it**. Goals are always about somethin
 
 | Tool | Has a program? | Terms worth knowing | Checked by Claude |
 |---|---|---|---|
-| Claude | to verify | | |
+| Claude | No public affiliate program, per Zucc's Oct 21 spec | Link stays plain, disclosed as non-affiliate | Re-verify at launch |
 | ChatGPT | to verify | | |
 | Gemini | to verify | | |

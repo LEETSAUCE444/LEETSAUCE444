@@ -15,6 +15,13 @@
 - "Duet-aware": to be defined.
 - No Grokbot kit until there's real data on it.
 
+**Earlier spec:** `loadout-1-spec.md` and `loadout-business-claude-kickoff.md` (Oct 21) hold the first full spec: The Operator Loadout, its 6 crew role kits and 4 business tracks. Where they conflict with Wil's later calls, the later calls win:
+- the challenge offer instead of a 14-day refund
+- 4 kits for 4 scenarios with Claude plus Meta AI, instead of Claude-only
+- faceless
+
+Everything else in them stands: the honest promise, the true-cost table, the banned claims and the build gates.
+
 **Status (Oct 23, 2026):** planning only. Nothing goes live until Wil says go. That covers the website, checkout, prices and refund mechanics.
 
 ---
