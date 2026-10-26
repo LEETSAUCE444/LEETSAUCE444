@@ -15,6 +15,34 @@ Every goal is a **draft until Wil approves it**. Goals are always about somethin
 
 ---
 
+## Proposal (Oct 26): the first 4 kits
+
+**Status:** Claude's proposal for Wil's direction. Wil asked for about 4 kits for 4 scenarios under the AI-automated-business umbrella, some leaning toward physical businesses, automation-first, built on Claude plus Meta AI, and no Grokbot. Wil approves or swaps them on the Questions tab (`q-kits`).
+
+**Shape: one shared core plus four scenario tracks.**
+- **The core (in every kit)** is the Operator crew from the Oct 21 spec: a context-files pack, 6 crew roles (strategist, researcher, builder, copywriter, marketer, analyst) and a routine library.
+- **The track** is the business it gets pointed at. This reuses the spec's best work instead of starting over.
+- **"Duet-aware":** each kit keeps its Claude instructions modular, so a Duet section can slot in once Wil defines what he wants from it.
+
+| # | Scenario | Leans | Build goal (draft) that earns the refund | Claude does | Meta AI does (to verify) | Next kit if they miss |
+|---|---|---|---|---|---|---|
+| 1 | **AI-run local service business** (cleaning, washing, landscaping, handyman) | physical | A test lead goes from a DM to a quote, a follow-up and a review request, start to finish, and the setup is switched on for real leads | quotes, follow-up scripts, scheduling notes, review requests | answering customer DMs on Instagram, Messenger and WhatsApp, if Meta's business AI covers it | 3 (content brand) |
+| 2 | **AI-run product store** (dropshipping or own product; follows `dropshipping/PLAYBOOK.md`) | physical | Store live, one product page with the honest-math sheet and written stop rules, and a test order processed | product research and validation, page copy, order operations | product images and ad-creative drafts in the Meta AI app (not Ads Manager) | 3 (content brand) |
+| 3 | **AI-run content brand** (faceless daily account; this account is the live example) | digital | 14 posts in 14 days on their own accounts, with the scorecard filled in | line bank, calendar, captions, weekly review | visuals and quick edits, if it fits | 1 or 4 |
+| 4 | **AI-run digital product business** (templates, guides or a small paid newsletter; spec tracks B and D) | digital | Product live with a working checkout, and a test purchase delivered automatically | product build, sales page, email sequence | promo images, DM replies | 3 (content brand) |
+
+**Dropped or merged:**
+- **Merged into the tracks:** K1 is now the shared core. K2 becomes track 3, K5 track 2, K7 track 1, and K4 track 4 plus the website parts.
+- **K3 (YouTube) and K6 (paid ads):** wait for a later round.
+- **The spec's directory track:** dropped.
+
+**Research before any build (Zucc to research, Claude to verify):**
+1. What Meta AI can actually do for a small business today, per track: business messaging AI, image and video generation, availability and cost. Use primary sources only.
+2. Current pricing for every tool in each stack, checked the week of the build.
+3. Which tools have referral programs (the table below).
+
+---
+
 ### K1. The Operator: an AI crew for a business owner
 *From the Oct 22 brief: "The Operator Loadout — Claude Crew Starter."*
 
