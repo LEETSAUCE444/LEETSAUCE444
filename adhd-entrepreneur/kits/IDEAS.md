@@ -17,7 +17,7 @@ Every goal is a **draft until Wil approves it**. Goals are always about somethin
 
 ## Proposal (Oct 26): the first 4 kits
 
-**Status:** Claude's proposal for Wil's direction. Wil asked for about 4 kits for 4 scenarios under the AI-automated-business umbrella, some leaning toward physical businesses, automation-first, built on Claude plus Meta AI, and no Grokbot. Wil approves or swaps them on the Questions tab (`q-kits`).
+**Status: approved by Wil on Oct 26 (`q-kits`).** Start with these 4. More premade kits get added later from Zucc's research and Claude's ideas, and custom-built kits sit alongside them. The quiz points each person to the premade kit that fits, or to the custom path. All 4 are on the live site, marked "price at launch".
 
 **Shape: one shared core plus four scenario tracks.**
 - **The core (in every kit)** is the Operator crew from the Oct 21 spec: a context-files pack, 6 crew roles (strategist, researcher, builder, copywriter, marketer, analyst) and a routine library.

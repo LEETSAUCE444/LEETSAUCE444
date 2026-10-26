@@ -5,32 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Policies · ADHD Entrepreneur</title>
 <meta name="description" content="Refund policy and guarantee, terms of service and privacy policy for ADHD Entrepreneur starter kits.">
+<meta name="theme-color" content="#04050c">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
+<script src="site.js" defer></script>
 </head>
 <body>
+<div class="sky" aria-hidden="true"><span class="orb warm"></span><span class="orb cyan"></span><span class="orb blue"></span></div>
+
 <div class="wrap">
-  <header class="bar">
-    <a class="mark" href="./"><img src="assets/favicon.png" alt="" width="30" height="30">ADHD Entrepreneur</a>
-    <nav aria-label="Policies">
-      <a href="#refunds">Refunds</a>
-      <a href="#terms">Terms</a>
-      <a href="#privacy">Privacy</a>
-    </nav>
+  <header class="topbar">
+    <div class="inner glass">
+      <a class="brand" href="./"><img src="assets/favicon.png" alt="" width="30" height="30"><span>ADHD Entrepreneur</span></a>
+      <nav aria-label="Policies">
+        <a class="hide-sm" href="#refunds">Refunds</a>
+        <a class="hide-sm" href="#terms">Terms</a>
+        <a class="hide-sm" href="#privacy">Privacy</a>
+        <a class="btn-split small" href="quiz.html"><span class="fx" aria-hidden="true"><i></i><i></i><i></i></span><span class="lbl">Take the quiz</span></a>
+      </nav>
+    </div>
   </header>
 
-  <main class="doc">
-    <span class="updated">Last updated October 24, 2026</span>
+  <main class="doc glass">
+    <span class="label">Last updated October 26, 2026</span>
     <h1>Policies</h1>
     <p>These policies cover the starter kits sold by ADHD Entrepreneur ("we", "us"). Questions about any of them: <a href="mailto:adhdentrepreneurhq@gmail.com">adhdentrepreneurhq@gmail.com</a>.</p>
     <div class="toc">
-      <a class="btn" href="#refunds">Refund policy and guarantee</a>
-      <a class="btn" href="#terms">Terms of service</a>
-      <a class="btn" href="#privacy">Privacy policy</a>
+      <a class="btn glass small" href="#refunds">Refund policy and guarantee</a>
+      <a class="btn glass small" href="#terms">Terms of service</a>
+      <a class="btn glass small" href="#privacy">Privacy policy</a>
     </div>
 
     <h2 id="refunds">Refund policy and guarantee</h2>
@@ -52,7 +58,7 @@
     <h3>Tools from other companies</h3>
     <p>Kits work with AI tools and apps run by other companies, such as Claude. You sign up for those tools yourself, pay them directly, and their own terms apply. They can change their features or prices at any time. We're not responsible for them.</p>
     <h3>Referral links</h3>
-    <p>Some links to those tools are referral links. If you sign up through one, we may get a credit or a commission. We only recommend a tool when it fits the kit.</p>
+    <p>Some links to those tools may be referral links. If you sign up through one, we may get a credit or a commission. We only recommend a tool when it fits the kit.</p>
     <h3>No promised results</h3>
     <p>Kits and posts are educational. What you get out of them depends on your work and your situation. Nothing we publish is legal, financial, tax or medical advice.</p>
     <h3>Payments</h3>
@@ -64,15 +70,17 @@
     <h3>What we collect</h3>
     <ul>
       <li><b>When you buy:</b> your name, your email and the details needed to process the payment. Stripe handles your card details. We never see your full card number.</li>
-      <li><b>When you email us:</b> your address and whatever you write.</li>
+      <li><b>When you email us:</b> your address and whatever you write. If you email us to hear about a kit launch, we use your address only for launch emails, and we delete it when you ask.</li>
       <li><b>When you visit this site:</b> our hosting provider keeps standard server logs, such as IP address, browser type and the pages requested, for security and reliability.</li>
     </ul>
+    <h3>The quiz</h3>
+    <p>The quiz runs entirely in your browser. Your answers are not sent to us or to anyone else, and they're cleared when you close or reload the page.</p>
     <h3>What we don't do</h3>
-    <p>This site has no ad-platform tracking pixels and no analytics cookies. We don't sell your information, and we don't share it with ad platforms.</p>
+    <p>This site has no ad-platform tracking pixels and no analytics cookies, and we don't add any third-party scripts. Our fonts are served from this site. Our host, Netlify, shows a small "hosted on Netlify" badge. We don't sell your information, and we don't share it with ad platforms.</p>
     <h3>How we use it</h3>
     <p>To deliver your kit, run the guarantee and refunds, answer your emails and keep records the law requires.</p>
     <h3>Services we use</h3>
-    <p>Stripe for payments, Google for email, and our website host. Each handles your data under its own privacy policy.</p>
+    <p>Stripe for payments, Google for email, and Netlify to host this site. Each handles your data under its own privacy policy.</p>
     <h3>Your choices</h3>
     <p>Email us to see, correct or delete the information we hold about you. We keep only what we must for tax and payment records.</p>
     <h3>Age</h3>
@@ -81,9 +89,10 @@
 
   <footer>
     <div class="row">
-      <span>© 2026 ADHD Entrepreneur · Payments are processed securely by Stripe.</span>
+      <span>© 2026 ADHD Entrepreneur · When kits go on sale, payments are processed by Stripe.</span>
       <nav aria-label="Footer">
         <a href="./">Home</a>
+        <a href="quiz.html">Quiz</a>
         <a href="mailto:adhdentrepreneurhq@gmail.com">Email us</a>
       </nav>
     </div>

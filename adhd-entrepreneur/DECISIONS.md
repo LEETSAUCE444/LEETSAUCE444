@@ -2,6 +2,22 @@
 
 Locked decisions only, newest first. Claude and Zucc build on these and don't reopen them unless Wil does. Anything still open is listed at the bottom.
 
+## Oct 26, 2026: website, button, legal name, kits (Wil, on the Questions tab)
+
+- **Website is live on Netlify** at https://adhd-entrepreneur-starter-kit-store.netlify.app (project `adhd-entrepreneur-starter-kit-store`). Nothing is for sale on it.
+- **Design direction:**
+  - midnight dark mode
+  - a simple color split and a retro-futuristic feel, with ARC Raiders as the reference but nothing copied
+  - iPhone-style liquid glass, kept clean
+  - an easy, Hims-style quiz
+- **Buttons (`q-accent`, Wil's own call):** the button carries the whole RGB split as liquid-glass layers. Pressing it lines the layers up into white glass. This is built.
+- **Legal name (`q-legal`):** "ADHD Entrepreneur" only, registered as a DBA or LLC. Wil files it. The policies name the registered entity once it's filed.
+- **Kits (`q-kits`):**
+  - Build the 4: local service business, product store, content brand, digital product.
+  - More premade kits get added later, from Zucc's research and Claude's ideas.
+  - Custom-built kits exist alongside them.
+  - The quiz points people to the premade kit that fits, and offers a custom path when none fits.
+
 ## Oct 24, 2026 (morning): relayed by Zucc from Wil
 
 - **Instagram goes to a Creator account** (not Business, and not staying personal), switched in the app with the category Entrepreneur. Zucc checks the music library right after. From then on, the evening numbers come from Insights.
@@ -68,7 +84,12 @@ Locked decisions only, newest first. Claude and Zucc build on these and don't re
 
 ## Open
 
-- **Website for Stripe.** Draft in `site/`. Waiting on Wil for three things: the accent color (`q-accent`), the legal name on the policies (`q-legal`), and the go-ahead on hosting for the public preview.
+- **Website.** Live at https://adhd-entrepreneur-starter-kit-store.netlify.app. Before anything goes on sale (details in `site/README.md`):
+  - register the DBA or LLC
+  - confirm the draft policy terms
+  - set prices, deadlines and proof per kit
+  - have someone qualified read the policies
+  - optionally, buy the domain
 - **Starter-kit plan check-in, around Fri Oct 30.** Claude reminds Wil and Zucc that day. The open items are in `kits/PLAN.md`:
   - the price
   - the deadline length per kit
