@@ -2,7 +2,7 @@
 
 Pre-written sets for the DAILY collage (Wil made the collage a standing daily post 2026-10-23). Day 3's set lives in `collage-day3.md`. Rules for every set (skill §4c): 6 fresh lines, all in the SAME field as that day's reel, each a different angle — never the reel's quote, never the same point rephrased, never a future calendar hero line. Captions from Day 4 on follow the skill §4c simple-caption rule (short plain line + one plain question, no meta announcements, no numbered roll-call) — the Day 3 caption templates are superseded, not reused. Music = the same reel rotation song, searched in the platform library: Days 4–6 "Potato Salad" (Tyler, The Creator & A$AP Rocky), Days 7–9 "Louise" (TV Girl). Poll captions (Wil, 2026-10-24): only on days where the field naturally splits into two options, as a this-or-that vote in the comments — never every day, never a tappable poll without his explicit yes for that day.
 
-**Peer-edited Oct 25 (Claude):** Days 5–9 below are the agreed build set, with swaps written into this file (see PR #1 comment 6393003499). Day 4 shipped with its original lines 3 and 6.
+**Peer-edited Oct 25 (Claude):** Days 5–9 below are the agreed build set, with swaps written into this file (see PR #1 comment 6393003499). Day 4 shipped with its original lines 3 and 6. Day 5 shipped with its original lines 1, 3 and 5: the 2 PM build read a local copy, not this file. Those lines pass the brand rules and stay up. They had been swapped only because they repeated the reel. From Day 6, each pre-post quotes this file verbatim from the branch before the build.
 
 ## Day 4 · Sun Oct 25 · Field: finishing (reel: "Starting is your superpower. Finishing is the skill.")
 1. Almost finished is still unfinished.
