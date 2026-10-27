@@ -2,6 +2,12 @@
 
 Locked decisions only, newest first. Claude and Zucc build on these and don't reopen them unless Wil does. Anything still open is listed at the bottom.
 
+## Oct 27, 2026: TikTok posting route (Wil)
+
+- **No TikTok posts from the phone app.** Wil: "I don't want to post anything from the actual phone app for TikTok." TikTok stays web-posted by Zucc.
+  - The phone-app test Claude proposed for the Thursday Oct 29 review is dropped.
+  - The 0-play problem gets worked on with web-side checks only: TikTok Studio on the web, account status, post settings and captions.
+
 ## Oct 27, 2026: site changes after Wil took the quiz
 
 - **The miss discount is private.** No page on the site, quiz or policies mentions a discount for missing the goal. After a miss, the buyer gets a follow-up email with a private offer: a discount on the next kit, or on a continuation of the same kit.
