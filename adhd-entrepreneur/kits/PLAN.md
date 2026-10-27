@@ -33,7 +33,10 @@ This is modeled on the challenge offer Alex Hormozi used to launch gym clients (
 1. The quiz matches the buyer to **one kit** and sets **one build goal** with a **deadline**.
 2. The buyer pays the full price up front.
 3. **Hit the goal by the deadline and show the proof: full refund.**
-4. **Miss it: we keep the payment, and they get 50% off the next kit,** the one that covers what stopped them.
+4. **Miss it: we keep the payment, and the kit stays theirs.**
+5. **After a miss, a follow-up email makes a private offer** (Wil, Oct 27). It's a discount on the next kit, or on a continuation of the same kit that helps them reach the goal. The size is still open: 50% or 75% (`q-miss-offer`). The draft is in `kits/emails/miss-followup.md`.
+   - The offer is **never shown on the site, the quiz or the policies.** Wil wants it to land only for people who missed.
+   - Buyers still see, before paying, that **a miss means no refund.** That's a term of the purchase. The follow-up offer is not.
 
 Why it works:
 - The money in the pot is the motivation.
@@ -51,7 +54,7 @@ Why it works:
   - the deadline
   - what counts as proof
   - how to claim the refund
-  - what happens on a miss
+  - what happens on a miss: no refund, and they keep the kit (the follow-up offer is not a term, so it isn't listed)
 
   Consent comes before the charge, and claiming is one obvious step. These are Wil's funnel rules.
 - **No "risk-free" wording,** because there are conditions.
@@ -64,7 +67,7 @@ Every finisher gets a full refund, so **the better the kits work, the less the u
 | Source | Per buyer |
 |---|---|
 | Buyers who miss the goal | price × share who miss |
-| Next kit at 50% off | (next kit price ÷ 2) × share who buy it |
+| Follow-up offer after a miss | next price × (1 − discount) × share who take it |
 | AI-tool referral credits | credit per sign-up through our links |
 | Later: coaching or a community | Wil's call, down the line |
 
@@ -73,7 +76,9 @@ Costs:
 - processing fees on refunds (most payment processors keep their fee when you refund, so check ours)
 - the tools we run
 
-> Per buyer ≈ price × (1 − finish rate) + (next kit price ÷ 2) × next-kit rate + referral credit − fees − support
+> Per buyer ≈ price × (1 − finish rate) + next price × (1 − discount) × take-up rate + referral credit − fees − support
+
+At 75% off, each follow-up sale brings in a quarter of its price, so check the math once prices exist.
 
 If that comes out thin at a realistic finish rate, there are three levers: raise the price, give finishers a choice of cash back or a larger store credit, or both.
 

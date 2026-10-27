@@ -2,6 +2,21 @@
 
 Locked decisions only, newest first. Claude and Zucc build on these and don't reopen them unless Wil does. Anything still open is listed at the bottom.
 
+## Oct 27, 2026: site changes after Wil took the quiz
+
+- **The miss discount is private.** No page on the site, quiz or policies mentions a discount for missing the goal. After a miss, the buyer gets a follow-up email with a private offer: a discount on the next kit, or on a continuation of the same kit.
+  - The size is open: 50% or 75% (`q-miss-offer`).
+  - The draft is in `kits/emails/miss-followup.md`.
+  - The site still says, before payment, that a miss means no refund and the kit stays theirs. That's a purchase term, so it has to be shown.
+- **Buttons:** the RGB split is softer, a slightly out-of-focus liquid-glass glow. Pressing a button brings it into focus as white glass.
+- **Quiz:**
+  - Each answer is its own color of glass, with a simple icon.
+  - Questions are shorter: 6 taps (7 for "Not sure yet", 5 for the custom path).
+  - The typed question and the heads-up screen are gone.
+- **Kits:**
+  - Icons on everything kit-related.
+  - A catalog page (`/kits`) sorted by category: Service & trades, Stores & products, Content & audience, Digital products, Custom.
+
 ## Oct 26, 2026: website, button, legal name, kits (Wil, on the Questions tab)
 
 - **Website is live on Netlify** at https://adhd-entrepreneur-starter-kit-store.netlify.app (project `adhd-entrepreneur-starter-kit-store`). Nothing is for sale on it.
@@ -10,7 +25,7 @@ Locked decisions only, newest first. Claude and Zucc build on these and don't re
   - a simple color split and a retro-futuristic feel, with ARC Raiders as the reference but nothing copied
   - iPhone-style liquid glass, kept clean
   - an easy, Hims-style quiz
-- **Buttons (`q-accent`, Wil's own call):** the button carries the whole RGB split as liquid-glass layers. Pressing it lines the layers up into white glass. This is built.
+- **Buttons (`q-accent`, Wil's own call):** the button carries the whole RGB split as liquid-glass layers. Pressing it lines the layers up into white glass. This is built. (Softened on Oct 27.)
 - **Legal name (`q-legal`):** "ADHD Entrepreneur" only, registered as a DBA or LLC. Wil files it. The policies name the registered entity once it's filed.
 - **Kits (`q-kits`):**
   - Build the 4: local service business, product store, content brand, digital product.

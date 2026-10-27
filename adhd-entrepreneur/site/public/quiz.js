@@ -1,233 +1,174 @@
-// The kit quiz. One question per screen, tap to answer, branches by kit.
+// The kit quiz. One short question per screen, tap an icon tile, branches by kit.
 // Everything runs in the browser: answers live in memory only and are never sent anywhere.
 (function () {
   "use strict";
 
   var EMAIL = "adhdentrepreneurhq@gmail.com";
+  var TINTS = ["t-warm", "t-gold", "t-green", "t-cyan", "t-violet"];
 
-  // ---------- the kits ----------
+  // ---------- the kits (same as the catalog) ----------
   var KITS = {
     service: {
-      num: "01", name: "Local Service Kit", leans: "Physical",
-      pitch: "Your AI handles the messages, quotes and follow-ups that pile up after the work.",
-      box: ["Quote and reply templates in your own voice", "Follow-up and review-request scripts", "Daily scheduling notes", "The six-role AI crew, set up for a service business"],
-      next: "content",
-      placeholder: "e.g. Every new lead gets a quote the same day, without me typing it."
+      name: "Local Service Kit", icon: "spray-can", tint: "t-warm",
+      pitch: "Your AI handles the messages, quotes and follow-ups after the work.",
+      inside: [["message-square", "Reply and quote templates"], ["star", "Follow-up and review scripts"], ["calendar", "Daily scheduling notes"], ["users", "The six-role AI crew"]]
     },
     store: {
-      num: "02", name: "Product Store Kit", leans: "Physical",
-      pitch: "Test a physical product online with the numbers and your spending limits worked out first.",
-      box: ["Product checklist and cost sheet", "How to research products in public ad libraries", "Spending-limit and stop-rule templates", "The six-role AI crew, set up for a store"],
-      next: "content",
-      placeholder: "e.g. My store is live and I know my numbers before I spend anything."
+      name: "Product Store Kit", icon: "package", tint: "t-gold",
+      pitch: "Test a product with your numbers and spending limits worked out first.",
+      inside: [["list-checks", "Product checklist and cost sheet"], ["search", "Ad-library product research"], ["shield-check", "Spending limits and stop rules"], ["users", "The six-role AI crew"]]
     },
     content: {
-      num: "03", name: "Content Brand Kit", leans: "Digital",
-      pitch: "Post every day and keep it up. Faceless works, and this brand runs on the same setup.",
-      box: ["Line bank and 30-day calendar builder", "Captions for each platform", "The weekly scorecard: saves and shares, not vanity numbers", "The six-role AI crew, set up for a content brand"],
-      next: null,
-      placeholder: "e.g. I post every day without staring at a blank screen."
+      name: "Content Brand Kit", icon: "clapperboard", tint: "t-cyan",
+      pitch: "Post every day and keep it up. Faceless works.",
+      inside: [["pencil", "Line bank and 30-day calendar"], ["message-circle", "Captions for each platform"], ["chart-column", "The weekly scorecard"], ["users", "The six-role AI crew"]]
     },
     digital: {
-      num: "04", name: "Digital Product Kit", leans: "Digital",
-      pitch: "Turn what you know into a template, guide or small newsletter, with checkout and delivery set up.",
-      box: ["Product build setups", "Sales page template and email sequence", "Checkout and delivery guide", "The six-role AI crew, set up for a digital product"],
-      next: "content",
-      placeholder: "e.g. My template is for sale and delivers itself after checkout."
+      name: "Digital Product Kit", icon: "file-down", tint: "t-violet",
+      pitch: "Turn what you know into a product, with checkout and delivery set up.",
+      inside: [["layout-template", "Product build setups"], ["mail", "Sales page and emails"], ["credit-card", "Checkout and delivery guide"], ["users", "The six-role AI crew"]]
     }
   };
 
   // ---------- the questions ----------
   var Q = {
     build: {
-      title: "What do you want AI to help you build?",
-      sub: "Pick the closest one.",
+      title: "What are you building?",
       options: [
-        { v: "service", t: "Run my service business with less admin", d: "Cleaning, washing, landscaping, trades" },
-        { v: "store", t: "Sell a physical product online", d: "Your own product, or one you want to test" },
-        { v: "content", t: "An account that posts every day", d: "Faceless is fine" },
-        { v: "digital", t: "Sell something digital", d: "A template, a guide or a small newsletter" },
-        { v: "unsure", t: "Not sure yet", d: "We'll narrow it down" }
+        { v: "service", t: "A service business", d: "Cleaning, trades, lawns", i: "spray-can" },
+        { v: "store", t: "An online store", d: "Physical products", i: "package" },
+        { v: "content", t: "A content account", d: "Faceless is fine", i: "smartphone" },
+        { v: "digital", t: "A digital product", d: "Templates, guides", i: "file-down" },
+        { v: "unsure", t: "Not sure yet", i: "compass" }
       ]
     },
     stage: {
-      title: "Where are you right now?",
+      title: "Where are you at?",
       options: [
-        { v: "zero", t: "Haven't started" },
-        { v: "stalled", t: "Started, then stalled" },
-        { v: "running", t: "It's running. I want it automated." }
+        { v: "zero", t: "Not started", i: "sprout" },
+        { v: "stalled", t: "Started, then stalled", i: "circle-pause" },
+        { v: "running", t: "Up and running", i: "rocket" }
       ]
     },
-    how: { type: "info" },
     vibe: {
-      title: "Which one sounds most like you?",
+      title: "Which sounds like you?",
       options: [
-        { v: "service", t: "I'm good at the work. The texts, quotes and follow-ups bury me." },
-        { v: "store", t: "I see products and think: I could sell that." },
-        { v: "content", t: "I have plenty to say. I just never keep posting." },
-        { v: "digital", t: "I know how to do something people would pay to learn." },
-        { v: "custom", t: "None of these" }
+        { v: "service", t: "Good at the work, buried in admin", i: "wrench" },
+        { v: "store", t: "I spot products to sell", i: "lightbulb" },
+        { v: "content", t: "I've got lots to say", i: "message-circle" },
+        { v: "digital", t: "I could teach what I know", i: "graduation-cap" },
+        { v: "custom", t: "None of these", i: "puzzle" }
       ]
     },
     service_a: {
-      title: "What eats most of your week?",
+      title: "What eats your week?",
       options: [
-        { v: "dms", t: "Answering messages and texts" },
-        { v: "quotes", t: "Writing quotes" },
-        { v: "follow", t: "Following up and asking for reviews" },
-        { v: "schedule", t: "Scheduling and planning the day" }
+        { v: "dms", t: "Messages", i: "message-square" },
+        { v: "quotes", t: "Quotes", i: "calculator" },
+        { v: "follow", t: "Follow-ups and reviews", i: "star" },
+        { v: "schedule", t: "Scheduling", i: "calendar" }
       ]
     },
     service_b: {
-      title: "Where do most of your leads come from?",
+      title: "Where do leads come from?",
       options: [
-        { v: "social", t: "Instagram or Facebook messages" },
-        { v: "text", t: "Texts and calls" },
-        { v: "google", t: "Google" },
-        { v: "referral", t: "Word of mouth" }
+        { v: "social", t: "Instagram or Facebook", i: "at-sign" },
+        { v: "text", t: "Texts and calls", i: "phone" },
+        { v: "google", t: "Google", i: "search" },
+        { v: "referral", t: "Word of mouth", i: "users" }
       ]
     },
     store_a: {
-      title: "Do you have a product yet?",
+      title: "Got a product yet?",
       options: [
-        { v: "own", t: "Yes, my own product" },
-        { v: "ideas", t: "A few ideas I want to test" },
-        { v: "none", t: "Not yet" }
+        { v: "own", t: "Yes, my own", i: "package-check" },
+        { v: "ideas", t: "A few ideas", i: "lightbulb" },
+        { v: "none", t: "Not yet", i: "circle-dashed" }
       ]
     },
     store_b: {
-      title: "Have you run paid ads before?",
+      title: "Run ads before?",
       options: [
-        { v: "never", t: "Never" },
-        { v: "lost", t: "Tried it and lost money" },
-        { v: "yes", t: "Yes, I'm comfortable with them" }
+        { v: "never", t: "Never", i: "sprout" },
+        { v: "lost", t: "Yes, and lost money", i: "trending-down" },
+        { v: "yes", t: "Yes, I'm comfortable", i: "target" }
       ]
     },
     content_a: {
-      title: "What usually makes you stop posting?",
+      title: "Why do you stop posting?",
       options: [
-        { v: "ideas", t: "I run out of things to say" },
-        { v: "visuals", t: "Making the visuals takes forever" },
-        { v: "dropoff", t: "I start strong, then drop off" },
-        { v: "unclear", t: "I can't tell if it's working" }
+        { v: "ideas", t: "Nothing to say", i: "pencil" },
+        { v: "visuals", t: "Visuals take forever", i: "image" },
+        { v: "dropoff", t: "I lose steam", i: "battery-low" },
+        { v: "unclear", t: "Can't tell if it works", i: "chart-column" }
       ]
     },
     content_b: {
-      title: "Do you want to show your face?",
+      title: "Show your face?",
       options: [
-        { v: "faceless", t: "No, faceless" },
-        { v: "sometimes", t: "Sometimes" },
-        { v: "yes", t: "Yes" }
+        { v: "faceless", t: "No, faceless", i: "eye-off" },
+        { v: "sometimes", t: "Sometimes", i: "contrast" },
+        { v: "yes", t: "Yes", i: "camera" }
       ]
     },
     digital_a: {
       title: "What would you sell?",
       options: [
-        { v: "template", t: "A template or toolkit" },
-        { v: "guide", t: "A guide or short course" },
-        { v: "newsletter", t: "A small paid newsletter" },
-        { v: "unsure", t: "Not sure yet" }
+        { v: "template", t: "A template", i: "layout-template" },
+        { v: "guide", t: "A guide or course", i: "book-open" },
+        { v: "newsletter", t: "A newsletter", i: "mail" },
+        { v: "unsure", t: "Not sure", i: "circle-help" }
       ]
     },
     digital_b: {
-      title: "Can you take payments online yet?",
+      title: "Can you take payments?",
       options: [
-        { v: "yes", t: "Yes" },
-        { v: "no", t: "Not yet" },
-        { v: "unsure", t: "Not sure" }
+        { v: "yes", t: "Yes", i: "credit-card" },
+        { v: "no", t: "Not yet", i: "circle-dashed" },
+        { v: "unsure", t: "Not sure", i: "circle-help" }
       ]
     },
     ai: {
-      title: "Which AI do you use now?",
+      title: "Which AI do you use?",
       options: [
-        { v: "claude", t: "Claude" },
-        { v: "chatgpt", t: "ChatGPT" },
-        { v: "gemini", t: "Gemini" },
-        { v: "none", t: "None yet" }
+        { v: "claude", t: "Claude", i: "sparkles" },
+        { v: "chatgpt", t: "ChatGPT", i: "message-circle" },
+        { v: "gemini", t: "Gemini", i: "gem" },
+        { v: "none", t: "None yet", i: "circle-plus" }
       ]
     },
     hours: {
-      title: "How many hours a week can you give this?",
+      title: "Time per week?",
       options: [
-        { v: "1", t: "1 to 2 hours" },
-        { v: "3", t: "3 to 5 hours" },
-        { v: "6", t: "6 to 10 hours" },
-        { v: "10", t: "More than 10" }
+        { v: "1", t: "1 to 2 hours", i: "clock-2" },
+        { v: "3", t: "3 to 5 hours", i: "clock-5" },
+        { v: "6", t: "6 to 10 hours", i: "clock-10" },
+        { v: "10", t: "10+ hours", i: "timer" }
       ]
-    },
-    finish: {
-      type: "text",
-      title: "Last one. In your own words, what would “done” look like?",
-      sub: "Optional. It shows up on your result and stays on this device."
     }
   };
 
   // ---------- what each answer changes on the result ----------
   var FIRST_UP = {
-    service_a: {
-      dms: "First up: replies to new messages, drafted the way you talk.",
-      quotes: "First up: quote templates your AI fills in from a few details.",
-      follow: "First up: follow-up and review-request scripts, and when to send each one.",
-      schedule: "First up: a daily plan your AI drafts from your bookings."
-    },
-    store_a: {
-      own: "First up: your cost sheet, to check the numbers on your product before any spending.",
-      ideas: "First up: the product checklist, to score your ideas against the same rules.",
-      none: "First up: finding products people already buy, using public ad libraries. No paid research tools needed."
-    },
-    content_a: {
-      ideas: "First up: your line bank, so you never start from a blank page.",
-      visuals: "First up: card templates you reuse every day.",
-      dropoff: "First up: a 30-day calendar built before day one, so every day is already decided.",
-      unclear: "First up: the weekly scorecard, so you know what's working."
-    },
-    digital_a: {
-      template: "First up: building the template itself, with your AI doing the first drafts.",
-      guide: "First up: outlining the guide, then drafting it section by section.",
-      newsletter: "First up: your first three issues, drafted before launch.",
-      unsure: "First up: picking the product, from what you already know how to do."
-    }
+    service_a: { dms: "First up: replies to new messages, in your voice.", quotes: "First up: quotes your AI drafts from a few details.", follow: "First up: follow-up and review-request scripts.", schedule: "First up: a daily plan drafted from your bookings." },
+    store_a: { own: "First up: the cost sheet for your product.", ideas: "First up: scoring your ideas with the checklist.", none: "First up: finding products people already buy." },
+    content_a: { ideas: "First up: your line bank. No more blank page.", visuals: "First up: card templates you reuse every day.", dropoff: "First up: a 30-day calendar, built before day one.", unclear: "First up: the weekly scorecard." },
+    digital_a: { template: "First up: building your template.", guide: "First up: outlining your guide.", newsletter: "First up: your first three issues.", unsure: "First up: picking what to sell." }
   };
-
   var SOURCE = { social: "Instagram or Facebook", text: "a text", google: "Google", referral: "a referral" };
-
   var NOTES = {
-    store_b: {
-      never: "Never run ads? You don't need to have. Your spending limit and stop rules get written before a single dollar goes out.",
-      lost: "Lost money on ads before? This time the stop rules come first, written down before anything is spent.",
-      yes: "You know ads already. The kit still has you write your spending limit and stop rules first. They're part of the goal."
-    },
-    content_b: {
-      faceless: "Faceless is how this brand runs too.",
-      sometimes: "Faceless by default, with room for you on camera when you want it.",
-      yes: "On camera works too. The line bank and calendar don't care either way."
-    },
-    digital_b: {
-      yes: "You can take payments already, so you'll plug your checkout straight in.",
-      no: "The checkout and delivery guide walks you through taking payments.",
-      unsure: "The checkout and delivery guide walks you through taking payments."
-    }
+    store_b: { never: ["shield-check", "Spending limits get written before any ad money goes out."], lost: ["shield-check", "This time, stop rules come first."], yes: ["shield-check", "You'll still write stop rules first. They're part of the goal."] },
+    content_b: { faceless: ["eye-off", "Faceless, like this brand."], sometimes: ["contrast", "Faceless by default, on camera when you want."], yes: ["camera", "On camera works too."] },
+    digital_b: { yes: ["credit-card", "Plug in the checkout you already have."], no: ["credit-card", "The kit walks you through taking payments."], unsure: ["credit-card", "The kit walks you through taking payments."] }
   };
-
-  var STAGE_NOTE = {
-    zero: "Starting from zero is fine. The checklist starts at step one.",
-    stalled: "Stalled before? That's what the deadline and the money on the line are for.",
-    running: "Already running? You'll set the kit up on top of what you have."
+  var STAGE = { zero: ["sprout", "Starting from zero is fine."], stalled: ["flag", "Stalled before? The deadline keeps you moving."], running: ["rocket", "You'll build on what you already have."] };
+  var AI = {
+    claude: ["sparkles", "Built for Claude. Ready to paste."],
+    chatgpt: ["message-circle", "Written for Claude. Before you buy, we list what carries over to ChatGPT."],
+    gemini: ["gem", "Written for Claude. Before you buy, we list what carries over to Gemini."],
+    none: ["circle-plus", "You'll start with Claude, from making the account."]
   };
-
-  var AI_NOTE = {
-    claude: "You're on Claude, which the kit is written for. The six crew roles are ready to paste in.",
-    chatgpt: "The kit is written for Claude. Before you buy, it lists exactly what carries over to ChatGPT and what doesn't.",
-    gemini: "The kit is written for Claude. Before you buy, it lists exactly what carries over to Gemini and what doesn't.",
-    none: "You'll start with Claude. The setup guide begins at making the account, then the crew."
-  };
-
-  var PACE = {
-    "1": "At 1 to 2 hours a week, plan on short sessions. The checklist is split into small steps you can stop and pick back up.",
-    "3": "At 3 to 5 hours a week, a few focused sessions keeps you on pace.",
-    "6": "At 6 to 10 hours a week, you have room to finish early. Do the setup in week one.",
-    "10": "With 10+ hours a week, you could finish well before the deadline. Do the setup in week one."
-  };
+  var PACE = { "1": "Short sessions. Small steps you can pause.", "3": "A few focused sessions a week.", "6": "Room to finish early.", "10": "You could finish well before the deadline." };
 
   // ---------- state ----------
   var answers = {};
@@ -246,27 +187,21 @@
     var k = kitKey();
     switch (id) {
       case "build": return "stage";
-      case "stage": return "how";
-      case "how": return answers.build === "unsure" ? "vibe" : k + "_a";
+      case "stage": return answers.build === "unsure" ? "vibe" : k + "_a";
       case "vibe": return k === "custom" ? "ai" : k + "_a";
       case "service_a": case "store_a": case "content_a": case "digital_a": return k + "_b";
       case "service_b": case "store_b": case "content_b": case "digital_b": return "ai";
       case "ai": return "hours";
-      case "hours": return "finish";
-      case "finish": return "result";
     }
     return "result";
   }
 
-  // Questions on this path (the heads-up screen doesn't count).
   function totalQuestions() {
-    var n = 7;
-    if (answers.build === "unsure") n += 1;
-    if (answers.vibe === "custom" && answers.build === "unsure") n -= 2;
-    return n;
+    if (answers.build !== "unsure") return 6;
+    return answers.vibe === "custom" ? 5 : 7;
   }
   function questionNumber() {
-    return stack.filter(function (id) { return id !== "how" && id !== "result"; }).length;
+    return stack.filter(function (id) { return id !== "result"; }).length;
   }
 
   // ---------- helpers ----------
@@ -275,6 +210,21 @@
     if (cls) n.className = cls;
     if (text != null) n.textContent = text;
     return n;
+  }
+  var SVGNS = "http://www.w3.org/2000/svg";
+  function icon(name) {
+    var svg = document.createElementNS(SVGNS, "svg");
+    svg.setAttribute("class", "ic");
+    svg.setAttribute("aria-hidden", "true");
+    var use = document.createElementNS(SVGNS, "use");
+    use.setAttribute("href", "assets/icons.svg#" + name);
+    svg.append(use);
+    return svg;
+  }
+  function chip(name, cls) {
+    var c = el("span", "chip" + (cls ? " " + cls : ""));
+    c.append(icon(name));
+    return c;
   }
   function splitButton(label, href) {
     var b = el(href ? "a" : "button", "btn-split");
@@ -295,11 +245,7 @@
     bar.style.width = pct + "%";
     progress.setAttribute("aria-valuenow", String(pct));
   }
-  function focusTitle() {
-    var h = stage.querySelector("h1");
-    if (h) { h.setAttribute("tabindex", "-1"); h.focus({ preventScroll: true }); }
-    window.scrollTo(0, 0);
-  }
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
 
   // ---------- navigation ----------
   function go(id) {
@@ -314,7 +260,7 @@
     render();
   });
 
-  function meta() {
+  function meta(id) {
     var row = el("div", "qmeta");
     if (stack.length > 1) {
       var back = el("button", "back", "← Back");
@@ -324,14 +270,9 @@
     } else {
       row.append(el("span"));
     }
-    var id = stack[stack.length - 1];
-    if (id !== "how" && id !== "result") {
-      var num = questionNumber(), tot = totalQuestions();
-      row.append(el("span", "label", pad(num) + " / " + pad(tot)));
-    }
+    if (id !== "result") row.append(el("span", "label", pad(questionNumber()) + " / " + pad(totalQuestions())));
     return row;
   }
-  function pad(n) { return (n < 10 ? "0" : "") + n; }
 
   // ---------- screens ----------
   function render() {
@@ -339,220 +280,144 @@
     stage.textContent = "";
     var screen = el("div", "screen");
     stage.append(screen);
-    screen.append(meta());
-
+    screen.append(meta(id));
     if (id === "result") { renderResult(screen); setProgress(1); }
-    else if (id === "how") { renderInfo(screen); setProgress((questionNumber()) / totalQuestions()); }
-    else if (Q[id].type === "text") { renderText(screen, id); setProgress((questionNumber() - 1) / totalQuestions()); }
     else { renderChoice(screen, id); setProgress((questionNumber() - 1) / totalQuestions()); }
-    focusTitle();
+    var h = stage.querySelector("h1");
+    if (h) { h.setAttribute("tabindex", "-1"); h.focus({ preventScroll: true }); }
+    window.scrollTo(0, 0);
   }
 
   function renderChoice(screen, id) {
     var q = Q[id];
     screen.append(el("h1", "qtitle", q.title));
-    if (q.sub) screen.append(el("p", "qsub", q.sub));
-    var list = el("div", "options");
+    var list = el("div", "tiles");
     list.setAttribute("role", "group");
     list.setAttribute("aria-label", q.title);
     q.options.forEach(function (o, i) {
-      var b = el("button", "opt glass");
+      var b = el("button", "tile glass tinted " + TINTS[i % TINTS.length]);
       b.type = "button";
-      b.dataset.v = o.v;
-      var txt = el("span", "otext");
+      b.append(chip(o.i));
+      var txt = el("span", "ttext");
       txt.append(el("span", "t", o.t));
       if (o.d) txt.append(el("span", "d", o.d));
       b.append(txt, el("span", "key", String(i + 1)));
-      if (answers[id] === o.v) { b.classList.add("was"); b.setAttribute("aria-pressed", "true"); }
+      if (answers[id] === o.v) b.classList.add("was");
       b.addEventListener("click", function () { choose(id, o.v, b); });
       list.append(b);
     });
     screen.append(list);
   }
 
-  function choose(id, v, button) {
+  function choose(id, v, tile) {
     if (busy) return;
     busy = true;
     answers[id] = v;
-    stage.querySelectorAll(".opt").forEach(function (o) { o.classList.remove("was"); o.removeAttribute("aria-pressed"); });
-    button.classList.add("picked");
-    button.setAttribute("aria-pressed", "true");
+    stage.querySelectorAll(".tile").forEach(function (t) { t.classList.remove("was"); });
+    tile.classList.add("picked");
+    tile.setAttribute("aria-pressed", "true");
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    setTimeout(function () { busy = false; go(nextOf(id)); }, reduce ? 60 : 300);
+    setTimeout(function () { busy = false; go(nextOf(id)); }, reduce ? 60 : 340);
   }
 
-  function renderInfo(screen) {
-    screen.append(el("h1", "qtitle", "Quick heads-up on how every kit works"));
-    var card = el("div", "infocard glass");
-    var lines = [
-      ["One goal", "Each kit has one build goal and one deadline, shown before you pay."],
-      ["Finish it", "Hit the goal on time, send the proof, and you get your money back."],
-      ["Miss it", "You keep the kit and get 50% off your next one."]
-    ];
-    lines.forEach(function (l) {
-      var row = el("div", "inforow");
-      row.append(el("span", "label", l[0]), el("p", null, l[1]));
-      card.append(row);
-    });
-    screen.append(card);
-    if (answers.stage) screen.append(el("p", "qsub", STAGE_NOTE[answers.stage]));
-    var actions = el("div", "qactions");
-    var ok = splitButton("Got it");
-    ok.addEventListener("click", function () {
-      if (busy) return;
-      busy = true;
-      setTimeout(function () { busy = false; go(nextOf("how")); }, 300);
-    });
-    actions.append(ok);
-    screen.append(actions);
-  }
-
-  function renderText(screen, id) {
-    var q = Q[id];
-    var k = KITS[kitKey()];
-    screen.append(el("h1", "qtitle", q.title));
-    screen.append(el("p", "qsub", q.sub));
-    var label = el("label", "sr-only", "Your answer");
-    label.htmlFor = "finishline";
-    var ta = el("textarea", "finish glass");
-    ta.id = "finishline";
-    ta.rows = 3;
-    ta.maxLength = 200;
-    ta.placeholder = k ? k.placeholder : "e.g. The thing I keep putting off is finally live.";
-    ta.value = answers[id] || "";
-    screen.append(label, ta);
-    var actions = el("div", "qactions");
-    var next = splitButton("See my kit");
-    var skip = glassButton("Skip");
-    function done(save) {
-      if (busy) return;
-      busy = true;
-      answers[id] = save ? ta.value.trim() : "";
-      setTimeout(function () { busy = false; go("result"); }, 300);
-    }
-    next.addEventListener("click", function () { done(true); });
-    skip.addEventListener("click", function () { done(false); });
-    actions.append(next, skip);
-    screen.append(actions);
-  }
-
-  function block(n, title) {
+  function block(iconName, title) {
     var b = el("section", "rblock glass");
-    b.append(el("span", "label", n + " · " + title));
+    var h = el("div", "rbhead");
+    h.append(chip(iconName, "sm"), el("span", "label", title));
+    b.append(h);
     return b;
+  }
+  function line(list, iconName, text) {
+    var li = el("li");
+    li.append(icon(iconName), el("span", null, text));
+    list.append(li);
   }
 
   function renderResult(screen) {
     var key = kitKey();
-    var head = el("div", "rhead");
-    var tag = el("div", "rtag");
-    var bar5 = el("div", "splitbar");
-    bar5.setAttribute("aria-hidden", "true");
-    for (var i = 0; i < 5; i++) bar5.append(el("i"));
-    tag.append(el("span", "label", "Your match"), bar5);
-    head.append(tag);
-
-    if (key === "custom" || !KITS[key]) { renderCustom(screen, head); return; }
+    if (!KITS[key]) { renderCustom(screen); return; }
     var k = KITS[key];
-    var h = el("h1", "qtitle rtitle");
-    h.append(el("span", "rnum", k.num), document.createTextNode(k.name));
-    head.append(h, el("p", "qsub", k.pitch));
-    screen.append(head);
-
-    var first = FIRST_UP[key + "_a"] && FIRST_UP[key + "_a"][answers[key + "_a"]];
 
     // 1. The kit
-    var b1 = block("1", "The kit");
-    if (first) b1.append(el("p", "strong", first));
-    var ul = el("ul", "ticks");
-    k.box.forEach(function (x) { ul.append(el("li", null, x)); });
-    b1.append(ul);
-    var extra = NOTES[key + "_b"] && NOTES[key + "_b"][answers[key + "_b"]];
-    if (extra) b1.append(el("p", "muted", extra));
-    screen.append(b1);
+    var head = el("div", "rhead glass tinted " + k.tint);
+    head.append(chip(k.icon, "lg"));
+    var ht = el("div");
+    ht.append(el("span", "label", "Your kit"), el("h1", "qtitle", k.name), el("p", "qsub", k.pitch));
+    head.append(ht);
+    screen.append(head);
+
+    var inside = block("layers", "What's inside");
+    inside.classList.add("tinted", k.tint);
+    var first = FIRST_UP[key + "_a"] && FIRST_UP[key + "_a"][answers[key + "_a"]];
+    if (first) inside.append(el("p", "strong", first));
+    var ul = el("ul", "inside");
+    k.inside.forEach(function (x) { line(ul, x[0], x[1]); });
+    inside.append(ul);
+    screen.append(inside);
 
     // 2. The goal and deadline
-    var b2 = block("2", "Your build goal");
-    b2.append(el("p", "strong", goalFor(key)));
-    var dl = el("dl", "rlist");
-    addRow(dl, "Deadline", "Fixed when you buy, and shown before you pay.");
-    addRow(dl, "Proof", "Screenshots or a short screen recording.");
-    if (answers.hours) addRow(dl, "Your pace", PACE[answers.hours]);
-    b2.append(dl);
-    if (answers.finish) {
-      var mine = el("blockquote", "mine");
-      mine.append(el("span", "label", "Done, in your words"), el("p", null, "“" + answers.finish + "”"));
-      b2.append(mine);
-    }
-    if (answers.stage) b2.append(el("p", "muted", STAGE_NOTE[answers.stage]));
-    screen.append(b2);
+    var goal = block("flag", "Your goal");
+    goal.append(el("p", "strong", goalFor(key)));
+    var gl = el("ul", "inside plain");
+    line(gl, "clock", "Deadline: set when you buy, shown before you pay.");
+    line(gl, "badge-check", "Proof: screenshots or a short screen recording.");
+    goal.append(gl);
+    screen.append(goal);
 
-    // 3. Setup for their AI
-    var b3 = block("3", "Setup for your AI");
-    b3.append(el("p", null, AI_NOTE[answers.ai] || AI_NOTE.claude));
-    b3.append(el("p", "muted", "You sign up for your AI yourself and pay for it directly."));
-    screen.append(b3);
+    // 3. Setup for their AI, plus what their answers changed
+    var plan = block("compass", "Your setup");
+    var pl = el("ul", "inside plain");
+    var ai = AI[answers.ai] || AI.claude;
+    line(pl, ai[0], ai[1]);
+    if (answers.hours) line(pl, "clock", PACE[answers.hours]);
+    var note = NOTES[key + "_b"] && NOTES[key + "_b"][answers[key + "_b"]];
+    if (note) line(pl, note[0], note[1]);
+    if (answers.stage) line(pl, STAGE[answers.stage][0], STAGE[answers.stage][1]);
+    plan.append(pl);
+    screen.append(plan);
 
     // 4. Price and terms
-    var b4 = block("4", "Price and terms");
-    var dl4 = el("dl", "rlist");
-    addRow(dl4, "Price", "Set at launch. Shown before you pay, with every term below.");
-    addRow(dl4, "Finish on time", "Send the proof and get a full refund.");
-    addRow(dl4, "Miss it", "Keep the kit and get 50% off " + (k.next ? "the " + KITS[k.next].name : "the kit that fits your next step") + ".");
-    b4.append(dl4);
+    var price = block("credit-card", "Price and guarantee");
+    var prl = el("ul", "inside plain");
+    line(prl, "tag", "Price: set at launch, shown before you pay.");
+    line(prl, "badge-check", "Finish on time and send the proof: full refund.");
+    line(prl, "circle-dashed", "Miss the deadline: no refund, and the kit stays yours.");
+    price.append(prl);
     var terms = el("p", "muted");
-    terms.append(document.createTextNode("Not on sale yet, so there's no checkout here and nothing is charged. Full terms: "));
-    var a = el("a", null, "refund policy");
+    terms.append(document.createTextNode("Not on sale yet, so nothing is charged here. "));
+    var a = el("a", null, "Full terms");
     a.href = "policies.html#refunds";
     terms.append(a, document.createTextNode("."));
-    b4.append(terms);
-    screen.append(b4);
+    price.append(terms);
+    screen.append(price);
 
     var actions = el("div", "qactions");
-    actions.append(splitButton("Email me when it launches", launchMail(k.name)), glassButton("See all kits", "./#kits"));
-    screen.append(actions);
-    screen.append(retake());
+    actions.append(splitButton("Email me at launch", launchMail(k.name)), glassButton("Browse the catalog", "kits.html"));
+    screen.append(actions, retake());
   }
 
-  function renderCustom(screen, head) {
-    var h = el("h1", "qtitle rtitle", "A kit built around you");
-    head.append(h, el("p", "qsub", "What you're building doesn't fit one of the four kits yet. More kits get added based on what people ask for, so tell us about it."));
+  function renderCustom(screen) {
+    var head = el("div", "rhead glass tinted t-green");
+    head.append(chip("puzzle", "lg"));
+    var ht = el("div");
+    ht.append(el("span", "label", "Your kit"), el("h1", "qtitle", "A custom kit"), el("p", "qsub", "You don't fit a category yet. Tell us what you're building. New kits come from requests like yours."));
+    head.append(ht);
     screen.append(head);
-    var b = block("1", "What to send us");
-    var ul = el("ul", "ticks");
-    ["What you're building, in a sentence or two", "Which AI you use now: " + optLabel("ai", answers.ai), "How much time you have: " + optLabel("hours", answers.hours)].forEach(function (x) { ul.append(el("li", null, x)); });
-    b.append(ul);
-    if (answers.finish) {
-      var mine = el("blockquote", "mine");
-      mine.append(el("span", "label", "Done, in your words"), el("p", null, "“" + answers.finish + "”"));
-      b.append(mine);
-    }
-    screen.append(b);
     var actions = el("div", "qactions");
-    actions.append(splitButton("Tell us what you're building", "mailto:" + EMAIL + "?subject=" + encodeURIComponent("Kit idea")), glassButton("See the 4 kits", "./#kits"));
-    screen.append(actions);
-    screen.append(retake());
+    actions.append(splitButton("Tell us what you're building", "mailto:" + EMAIL + "?subject=" + encodeURIComponent("Kit idea")), glassButton("Browse the catalog", "kits.html"));
+    screen.append(actions, retake());
   }
 
   function goalFor(key) {
     if (key === "service") {
       var src = SOURCE[answers.service_b];
-      return "A test lead " + (src ? "from " + src + " " : "") + "goes from first message to a quote, a follow-up and a review request, start to finish. Then you switch it on for real leads.";
+      return "A test lead " + (src ? "from " + src + " " : "") + "goes from first message to quote, follow-up and review request. Then it's switched on for real leads.";
     }
-    if (key === "store") return "Your store is live with one product page, your cost sheet and your written spending limits, and a test order goes through.";
+    if (key === "store") return "Your store is live with one product page, your cost sheet and written spending limits, and a test order goes through.";
     if (key === "content") return "14 posts in 14 days on your own accounts, with your weekly scorecard filled in.";
     return "Your product is live with a working checkout, and a test purchase gets delivered automatically.";
   }
 
-  function addRow(dl, term, def) {
-    var row = el("div", "rrow");
-    row.append(el("dt", null, term), el("dd", null, def));
-    dl.append(row);
-  }
-  function optLabel(qid, v) {
-    var o = (Q[qid].options || []).filter(function (x) { return x.v === v; })[0];
-    return o ? o.t : "not answered";
-  }
   function launchMail(name) {
     var body = "Please email me when the " + name + " launches.\n\n(We only use your address to tell you about kit launches. Ask us anytime and we'll delete it.)";
     return "mailto:" + EMAIL + "?subject=" + encodeURIComponent("Launch list: " + name) + "&body=" + encodeURIComponent(body);
@@ -568,12 +433,11 @@
 
   // Number keys pick an option.
   document.addEventListener("keydown", function (e) {
-    if (e.target && (e.target.tagName === "TEXTAREA" || e.target.tagName === "INPUT")) return;
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     var n = parseInt(e.key, 10);
     if (!n) return;
-    var opts = stage.querySelectorAll(".opt");
-    if (opts[n - 1]) opts[n - 1].click();
+    var tiles = stage.querySelectorAll(".tile");
+    if (tiles[n - 1]) tiles[n - 1].click();
   });
 
   history.replaceState({ n: 1 }, "");
