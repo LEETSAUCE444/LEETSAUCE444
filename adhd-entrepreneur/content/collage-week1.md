@@ -38,7 +38,7 @@ Post only under the same condition as the Day 7 reel (Days 1–7 all went out; o
 6. Week one is data, not a verdict.
 
 ## Day 8 · Thu Oct 29 · Field: capture it / write it down (reel: "Your head is a terrible filing cabinet.")
-1. Write it ugly. Nobody grades the notes.
+1. Write it messy. Nobody grades the notes.
 2. A notebook never says "wait, what was that idea?"
 3. Capturing an idea isn't committing to it.
 4. Read your notes every Friday. The good ones hide there.
