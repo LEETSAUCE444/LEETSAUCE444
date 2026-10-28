@@ -31,7 +31,7 @@ Pre-written sets for the DAILY collage (Wil made the collage a standing daily po
 ## Day 7 · Wed Oct 28 · Field: consistency (reel: "One week in. None felt ready. All of them went out.")
 Post only under the same condition as the Day 7 reel (Days 1–7 all went out; otherwise hold this set for the make-up day).
 1. Seven days of imperfect beats one perfect someday.
-2. The streak isn't the point. The standard is.
+2. Keep the bar low enough to clear every day.
 3. You don't need a bigger launch. You need a longer streak.
 4. The days nobody watches count the most.
 5. Consistency is boring on purpose.
