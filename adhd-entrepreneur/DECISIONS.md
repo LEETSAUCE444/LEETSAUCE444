@@ -2,6 +2,17 @@
 
 Locked decisions only, newest first. Claude and Zucc build on these and don't reopen them unless Wil does. Anything still open is listed at the bottom.
 
+## Oct 28, 2026 (evening): posting cadence and quote bar (Wil, relayed by Zucc)
+
+- **More posts a day, starting Day 8 (Thu Oct 29).** Wil proposed 2–3 a day in a morning, afternoon and evening window. Claude agreed with two conditions (Wil can overrule either):
+  - The **morning reel** (calendar hero), the **afternoon collage** and an **evening second reel** make 3 posts a day on IG, and 2 reels a day on YouTube and Threads.
+  - **TikTok's second reel waits** until the 0-play cause is found. More posts don't fix distribution.
+  - Times vary inside the windows. X stays Wil's phone post.
+- **Extra lines come from Claude,** so the brand keeps one voice. Zucc peer-edits them. Days 8–14 are in `content/reel2-week2.md`. Days 15–30 follow the Thursday Oct 29 review.
+- **Quote bar raised (Wil):** one idea, blunt, said to "you", concrete, zero filler, useful in a Gen Z starter's day (starting, overthinking, building next to a 9-to-5). No slang or gimmicks. Gen Z is the expected starter-kit buyer.
+  - **The brand rules still hold:** original wording, never naming or paraphrasing the people the bar is modeled on, and no income or medical claims.
+- **Music:** in-app platform libraries only. No commercial songs baked into video files. "Louise" drew a YouTube copyright claim on Day 7.
+
 ## Oct 27, 2026: TikTok posting route (Wil)
 
 - **No TikTok posts from the phone app.** Wil: "I don't want to post anything from the actual phone app for TikTok." TikTok stays web-posted by Zucc.
@@ -118,6 +129,7 @@ Locked decisions only, newest first. Claude and Zucc build on these and don't re
   - the Hims & Hers quiz breakdown (Zucc to post)
   - which AI tools run referral programs
 - **Calendar Day 15 (Nov 5).** Its line assumed a link going live. Zucc and Claude bring a replacement founder line to the Nov 4 pre-post.
+- **Approved calendar heroes for Days 8–30 vs the new quote bar.** Claude can audit them and propose rewrites. Wil approves any change to an approved line.
 - **Domain.** `adhdentrepreneurhq.com` was unregistered on Oct 23 (.com registry lookup). It isn't held until someone registers it.
 - **From Zucc.**
   - his daily analytics log columns, for the scorecard
