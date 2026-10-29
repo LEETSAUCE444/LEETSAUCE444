@@ -1,0 +1,514 @@
+<title>Wil's Handheld Hub</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column with a sticky device switcher; a fixed-scale "what runs where" grid up top, then one section per device. */
+:root {
+  --bg: #ECEDF0;          /* handheld-shell grey, slightly cool */
+  --panel: #F8F8FA;
+  --ink: #1C1D22;
+  --muted: #5A5C66;
+  --line: #CFD1D8;
+  --accent: #9B2257;      /* DMG A/B button magenta */
+  --accent-ink: #FFFFFF;
+  --good: #2F7D4F;
+  --ok: #A86B00;
+  --bad: #A33A3A;
+  --none: #8A8C96;
+  --good-bg: #DCEFE3;
+  --ok-bg: #F6E8C9;
+  --bad-bg: #F3DADA;
+  --none-bg: #E1E2E7;
+  --code-bg: #E3E4EA;
+  --display: "Chakra Petch", "Arial Narrow", system-ui, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15161B; --panel: #1E2027; --ink: #E9E9EE; --muted: #A2A4AF; --line: #33353F;
+    --accent: #E0619C; --accent-ink: #15161B;
+    --good: #6CCB91; --ok: #E6B34D; --bad: #EE8383; --none: #8E909B;
+    --good-bg: #1D3427; --ok-bg: #3A2F17; --bad-bg: #3B2022; --none-bg: #272931;
+    --code-bg: #2A2C35;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15161B; --panel: #1E2027; --ink: #E9E9EE; --muted: #A2A4AF; --line: #33353F;
+  --accent: #E0619C; --accent-ink: #15161B;
+  --good: #6CCB91; --ok: #E6B34D; --bad: #EE8383; --none: #8E909B;
+  --good-bg: #1D3427; --ok-bg: #3A2F17; --bad-bg: #3B2022; --none-bg: #272931;
+  --code-bg: #2A2C35;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 16px/1.6 var(--body); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 880px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 64px; display: grid; gap: 40px; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2rem, 6vw, 2.9rem); letter-spacing: -0.01em; }
+h2 { font-size: 1.65rem; }
+h3 { font-size: 1.15rem; margin-top: 4px; }
+p { margin: 0; max-width: 68ch; }
+code, .mono { font-family: var(--mono); font-size: 0.88em; background: var(--code-bg); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+.eyebrow { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.stack { display: grid; gap: 14px; min-width: 0; }
+.stack-lg { display: grid; gap: 22px; min-width: 0; }
+ul, ol { margin: 0; padding-left: 1.3em; display: grid; gap: 6px; max-width: 70ch; }
+li > ul { margin-top: 6px; }
+
+/* header */
+header.hero { display: grid; gap: 14px; padding-top: 8px; }
+.lede { font-size: 1.08rem; color: var(--muted); max-width: 62ch; }
+.devices { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--mono); font-size: 0.8rem; border: 1px solid var(--line); background: var(--panel); padding: 4px 10px; border-radius: 999px; }
+
+/* sticky nav */
+nav.jump { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); margin: -20px calc(-1 * max(16px, env(safe-area-inset-left, 0px))) 0; padding: 10px max(16px, env(safe-area-inset-left, 0px)); }
+nav.jump ul { list-style: none; padding: 0; display: flex; gap: 6px; overflow-x: auto; max-width: none; scrollbar-width: none; }
+nav.jump a { display: block; white-space: nowrap; text-decoration: none; color: var(--ink); font-size: 0.88rem; font-weight: 500; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); }
+nav.jump a:hover { border-color: var(--accent); color: var(--accent); }
+
+/* callouts */
+.need { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 6px; padding: 16px 18px; display: grid; gap: 10px; }
+.warn { background: var(--ok-bg); border-radius: 6px; padding: 12px 16px; display: grid; gap: 6px; }
+.warn strong:first-child { color: var(--ok); }
+.honest { background: var(--panel); border: 1px dashed var(--line); border-radius: 6px; padding: 16px 18px; display: grid; gap: 10px; }
+
+/* compatibility grid */
+.grid-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
+table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+thead th { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 500; background: var(--panel); }
+.compat td:first-child { font-weight: 600; white-space: nowrap; }
+.compat td { min-width: 120px; }
+.pill { display: inline-block; font-family: var(--mono); font-size: 0.74rem; font-weight: 500; padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
+.pill.good { background: var(--good-bg); color: var(--good); }
+.pill.ok { background: var(--ok-bg); color: var(--ok); }
+.pill.bad { background: var(--bad-bg); color: var(--bad); }
+.pill.none { background: var(--none-bg); color: var(--none); }
+.sub { display: block; font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+.legend { display: flex; flex-wrap: wrap; gap: 10px 16px; font-size: 0.85rem; color: var(--muted); align-items: center; }
+
+/* device sections */
+section.device { display: grid; gap: 20px; scroll-margin-top: 64px; }
+.dev-head { display: grid; gap: 6px; padding-bottom: 12px; border-bottom: 2px solid var(--ink); }
+.steps { list-style: none; padding: 0; display: grid; gap: 8px; max-width: none; counter-reset: step; }
+.steps li { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; counter-increment: step; }
+.steps input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--accent); cursor: pointer; }
+.steps label { cursor: pointer; display: grid; gap: 4px; min-width: 0; }
+.steps label b::before { content: counter(step) ". "; font-family: var(--mono); color: var(--muted); font-weight: 500; }
+.steps li.done { opacity: 0.6; }
+.steps li.done label b { text-decoration: line-through; }
+.steps .detail { color: var(--muted); font-size: 0.92rem; }
+.progress { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
+
+.settings td:first-child { font-weight: 600; min-width: 150px; }
+.settings td:nth-child(2) { min-width: 160px; }
+.games { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+.games > div { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.games ul { font-size: 0.92rem; gap: 3px; }
+
+.apps td:first-child { font-weight: 600; white-space: nowrap; }
+.apps td { min-width: 110px; }
+.where { font-size: 0.88rem; }
+
+footer { color: var(--muted); font-size: 0.85rem; display: grid; gap: 8px; border-top: 1px solid var(--line); padding-top: 18px; }
+.sources { font-size: 0.82rem; columns: 2 260px; column-gap: 28px; padding-left: 1.1em; display: block; }
+.sources li { break-inside: avoid; margin-bottom: 4px; overflow-wrap: anywhere; }
+
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <span class="eyebrow">Setup notes · checked 29 Oct 2026</span>
+  <h1>Wil's Handheld Hub</h1>
+  <p class="lede">What each of your three devices plays well, the exact settings for smooth Wii on the Retroid, and where to get every emulator from its official source. Tick off each step as you go; the checkboxes remember your progress on whatever device you open this page on.</p>
+  <div class="devices">
+    <span class="chip">Miyoo Mini Plus</span>
+    <span class="chip">Retroid Pocket 3 / 3+</span>
+    <span class="chip">Galaxy S24-series phone</span>
+  </div>
+</header>
+
+<nav class="jump" aria-label="Sections">
+  <ul>
+    <li><a href="#runs">What runs where</a></li>
+    <li><a href="#miyoo">Miyoo</a></li>
+    <li><a href="#retroid">Retroid</a></li>
+    <li><a href="#wii">Wii on Retroid</a></li>
+    <li><a href="#phone">S24 phone</a></li>
+    <li><a href="#apps">App hub</a></li>
+    <li><a href="#saves">Saves &amp; box art</a></li>
+    <li><a href="#games">Getting games</a></li>
+  </ul>
+</nav>
+
+<div class="need">
+  <span class="eyebrow">Four things to check first</span>
+  <ol>
+    <li><b>Which Retroid?</b> Open Settings → Storage. About <b>128 GB</b> total means a <b>3+</b>; about <b>32 GB</b> means the original <b>RP3</b>. The 3+ is much stronger, and this decides how much Wii you can play.</li>
+    <li><b>Which phone?</b> Settings → About phone → Model number. <code>S921</code> is an S24, <code>S926</code> an S24+, <code>S928</code> an S24 Ultra. A number ending in <b>U</b> (US) has the Snapdragon chip, which is the better one for emulators. (There's no "S24 Pro".)</li>
+    <li><b>Miyoo firmware:</b> Settings → Device Info → Version. It needs <b>20230505</b> or newer for Onion.</li>
+    <li><b>Your computer:</b> Windows or Mac. It changes how you format the SD card.</li>
+  </ol>
+  <p>Send me those four answers and I'll tailor any step that depends on them.</p>
+</div>
+
+<!-- ============ COMPAT GRID ============ -->
+<section class="stack" id="runs" style="scroll-margin-top:64px">
+  <span class="eyebrow">At a glance</span>
+  <h2>What runs where</h2>
+  <p>Rule of thumb: the <b>Miyoo</b> is for anything up to PS1, the <b>Retroid 3+</b> covers up to GameCube with Wii as a per-game maybe, and the <b>phone</b> handles everything, including the heavy Wii games.</p>
+  <div class="legend">
+    <span><span class="pill good">Great</span> full speed</span>
+    <span><span class="pill ok">Mixed</span> depends on the game</span>
+    <span><span class="pill bad">Rough</span> mostly choppy</span>
+    <span><span class="pill none">No</span> not supported</span>
+  </div>
+  <div class="grid-wrap">
+    <table class="compat">
+      <thead><tr><th>System</th><th>Miyoo Mini Plus</th><th>Retroid 3+</th><th>Galaxy S24</th></tr></thead>
+      <tbody>
+        <tr><td>Game Boy / GBC / GBA</td><td><span class="pill good">Great</span></td><td><span class="pill good">Great</span></td><td><span class="pill good">Great</span></td></tr>
+        <tr><td>NES / SNES / Genesis</td><td><span class="pill good">Great</span></td><td><span class="pill good">Great</span></td><td><span class="pill good">Great</span></td></tr>
+        <tr><td>PlayStation 1</td><td><span class="pill good">Great</span><span class="sub">"Most at 60 FPS" (Onion)</span></td><td><span class="pill good">Great</span></td><td><span class="pill good">Great</span></td></tr>
+        <tr><td>Nintendo DS</td><td><span class="pill ok">Mixed</span><span class="sub">heavy 3D games struggle</span></td><td><span class="pill good">Great</span></td><td><span class="pill good">Great</span></td></tr>
+        <tr><td>N64</td><td><span class="pill none">No</span></td><td><span class="pill good">Great</span></td><td><span class="pill good">Great</span></td></tr>
+        <tr><td>PSP</td><td><span class="pill none">No</span></td><td><span class="pill good">Great</span><span class="sub">even at 3× resolution</span></td><td><span class="pill good">Great</span></td></tr>
+        <tr><td>Dreamcast / Saturn</td><td><span class="pill none">No</span></td><td><span class="pill good">Great</span></td><td><span class="pill good">Great</span></td></tr>
+        <tr><td>GameCube</td><td><span class="pill none">No</span></td><td><span class="pill good">Great</span><span class="sub">at 1× resolution</span></td><td><span class="pill good">Great</span><span class="sub">try 2×–3×</span></td></tr>
+        <tr><td>Wii</td><td><span class="pill none">No</span></td><td><span class="pill ok">Mixed</span><span class="sub">see the Wii section</span></td><td><span class="pill good">Great</span></td></tr>
+        <tr><td>PS2</td><td><span class="pill none">No</span></td><td><span class="pill ok">Mixed</span><span class="sub">hit or miss</span></td><td><span class="pill good">Great</span></td></tr>
+        <tr><td>3DS</td><td><span class="pill none">No</span></td><td><span class="pill ok">Mixed</span></td><td><span class="pill good">Great</span></td></tr>
+        <tr><td>PS Vita</td><td><span class="pill none">No</span></td><td><span class="pill none">No</span></td><td><span class="pill ok">Mixed</span><span class="sub">experimental emulator</span></td></tr>
+        <tr><td>Switch</td><td><span class="pill none">No</span></td><td><span class="pill none">No</span></td><td><span class="pill ok">Mixed</span><span class="sub">some games; needs your own Switch's keys</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="where" style="color:var(--muted)">If your Retroid turns out to be the <b>original RP3</b> (32 GB), drop GameCube, Wii, PS2 and 3DS down to <span class="pill bad">Rough</span>; its chip is much weaker. The phone ratings assume the Snapdragon model. No one has published frame-rate tests for the S24, so they come from each emulator's requirements and the chip's tier.</p>
+</section>
+
+<!-- ============ MIYOO ============ -->
+<section class="device" id="miyoo">
+  <div class="dev-head">
+    <span class="eyebrow">Device 1</span>
+    <h2>Miyoo Mini Plus: Onion OS</h2>
+    <p>Onion <b>v4.3.1-1</b> is the newest stable release (June 2024). I downloaded it and checked that the zip holds the folders it should.</p>
+  </div>
+
+  <ol class="steps" data-group="miyoo">
+    <li><input type="checkbox" id="m1"><label for="m1"><b>Buy a new microSD card</b><span class="detail">SanDisk or Samsung, 64–128 GB. Onion's own guide says the card that came with the Miyoo "is known to be slow, and will likely ruin your experience and/or data". That card is why yours corrupted. Keep the old card as a backup.</span></label></li>
+    <li><input type="checkbox" id="m2"><label for="m2"><b>Download Onion</b><span class="detail"><a href="https://github.com/OnionUI/Onion/releases/download/v4.3.1-1/Onion-v4.3.1-1.zip">Onion-v4.3.1-1.zip</a> (about 430 MB, from the official GitHub)</span></label></li>
+    <li><input type="checkbox" id="m3"><label for="m3"><b>Format the new card as FAT32 (not exFAT)</b><span class="detail"><b>Windows:</b> <a href="https://rufus.ie/">Rufus</a>, with Boot selection: Non bootable, Partition scheme: MBR, File system: Large FAT32, Cluster size: 32 KB. <b>Mac:</b> Disk Utility → select the card itself → Erase → MS-DOS (FAT) + Master Boot Record.</span></label></li>
+    <li><input type="checkbox" id="m4"><label for="m4"><b>Copy all 7 folders to the card</b><span class="detail">Unzip, turn on hidden files (Windows: View → Show → Hidden items; Mac: Cmd+Shift+.), and copy <code>.tmp_update</code>, <code>BIOS</code>, <code>Media</code>, <code>miyoo</code>, <code>miyoo354</code>, <code>RetroArch</code> and <code>Themes</code> to the top level of the card. Eject the card before you unplug it.</span></label></li>
+    <li><input type="checkbox" id="m5"><label for="m5"><b>Boot and pick your systems</b><span class="detail">Onion installs itself. When the Package Manager opens, press X until it reads "auto", or pick systems by hand, then press START twice. The Miyoo reboots when it's done.</span></label></li>
+    <li><input type="checkbox" id="m6"><label for="m6"><b>Turn on "Disable services in-game"</b><span class="detail">Tweaks → Network. It turns off network services while you play, for better speed and battery life.</span></label></li>
+    <li><input type="checkbox" id="m7"><label for="m7"><b>Add games without pulling the card</b><span class="detail">Connect the Miyoo to Wi-Fi (2.4 GHz only), turn on Tweaks → Network → HTTP, then type the Miyoo's IP address into your computer's browser to drag files over. The default login is admin/admin; change it. Taking the card in and out less often means less wear.</span></label></li>
+    <li><input type="checkbox" id="m8"><label for="m8"><b>Get box art</b><span class="detail">In the game list, press <b>Y</b> on a game → Scraper. A free <a href="https://www.screenscraper.fr/membreinscription.php">ScreenScraper account</a> makes it faster and more reliable.</span></label></li>
+  </ol>
+  <p class="progress" data-progress="miyoo"></p>
+
+  <div class="stack">
+    <h3>Make it run smoother</h3>
+    <ul>
+      <li><b>Mild overclock for heavy PS1 games.</b> Create a text file <code>RetroArch/cpuclock.txt</code> containing only <code>1800</code>. Onion's docs say this gives "up to 20%" more speed; 1800 is their recommended stable value for the Mini Plus. Don't go higher.</li>
+      <li><b>PS1:</b> keep rewind and fast-forward off. Onion says "performance may suffer greatly" otherwise.</li>
+      <li><b>GBA running slow?</b> Press Y on that game and switch its core to gpSP. It's faster, but it needs a <code>gba_bios.bin</code> dumped from your own GBA.</li>
+      <li><b>Save settings the Onion way.</b> Make changes in RetroArch's Quick Menu → Overrides → <b>Content</b> override. Resetting from inside RetroArch "will break Onion functionality".</li>
+      <li><b>Save battery:</b> brightness under about 70%, Wi-Fi off when you're not using it, and headphones ("the speaker is the most battery-hungry component").</li>
+      <li><b>Shut down correctly:</b> hold POWER (it saves first). A long hold to force it off is only for a frozen device.</li>
+    </ul>
+  </div>
+
+  <div class="warn">
+    <strong>Watch out for the update app</strong>
+    <p>If you install Onion's OTA Update app, its <b>default channel is beta</b> (a 4.4 beta from January 2026 with an open RetroAchievements bug). Switch it to <b>stable</b> before running it, or skip it; you're already on the newest stable version.</p>
+  </div>
+
+  <div class="stack">
+    <h3>Free extras</h3>
+    <ul>
+      <li><b><a href="https://onionui.github.io/docs/ports">Ports Collection</a>:</b> 24 complete games are free to play. The other 37 need data files from games you own.</li>
+      <li><b><a href="https://github.com/OnionUI/Themes">Themes</a>:</b> preview and apply them in the Themes app.</li>
+      <li><b>Pokémon-style clock games:</b> Tweaks → System → Date and time → "Set automatically via the internet".</li>
+      <li><b>Back up your saves</b> by copying the <code>Saves</code> folder to your computer now and then. That folder holds everything.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ RETROID ============ -->
+<section class="device" id="retroid">
+  <div class="dev-head">
+    <span class="eyebrow">Device 2</span>
+    <h2>Retroid Pocket 3 / 3+</h2>
+    <p>The 3+ has a Unisoc T618 chip, 4 GB RAM, Android 11 and no fan. The original RP3 has a weaker T310 with 2–3 GB. Check storage first (see the top of this page).</p>
+  </div>
+
+  <div class="honest">
+    <span class="eyebrow">About "recoding" the Retroid</span>
+    <p>The chip's speed is fixed in hardware, and no software can rewrite it. I also looked for custom firmware that speeds up the 3+. Nothing reliable exists: LineageOS covers only newer Retroids (Pocket 6 and Nova), and GammaOS never released a Retroid build and was archived in May 2026. Flashing unofficial system software can also brick the device.</p>
+    <p>Most of the real speed comes from <b>the right emulator build plus per-game settings</b>. The rest comes from these system tweaks:</p>
+  </div>
+
+  <ol class="steps" data-group="retroid">
+    <li><input type="checkbox" id="r1"><label for="r1"><b>Run the system update</b><span class="detail">Look in Settings → System for "Updates" or "Updater"; guides disagree on the exact menu.</span></label></li>
+    <li><input type="checkbox" id="r2"><label for="r2"><b>Set the performance mode</b><span class="detail">Retroid's Handheld Settings: use <b>Balance</b> or <b>Performance</b> for most systems and <b>Extreme</b> only for GameCube, Wii and PS2. With no fan, it will get warm.</span></label></li>
+    <li><input type="checkbox" id="r3"><label for="r3"><b>Turn Battery Saver off</b><span class="detail">Settings → Battery → Battery Saver. It throttles background work.</span></label></li>
+    <li><input type="checkbox" id="r4"><label for="r4"><b>Hide the floating icon, close other apps</b><span class="detail">Turn off the white floating bar on the right side from the swipe-down panel, and close other apps before launching a heavy game.</span></label></li>
+    <li><input type="checkbox" id="r5"><label for="r5"><b>Snappier menus (optional)</b><span class="detail">Settings → About → tap Build number 7 times → Developer options → set Window and Transition animation scale to 0.5×. Menus feel faster; games don't.</span></label></li>
+    <li><input type="checkbox" id="r6"><label for="r6"><b>Install Obtainium</b><span class="detail">It installs and updates emulators straight from their official GitHub pages. See the <a href="#apps">App hub</a>.</span></label></li>
+    <li><input type="checkbox" id="r7"><label for="r7"><b>Install the emulators below</b><span class="detail">The right emulator for each system is in the <a href="#apps">App hub</a> table (the "Retroid" column).</span></label></li>
+  </ol>
+  <p class="progress" data-progress="retroid"></p>
+</section>
+
+<!-- ============ WII ============ -->
+<section class="device" id="wii">
+  <div class="dev-head">
+    <span class="eyebrow">The big one</span>
+    <h2>Wii on the Retroid 3+</h2>
+    <p>The community RP3+ test sheet rates about two-thirds of its 71 tested Wii games as Perfect or Great. Testers picked which games to try, though, and most used older speed-focused Dolphin builds that are no longer officially available. Expect the light and 2D games to be smooth and the big 3D games to be choppy.</p>
+  </div>
+
+  <div class="stack">
+    <h3>Which Dolphin to use</h3>
+    <ul>
+      <li><b>Keep the preinstalled "Dolphin for Handheld"</b> from Retroid's setup wizard. The community sheet calls it the best performer on GameCube.</li>
+      <li><b>Also install official Dolphin</b> (<a href="https://play.google.com/store/apps/details?id=org.dolphinemu.dolphinemu">Google Play</a>; current release 2609a, October 2026). It's actively developed, so try each game in both and keep whichever runs better.</li>
+      <li><b>Don't uninstall the preinstalled one with "keep data".</b> On a Retroid Pocket 5 that blocked reinstalling Dolphin until the owner re-ran the setup wizard. If you remove it, remove its data too.</li>
+      <li>Skip random "fast" Dolphin forks. The famous MMJR builds are gone, and the one surviving fork tells beginners to use official Dolphin.</li>
+    </ul>
+  </div>
+
+  <div class="stack">
+    <h3>Starting settings</h3>
+    <p>Set these once in Dolphin's settings, then adjust single games with a long-press on the game → Properties → Edit Game Settings.</p>
+    <div class="grid-wrap">
+      <table class="settings">
+        <thead><tr><th>Setting</th><th>Set to</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Video Backend</td><td><b>Vulkan</b></td><td>Most testers used it. Switch to OpenGL if a game glitches (Smash Bros. Brawl needs OpenGL).</td></tr>
+          <tr><td>Internal Resolution</td><td><b>1× Native</b></td><td>The recommended level for the 3+. Try 1.5× only on light games.</td></tr>
+          <tr><td>Shader Compilation</td><td><b>Specialized</b></td><td>Dolphin labels it "Recommended for low-end hardware". If a game stutters, try Hybrid Ubershaders.</td></tr>
+          <tr><td>Compile Shaders Before Starting</td><td><b>On</b></td><td>Slower to launch, less stutter in game.</td></tr>
+          <tr><td>VBI Skip</td><td>On, per game</td><td>"Can significantly improve" low-end devices. Turn it off if a game misbehaves (Twilight Princess, Wind Waker).</td></tr>
+          <tr><td>Immediately Present XFB</td><td>On, per game</td><td>Many testers' speed trick.</td></tr>
+          <tr><td>Synchronize GPU Thread</td><td>On Idle Skipping</td><td>Dolphin warns "Never" is risky.</td></tr>
+          <tr><td>Emulated CPU Clock</td><td>100%, per game</td><td>Testers lowered it 30–65% in some games for speed. Dolphin warns that changing it can break games, so only change it when a game asks for it.</td></tr>
+          <tr><td>Audio crackling</td><td>Raise Audio Buffer</td><td>Default 80 ms; go higher if sound crackles.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="stack">
+    <h3>Controls without a Wii Remote</h3>
+    <ul>
+      <li><b>Pointer on the right stick:</b> Controller settings → Wii Remote → Motion Simulation → map <b>Point</b> to the right stick and tick <b>Relative Input</b>.</li>
+      <li><b>Or point with the touchscreen:</b> Dolphin's Touch IR Pointer (Follow or Drag mode). Use one pointer method per game; mixing them confuses it.</li>
+      <li><b>Shake:</b> map Wii Remote "Shake" to R2 (and Nunchuk shake to a spare button).</li>
+      <li><b>Sideways games</b> (like New Super Mario Bros. Wii): make a second controller profile with "Sideways Wii Remote" ticked.</li>
+    </ul>
+  </div>
+
+  <div class="stack">
+    <h3>What to expect, from community tests on the 3+</h3>
+    <div class="games">
+      <div><span class="pill good">Runs well</span><ul>
+        <li>New Super Mario Bros. Wii</li><li>Kirby's Epic Yarn &amp; Return to Dreamland</li><li>Animal Crossing: City Folk</li><li>Sonic Colors</li><li>Monster Hunter Tri</li><li>Rayman Origins</li><li>Wario Land: Shake It!</li><li>Muramasa</li><li>DBZ Budokai Tenkaichi 3</li><li>Super Paper Mario</li><li>Tatsunoko vs. Capcom</li>
+      </ul></div>
+      <div><span class="pill ok">Playable with dips</span><ul>
+        <li>Mario Kart Wii (dips with full grids)</li><li>Super Mario Galaxy 2</li><li>Xenoblade (~30 FPS open world)</li><li>Zelda: Skyward Sword (25–30 FPS)</li><li>Smash Bros. Brawl (OpenGL; some stages crash)</li><li>Epic Mickey</li>
+      </ul></div>
+      <div><span class="pill bad">Play these on the phone</span><ul>
+        <li>Super Mario Galaxy</li><li>Donkey Kong Country Returns</li><li>GoldenEye 007</li><li>Metroid: Other M</li><li>Wii Sports (half speed)</li><li>The Last Story</li>
+      </ul></div>
+    </div>
+    <p class="where">Full per-game notes and settings: the <a href="https://docs.google.com/spreadsheets/d/1Vf7SIS7ecWa_J301h0mb2bxMWBMtKLvcpAFyaa5-LDc/htmlview">RP3+ compatibility sheet</a> (Wii tab).</p>
+  </div>
+</section>
+
+<!-- ============ PHONE ============ -->
+<section class="device" id="phone">
+  <div class="dev-head">
+    <span class="eyebrow">Device 3</span>
+    <h2>Galaxy S24-series phone</h2>
+    <p>The strongest of the three by far. Use it for the Wii and PS2 games the Retroid can't handle, plus 3DS, Vita and Switch.</p>
+  </div>
+  <ol class="steps" data-group="phone">
+    <li><input type="checkbox" id="p1"><label for="p1"><b>Check the model number</b><span class="detail">Settings → About phone. Ending in <b>U</b> (US) means Snapdragon: everything below applies. Ending in <b>B</b> (international) means Exynos: still strong, but the custom-driver step won't apply and Switch is riskier.</span></label></li>
+    <li><input type="checkbox" id="p2"><label for="p2"><b>Get a controller</b><span class="detail">A USB-C phone controller (for example Backbone One; thick cases may not fit) or any Bluetooth gamepad. A real Wii Remote needs a Mayflash DolphinBar adapter.</span></label></li>
+    <li><input type="checkbox" id="p3"><label for="p3"><b>Install Obtainium and the emulators</b><span class="detail">See the "Phone" column of the <a href="#apps">App hub</a>.</span></label></li>
+    <li><input type="checkbox" id="p4"><label for="p4"><b>Dolphin: start at 2× resolution</b><span class="detail">Vulkan, Internal Resolution <b>2×</b> (try 3× per game while watching FPS), Hybrid Ubershaders, Dual Core on, DSP-HLE, CPU clock 100%. These are starting points to test; no one has published S24 benchmarks.</span></label></li>
+    <li><input type="checkbox" id="p5"><label for="p5"><b>Custom GPU driver (Snapdragon only, optional)</b><span class="detail">If a game glitches or stutters in Dolphin, PPSSPP or Vita3K, try a Turnip driver from <a href="https://github.com/K11MCH1/AdrenoToolsDrivers/releases/">AdrenoToolsDrivers</a>. Load the zip in the emulator's driver manager <b>without unzipping it</b>, and switch back to the default driver if something breaks. PS2 emulator ARMSX2 offers to download one for you on first launch.</span></label></li>
+    <li><input type="checkbox" id="p6"><label for="p6"><b>Add emulators to Gaming Hub</b><span class="detail">Gaming Hub → My games → Add games. Then turn on Game Booster → "Pause USB PD charging when gaming", which runs the phone straight off a 25 W+ PPS charger and keeps it cooler. Check the toggle shows up on your model.</span></label></li>
+  </ol>
+  <p class="progress" data-progress="phone"></p>
+  <div class="warn">
+    <strong>Two phone gotchas</strong>
+    <p><b>No microSD slot</b> on the S24, so PS2, Wii and Switch games will fill a 128 GB phone fast. <b>Switch emulators</b> were all hit by Nintendo legal notices in February 2026 and moved off GitHub. <b>Eden</b> is the maintained one, and you should download it only from <a href="https://eden-emu.dev/downloads">eden-emu.dev</a>; copycat sites have pushed malware. It also needs keys and firmware dumped from your own homebrew-capable Switch.</p>
+  </div>
+</section>
+
+<!-- ============ APP HUB ============ -->
+<section class="device" id="apps">
+  <div class="dev-head">
+    <span class="eyebrow">Official sources only</span>
+    <h2>App hub</h2>
+    <p>Every link goes to the project itself. Avoid "all-in-one emulator packs" and repack sites; they're where malware comes from.</p>
+  </div>
+
+  <div class="stack">
+    <h3>Start with Obtainium</h3>
+    <p><a href="https://github.com/ImranR98/Obtainium/releases">Obtainium</a> (free, open source) installs Android apps straight from their GitHub release pages and alerts you to updates. Install it on the Retroid and the phone, tap <b>Add App</b>, and paste a GitHub link from the table below. <a href="https://apps.obtainium.imranr.dev/">This directory</a> has one-tap configs for hundreds of apps. Keep each app on one install source: an app installed from the Play Store won't take updates from Obtainium until you uninstall it (back up saves first).</p>
+  </div>
+
+  <div class="grid-wrap">
+    <table class="apps">
+      <thead><tr><th>System</th><th>Retroid</th><th>Phone</th><th>Where to get it</th></tr></thead>
+      <tbody>
+        <tr><td>Retro (NES→PS1)</td><td>RetroArch</td><td>RetroArch</td><td class="where"><a href="https://www.retroarch.com/?page=platforms">retroarch.com</a> APK (1.22.2). The site says its Play listing is outdated.</td></tr>
+        <tr><td>Easy all-in-one</td><td>Lemuroid</td><td>Lemuroid</td><td class="where"><a href="https://github.com/Swordfish90/Lemuroid">GitHub</a> or Play. Simpler than RetroArch for beginners.</td></tr>
+        <tr><td>PS1</td><td>DuckStation</td><td>DuckStation</td><td class="where"><a href="https://www.duckstation.org/">duckstation.org</a> (Play link). Play builds are frozen; a rewritten <a href="https://downloads.duckstation.org/android-testing/">beta</a> is in testing. RetroArch's SwanStation core is the backup.</td></tr>
+        <tr><td>N64</td><td>Mupen64Plus FZ</td><td>Mupen64Plus FZ</td><td class="where">Google Play (<a href="https://github.com/fzurita/mupen64plus-ae">source</a>)</td></tr>
+        <tr><td>DS</td><td>melonDS</td><td>melonDS</td><td class="where"><a href="https://github.com/rafaelvcaetano/melonDS-android">GitHub</a> or Play. DraStic was pulled from Play in 2025.</td></tr>
+        <tr><td>PSP</td><td>PPSSPP</td><td>PPSSPP</td><td class="where"><a href="https://www.ppsspp.org/download/">ppsspp.org</a> or Play (1.20.4)</td></tr>
+        <tr><td>Dreamcast</td><td>Flycast</td><td>Flycast</td><td class="where"><a href="https://github.com/flyinghead/flycast/releases">GitHub</a> or Play (v2.7)</td></tr>
+        <tr><td>Saturn</td><td>Yaba Sanshiro 2</td><td>Yaba Sanshiro 2</td><td class="where">Google Play</td></tr>
+        <tr><td>GameCube / Wii</td><td>Dolphin + Dolphin for Handheld</td><td>Dolphin</td><td class="where"><a href="https://play.google.com/store/apps/details?id=org.dolphinemu.dolphinemu">Google Play</a> (2609a)</td></tr>
+        <tr><td>PS2</td><td>ARMSX2 (try it)</td><td>ARMSX2</td><td class="where"><a href="https://github.com/ARMSX2/ARMSX2/releases">GitHub</a> or Play (2.9.1, Oct 2026; open source, based on PCSX2)</td></tr>
+        <tr><td>3DS</td><td>Citra MMJ</td><td>Azahar</td><td class="where">Azahar: <a href="https://github.com/azahar-emu/azahar/releases">GitHub</a> or Play (2126.2). It needs a Snapdragon 835-class chip, so the Retroid uses <a href="https://github.com/weihuoya/citra/releases">Citra MMJ</a>.</td></tr>
+        <tr><td>PS Vita</td><td>—</td><td>Vita3K</td><td class="where"><a href="https://vita3k.org/download">vita3k.org</a> "Android Nightlies" (not the old Vita3K-Android repo)</td></tr>
+        <tr><td>Switch</td><td>—</td><td>Eden</td><td class="where"><a href="https://eden-emu.dev/downloads">eden-emu.dev</a> only</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="stack">
+    <h3>One menu for all your games (a frontend)</h3>
+    <ul>
+      <li><b>Retroid:</b> start with its <b>built-in launcher</b>, which Retro Game Corps calls "one of the best built-in launchers" on any handheld.</li>
+      <li><b><a href="https://es-de.org/">ES-DE</a></b> (3.5.0, paid, one purchase on Patreon covers all your devices): the most powerful, with box art and themes. Its FAQ warns that on devices with about 4 GB of RAM, like the 3+, Android may close it while a heavy emulator runs.</li>
+      <li><b><a href="https://play.google.com/store/apps/details?id=com.magneticchen.daijishou">Daijishō</a></b> (free, Play): good, but its developer is on a break.</li>
+      <li><b><a href="https://play.google.com/store/apps/details?id=com.radikal.gamelauncher">Beacon</a></b> ($2.99, Play): actively updated and easy to set up.</li>
+      <li>On Retroid, pick the <b>AOSP launcher</b> in the setup wizard if you switch to ES-DE or Daijishō.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ SAVES ============ -->
+<section class="device" id="saves">
+  <div class="dev-head">
+    <span class="eyebrow">Tie it together</span>
+    <h2>Saves, achievements &amp; box art</h2>
+  </div>
+  <ul>
+    <li><b>Carry a game between devices</b> by using the <b>same RetroArch core</b> for that system on every device, and moving the <b>in-game save</b> (the <code>.srm</code> file), not the save state. Save states often break between versions. Make an in-game save before you switch, and test with one game first.</li>
+    <li><b>Syncing automatically:</b> the official Syncthing Android app was discontinued in 2024. The fork that replaced it changed owners in late 2025 without a clear handover. It's on <a href="https://f-droid.org/packages/com.github.catfriend1.syncthingfork/">F-Droid</a>, and reviewers found nothing malicious, but for now copying save folders by USB is the safer choice. On the Miyoo, everything lives in <code>Saves/</code>.</li>
+    <li><b>Achievements:</b> a free <a href="https://retroachievements.org">RetroAchievements</a> account works in RetroArch on all three devices (Settings → Achievements) and in Dolphin. For Wii achievements, Dolphin requires "Dual Core" to be <b>off</b>, which costs speed on the Retroid.</li>
+    <li><b>Box art:</b> use the free <a href="https://www.screenscraper.fr/membreinscription.php">ScreenScraper</a> account in each frontend's scraper. For a big library, <a href="https://www.skraper.net/">Skraper</a> on a Windows PC is faster. For the Miyoo, follow <a href="https://onionui.github.io/docs/advanced/scraping">Onion's Skraper settings</a>, which use an <code>Imgs</code> folder with a capital I.</li>
+  </ul>
+</section>
+
+<!-- ============ GAMES ============ -->
+<section class="device" id="games">
+  <div class="dev-head">
+    <span class="eyebrow">The part I can't do for you</span>
+    <h2>Getting games</h2>
+    <p>I won't download or link game ROMs, ISOs or BIOS files. Commercial games are copyrighted, and there's no legal all-in-one ROM pack on GitHub; repos that claim to be one are piracy and get taken down. These are the routes that are actually legal:</p>
+  </div>
+  <div class="games">
+    <div><span class="pill good">Copy carts you own</span><ul>
+      <li><a href="https://www.epilogue.co/product/gb-operator">GB Operator</a> ($49.99): Game Boy, GBC and GBA carts plus their saves</li>
+      <li>SN Operator ($59.99): SNES</li>
+      <li><a href="https://github.com/oscartreader">Open Source Cartridge Reader</a>: DIY build, NES/SNES/N64/Genesis and more</li>
+    </ul></div>
+    <div><span class="pill good">Copy discs you own</span><ul>
+      <li><b>Wii &amp; GameCube:</b> mod your own Wii with <a href="https://wii.hacks.guide/">wii.hacks.guide</a>, then dump discs with <a href="https://wii.hacks.guide/dump-games">CleanRip</a></li>
+      <li><b>PS1 / PS2:</b> a PC disc drive plus <a href="https://github.com/superg/redumper">redumper</a> or <a href="https://github.com/SabreTools/MPF">MPF</a></li>
+      <li><b>PS2 BIOS:</b> <a href="https://pcsx2.net/docs/setup/bios/">PCSX2's guide</a> (biosdrain). It also works for DuckStation.</li>
+    </ul></div>
+    <div><span class="pill good">Free &amp; legal</span><ul>
+      <li><a href="https://hh.gbdev.io/">Homebrew Hub</a>: 1,600+ free GB/GBC/GBA/NES games</li>
+      <li><a href="https://itch.io/games/tag-homebrew">itch.io homebrew</a> (check each game's terms)</li>
+      <li>The 24 free games in Onion's Ports Collection</li>
+    </ul></div>
+  </div>
+  <p>Already have games on the old Miyoo card? Copy its <code>Roms</code> folder to your computer before anything else, then drop each game into the matching folder on the new card.</p>
+</section>
+
+<footer>
+  <p>Compiled from official project pages, release listings and community testing, checked on 29 Oct 2026. Emulators change fast: if a link or version looks different, the official page wins.</p>
+  <ul class="sources">
+    <li><a href="https://onionui.github.io/docs/installation/fresh">Onion: fresh install</a></li>
+    <li><a href="https://onionui.github.io/docs/faq">Onion: FAQ (overclock, battery)</a></li>
+    <li><a href="https://onionui.github.io/docs/apps/tweaks">Onion: Tweaks</a></li>
+    <li><a href="https://onionui.github.io/docs/apps/ota-update">Onion: OTA update channels</a></li>
+    <li><a href="https://onionui.github.io/docs/emulators/psx">Onion: PS1</a></li>
+    <li><a href="https://github.com/OnionUI/Onion/releases">Onion releases</a></li>
+    <li><a href="https://liliputing.com/retroid-pocket-3-is-a-149-handheld-game-console-with-a-unisoc-t618-processor/">Liliputing: RP3 vs RP3+ specs</a></li>
+    <li><a href="https://docs.google.com/spreadsheets/d/1Vf7SIS7ecWa_J301h0mb2bxMWBMtKLvcpAFyaa5-LDc/htmlview">RP3+ compatibility sheet</a></li>
+    <li><a href="https://retrogamecorps.com/2022/01/16/retroid-pocket-2-starter-guide/">Retro Game Corps: Retroid starter guide</a></li>
+    <li><a href="https://joeysretrohandhelds.com/guides/retroid-pocket-3-plus-setup-guide">Joey's RP3+ setup guide</a></li>
+    <li><a href="https://www.joeysretrohandhelds.com/guides/android-nintendo-gamecube-emulation-setup-guide-with-dolphin/">Joey's Dolphin guide</a></li>
+    <li><a href="https://wiki.dolphin-emu.org/index.php?title=Performance_Guide">Dolphin performance guide</a></li>
+    <li><a href="https://forums.dolphin-emu.org/Thread-unable-to-reinstall-dolphin-on-retroid-pocket-5">Dolphin forum: Retroid reinstall issue</a></li>
+    <li><a href="https://9to5google.com/2026/07/01/the-retroid-pocket-6-now-officially-supports-lineageos/">9to5Google: LineageOS on Retroid</a></li>
+    <li><a href="https://androidauthority.com/samsung-galaxy-s24-snapdragon-vs-exynos-countries-3402659">Android Authority: S24 chip by country</a></li>
+    <li><a href="https://www.ppsspp.org/docs/reference/custom-drivers/">PPSSPP: custom GPU drivers</a></li>
+    <li><a href="https://eden-emu.dev/system-requirements">Eden: system requirements</a></li>
+    <li><a href="https://www.androidauthority.com/nintendo-switch-emulator-github-dmca-3640722/">Android Authority: Switch emulator DMCA</a></li>
+    <li><a href="https://www.samsung.com/au/support/apps-services/pause-usb-pd-power-delivery-charging-when-gaming-feature-on-your-galaxy-device">Samsung: pause USB PD charging</a></li>
+    <li><a href="https://www.androidauthority.com/duckstation-ends-android-support-3648430/">Android Authority: DuckStation Android</a></li>
+    <li><a href="https://gitlab.com/es-de/emulationstation-de/-/blob/master/FAQ-ANDROID.md">ES-DE Android FAQ</a></li>
+    <li><a href="https://heise.de/-11107337">heise: Syncthing-Fork handover</a></li>
+    <li><a href="https://docs.retroachievements.org/general/emulator-support-and-issues.html">RetroAchievements: emulator support</a></li>
+    <li><a href="https://pcsx2.net/docs/setup/bios/">PCSX2: dumping your BIOS</a></li>
+  </ul>
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var KEY = 'wil-handheld-hub-steps';
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { state = {}; }
+
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+
+  function refresh(group) {
+    var list = document.querySelector('.steps[data-group="' + group + '"]');
+    var out = document.querySelector('[data-progress="' + group + '"]');
+    if (!list || !out) return;
+    var boxes = list.querySelectorAll('input[type="checkbox"]');
+    var done = 0;
+    boxes.forEach(function (b) { if (b.checked) done++; });
+    out.textContent = done + ' of ' + boxes.length + ' steps done';
+  }
+
+  document.querySelectorAll('.steps input[type="checkbox"]').forEach(function (box) {
+    var li = box.closest('li');
+    var group = box.closest('.steps').getAttribute('data-group');
+    box.checked = !!state[box.id];
+    li.classList.toggle('done', box.checked);
+    box.addEventListener('change', function () {
+      state[box.id] = box.checked;
+      li.classList.toggle('done', box.checked);
+      save();
+      refresh(group);
+    });
+  });
+  ['miyoo', 'retroid', 'phone'].forEach(refresh);
+})();
+</script>
