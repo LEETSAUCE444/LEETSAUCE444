@@ -55,3 +55,12 @@ Before then:
 - 35-hour re-reads from Studio for YouTube and TikTok, logged in `daily.csv`.
 - Wil's call on the weekly Instagram Insights screenshot.
 - Slot labels on every row.
+
+## Update: later reads (Thu Oct 29, ~01:05 MDT, public pages)
+
+These reads came after the review above. They correct two things and change nothing in the experiment or the stop.
+
+- **Threads had 4 posts, not 3.** A Day 4 post (390 views, 5 likes) was never logged. Threads now reads: 4 posts, median views 8.5 (390, 2, 14, 3), best post Day 4.
+- **YouTube, all 7 Shorts read:** 101, 390, 27, 14, 10, 161, 84. Median 84. Read ages vary (15 hours to about 6 days), so treat it as rough.
+- **First on-topic Instagram comment:** a reply to the Day 6 collage's "start messy or wait" vote.
+- **A hunch, not a finding:** the two best posts of the week (YouTube Day 2, Threads Day 4) are both "finish what you started" lines. Too few posts to act on; watch it in Week 2.

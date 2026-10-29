@@ -213,3 +213,14 @@ Adjustment into Day 8: YouTube's first copyright-claim flag (Louise) is the thin
 - Engagement (Part A, this evening): 3 comments verified, one per distinct account — @morningbrew (single trio slot), @lewishowes, @paulinawegeniusminds — logged with exact texts in engagement-log.md; 1 follow placed (@hadleyhempel); 0 unfollows (none due); no Instagram warning; no QUIZ replies (quiz-link.md still absent).
 
 OBSERVATION (Day 7 evening): YouTube is still the only platform with real reach, but Day 7's 77 views are well below Day 6's 130-in-4-hours pace — the "one week in" retrospective framing underperformed Day 6's concrete 10-minute-start hook, and the Louise copyright-claim flag is not visibly throttling anything, so the hook, not the claim, is the likelier explanation. Saves + shares per reach — the primary signal — remain 0/unread everywhere: Instagram's Day 7 reel drew 0 comments, the collage's only comment is another spam-style send-request, and TikTok is at 0 across both Day 7 formats even with the review flag now cleared, confirming distribution — not the flag — is the TikTok problem. The account's real growth this week is still outbound engagement (4 followers now, with @hadleyhempel and @trin.a3146 arriving today). Adjustment into Day 8: lead with another concrete, do-it-now hook like Day 6's, not a retrospective maxim — and keep judging the collage on saves, not on its spam comment count.
+
+## Re-read — Thu 2026-10-29 (~01:05 MDT, Claude, public pages, signed out)
+- YouTube (public Shorts list, 1 subscriber, 7 videos): Day 1 https://youtube.com/shorts/_SEgiJJMYN8 101 · Day 2 390 · Day 3 27 · Day 4 14 · Day 5 10 · Day 6 https://youtube.com/shorts/O4Wt2-OKg94 161 (the ~35h read) · Day 7 84 (15h, early). Shares need Studio.
+- Threads (0 followers): Day 4 https://www.threads.com/@adhdentrepreneurhq/post/De8oqaTFaGQ 390 views, 5 likes (this post was never logged before) · Day 5 2 views · Day 6 14 views, 1 like (~39h) · Day 7 too early.
+- Instagram: Day 6 reel 1 like, 0 comments · Day 6 collage 1 like, 2 comments (one on-topic reply to the "start messy or wait" vote, one spam send-request). Views/reach/saves/shares need Insights.
+- TikTok (0 followers, 0 likes): Day 6 video and collage 0 likes, 0 comments; video 0 saves, 0 shares; plays not shown signed out. The profile's video grid failed to load.
+- Not read: X (Wil's phone), Instagram follower count, any app-only field.
+
+**OBSERVATION:** The week's two best single posts are both "finish" lines: YouTube Day 2 ("finish the last one") and the Threads Day 4 post ("Finishing is the only part anyone remembers"), 390 views each. That they show the same number is a coincidence worth a second look in the apps. Day 6 also drew the first on-topic Instagram comment, on the collage's this-or-that vote.
+
+**Adjustment into Day 9:** none. Two posts is a hunch, not data (7-post rule). Watch whether "finish/ship" lines keep leading once the 35h reads are in.
