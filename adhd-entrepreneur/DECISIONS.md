@@ -2,6 +2,12 @@
 
 Locked decisions only, newest first. Claude and Zucc build on these and don't reopen them unless Wil does. Anything still open is listed at the bottom.
 
+## Oct 29, 2026: scope of this chat and PR #1 (Wil)
+
+- **ADHD Entrepreneur only.** The brand-launch chat and PR #1 are for the ADHD Entrepreneur brand alone. Wil: "this chat isn't for anything good guys related … don't ask me anything about good guys on this chat."
+  - Claude doesn't raise, relay or ask about Wil's other business here.
+  - Zucc sends those topics to their own chats, not to PR #1.
+
 ## Oct 28, 2026 (evening): posting cadence and quote bar (Wil, relayed by Zucc)
 
 - **More posts a day, starting Day 8 (Thu Oct 29).** Wil proposed 2–3 a day in a morning, afternoon and evening window. Claude agreed with two conditions (Wil can overrule either):
