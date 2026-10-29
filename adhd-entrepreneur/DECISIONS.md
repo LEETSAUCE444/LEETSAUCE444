@@ -2,6 +2,15 @@
 
 Locked decisions only, newest first. Claude and Zucc build on these and don't reopen them unless Wil does. Anything still open is listed at the bottom.
 
+## Oct 29, 2026 (evening): calendar rewrites, Days 11–27 (Wil)
+
+- **8 calendar lines rewritten to the new quote bar,** approved as a set ("approve all"):
+  - Days 11, 15, 17, 18, 20, 23, 26 and 27.
+  - Days 26 and 27 also get new questions.
+  - The old wording is kept as `was` in `content/calendar-30.json`.
+- **The Day 15 founder line is settled:** "Two weeks of posting to almost nobody. That's what starting looks like. I'm not stopping." This closes the Nov 4 pre-post item.
+- **The other 14 lines stay as written:** Days 9, 10, 12, 13, 14, 16, 19, 21, 22, 24, 25, 28, 29 and 30. Day 8 had already posted.
+
 ## Oct 29, 2026: scope of this chat and PR #1 (Wil)
 
 - **ADHD Entrepreneur only.** The brand-launch chat and PR #1 are for the ADHD Entrepreneur brand alone. Wil: "this chat isn't for anything good guys related … don't ask me anything about good guys on this chat."
@@ -134,8 +143,6 @@ Locked decisions only, newest first. Claude and Zucc build on these and don't re
   - cash-back vs store-credit option
   - the Hims & Hers quiz breakdown (Zucc to post)
   - which AI tools run referral programs
-- **Calendar Day 15 (Nov 5).** Its line assumed a link going live. Zucc and Claude bring a replacement founder line to the Nov 4 pre-post.
-- **Approved calendar heroes for Days 8–30 vs the new quote bar.** Claude can audit them and propose rewrites. Wil approves any change to an approved line.
 - **Domain.** `adhdentrepreneurhq.com` was unregistered on Oct 23 (.com registry lookup). It isn't held until someone registers it.
 - **From Zucc.**
   - his daily analytics log columns, for the scorecard

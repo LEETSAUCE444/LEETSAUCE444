@@ -284,14 +284,14 @@ Source: bank 5 · Music: She (instrumental) from 0:35 · Links: no · Pattern: s
 
 **Card / X**
 
-> Every unfinished project charges you rent in your head.
-> Finish one. Evict the noise.
+> Every unfinished project charges rent in your head.
+> Finish one and stop paying.
 
 **Instagram caption**
 
 ```
-Every unfinished project charges you rent in your head.
-Finish one. Evict the noise.
+Every unfinished project charges rent in your head.
+Finish one and stop paying.
 
 Day 11. One simple idea a day.
 Which unfinished project is living rent-free in your head right now?
@@ -302,10 +302,10 @@ Which unfinished project is living rent-free in your head right now?
 **TikTok caption**
 
 ```
-Every unfinished project charges you rent in your head. Finish one. Evict the noise. Day 11. Which unfinished project is living rent-free in your head right now? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+Every unfinished project charges rent in your head. Finish one and stop paying. Day 11. Which unfinished project is living rent-free in your head right now? #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
 
-**YouTube Short** title: `Every unfinished project charges you rent in your head. Finish one. Evict the noise.` · description: `Day 11. One simple idea a day.`
+**YouTube Short** title: `Every unfinished project charges rent in your head. Finish one and stop paying.` · description: `Day 11. One simple idea a day.`
 
 **Hook variants** (reruns after Day 30 or a swap if Wil prefers; never both in one week)
 
@@ -405,14 +405,14 @@ Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: no · Patt
 
 **Card / X**
 
-> Two weeks of posts with no link.
-> Today I'm showing what I'm building.
+> Two weeks of posting to almost nobody.
+> That's what starting looks like. I'm not stopping.
 
 **Instagram caption**
 
 ```
-Two weeks of posts with no link.
-Today I'm showing what I'm building.
+Two weeks of posting to almost nobody.
+That's what starting looks like. I'm not stopping.
 
 Day 15. One simple idea a day.
 What kind of business are you building? One word.
@@ -423,12 +423,12 @@ What kind of business are you building? One word.
 **TikTok caption**
 
 ```
-Two weeks of posts with no link. Today I'm showing what I'm building. Day 15. What kind of business are you building? One word. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+Two weeks of posting to almost nobody. That's what starting looks like. I'm not stopping. Day 15. What kind of business are you building? One word. #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
 
-**YouTube Short** title: `Two weeks of posts with no link. Today I'm showing what I'm building.` · description: `Day 15. One simple idea a day.`
+**YouTube Short** title: `Two weeks of posting to almost nobody. That's what starting looks like. I'm not stopping.` · description: `Day 15. One simple idea a day.`
 
-**Condition:** Website on hold since Oct 23, so this line no longer fits. Zucc and Claude bring a replacement founder line to the Nov 4 pre-post for Wil's OK.
+**Condition:** Replacement founder line approved by Wil on Oct 29: the old line promised a link that is not going live.
 
 ## Day 16 · Fri Nov 6 · Business tip
 
@@ -465,14 +465,14 @@ Source: bank 6 · Music: Louise (instrumental) from 0:53 · Links: no · Pattern
 
 **Card / X**
 
-> Ideas are cheap for people like us.
-> Follow-through is the flex.
+> Ideas are everywhere.
+> Finished ones aren't.
 
 **Instagram caption**
 
 ```
-Ideas are cheap for people like us.
-Follow-through is the flex.
+Ideas are everywhere.
+Finished ones aren't.
 
 Day 17. One simple idea a day.
 How many ideas are sitting in your notes app right now?
@@ -483,10 +483,10 @@ How many ideas are sitting in your notes app right now?
 **TikTok caption**
 
 ```
-Ideas are cheap for people like us. Follow-through is the flex. Day 17. How many ideas are sitting in your notes app right now? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+Ideas are everywhere. Finished ones aren't. Day 17. How many ideas are sitting in your notes app right now? #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
 
-**YouTube Short** title: `Ideas are cheap for people like us. Follow-through is the flex.` · description: `Day 17. One simple idea a day.`
+**YouTube Short** title: `Ideas are everywhere. Finished ones aren't.` · description: `Day 17. One simple idea a day.`
 
 ## Day 18 · Sun Nov 8 · Reminder / relatable truth
 
@@ -494,14 +494,12 @@ Source: bank 8 · Music: Louise (instrumental) from 0:53 · Links: no · Pattern
 
 **Card / X**
 
-> Discipline for a fast brain isn't working harder.
-> It's making the list shorter.
+> A shorter list beats more willpower.
 
 **Instagram caption**
 
 ```
-Discipline for a fast brain isn't working harder.
-It's making the list shorter.
+A shorter list beats more willpower.
 
 Day 18. One simple idea a day.
 What can come off your list today?
@@ -512,10 +510,10 @@ What can come off your list today?
 **TikTok caption**
 
 ```
-Discipline for a fast brain isn't working harder. It's making the list shorter. Day 18. What can come off your list today? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+A shorter list beats more willpower. Day 18. What can come off your list today? #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
 
-**YouTube Short** title: `Discipline for a fast brain isn't working harder. It's making the list shorter.` · description: `Day 18. One simple idea a day.`
+**YouTube Short** title: `A shorter list beats more willpower.` · description: `Day 18. One simple idea a day.`
 
 ## Day 19 · Mon Nov 9 · AI use-case
 
@@ -552,14 +550,14 @@ Source: new · Music: She (instrumental) from 0:35 · Links: no · Pattern: nega
 
 **Card / X**
 
-> Strategy isn't what you add.
-> It's what you refuse.
+> Every yes costs you a finish.
+> Say no to one thing today.
 
 **Instagram caption**
 
 ```
-Strategy isn't what you add.
-It's what you refuse.
+Every yes costs you a finish.
+Say no to one thing today.
 
 Day 20. One simple idea a day.
 What's one thing you said no to this month?
@@ -570,10 +568,10 @@ What's one thing you said no to this month?
 **TikTok caption**
 
 ```
-Strategy isn't what you add. It's what you refuse. Day 20. What's one thing you said no to this month? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+Every yes costs you a finish. Say no to one thing today. Day 20. What's one thing you said no to this month? #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
 
-**YouTube Short** title: `Strategy isn't what you add. It's what you refuse.` · description: `Day 20. One simple idea a day.`
+**YouTube Short** title: `Every yes costs you a finish. Say no to one thing today.` · description: `Day 20. One simple idea a day.`
 
 ## Day 21 · Wed Nov 11 · Reminder / relatable truth
 
@@ -644,16 +642,14 @@ Source: bank 12 · Music: Potato Salad (instrumental) from 0:10 · Links: no · 
 
 **Card / X**
 
-> Nobody is coming to organize your ideas for you.
-> Write them down, pick one, finish it.
-> That's the whole system.
+> Nobody is coming to sort your ideas.
+> Write them down. Pick one. Finish it.
 
 **Instagram caption**
 
 ```
-Nobody is coming to organize your ideas for you.
-Write them down, pick one, finish it.
-That's the whole system.
+Nobody is coming to sort your ideas.
+Write them down. Pick one. Finish it.
 
 Day 23. One simple idea a day.
 Which idea are you picking? Put it in the comments to make it real.
@@ -664,10 +660,10 @@ Which idea are you picking? Put it in the comments to make it real.
 **TikTok caption**
 
 ```
-Nobody is coming to organize your ideas for you. Write them down, pick one, finish it. That's the whole system. Day 23. Which idea are you picking? Put it in the comments to make it real. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+Nobody is coming to sort your ideas. Write them down. Pick one. Finish it. Day 23. Which idea are you picking? Put it in the comments to make it real. #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
 
-**YouTube Short** title: `Nobody is coming to organize your ideas for you. Write them down, pick one, finish it.` · description: `Day 23. One simple idea a day.`
+**YouTube Short** title: `Nobody is coming to sort your ideas. Write them down. Pick one. Finish it.` · description: `Day 23. One simple idea a day.`
 
 **Hook variants** (reruns after Day 30 or a swap if Wil prefers; never both in one week)
 
@@ -739,17 +735,17 @@ Source: new · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: n
 
 **Card / X**
 
-> AI can't choose your one thing.
-> It can help you finish it.
+> AI can make the plan.
+> It can't make you start.
 
 **Instagram caption**
 
 ```
-AI can't choose your one thing.
-It can help you finish it.
+AI can make the plan.
+It can't make you start.
 
 Day 26. One simple idea a day.
-What's your one thing this week?
+What are you starting this week?
 
 #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
@@ -757,10 +753,10 @@ What's your one thing this week?
 **TikTok caption**
 
 ```
-AI can't choose your one thing. It can help you finish it. Day 26. What's your one thing this week? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+AI can make the plan. It can't make you start. Day 26. What are you starting this week? #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
 
-**YouTube Short** title: `AI can't choose your one thing. It can help you finish it.` · description: `Day 26. One simple idea a day.`
+**YouTube Short** title: `AI can make the plan. It can't make you start.` · description: `Day 26. One simple idea a day.`
 
 ## Day 27 · Tue Nov 17 · Business tip
 
@@ -768,17 +764,17 @@ Source: new · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: y
 
 **Card / X**
 
-> You don't need a big audience.
-> You need the right hundred people.
+> Stop chasing followers.
+> Talk to ten people who'd buy.
 
 **Instagram caption**
 
 ```
-You don't need a big audience.
-You need the right hundred people.
+Stop chasing followers.
+Talk to ten people who'd buy.
 
 Day 27. One simple idea a day.
-Describe your right hundred people in five words.
+Who are your ten? Describe them in five words.
 
 #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
@@ -786,10 +782,10 @@ Describe your right hundred people in five words.
 **TikTok caption**
 
 ```
-You don't need a big audience. You need the right hundred people. Day 27. Describe your right hundred people in five words. #entrepreneur #adhd #businessowner #mindset #smallbusiness
+Stop chasing followers. Talk to ten people who'd buy. Day 27. Who are your ten? Describe them in five words. #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
 
-**YouTube Short** title: `You don't need a big audience. You need the right hundred people.` · description: `Day 27. One simple idea a day.`
+**YouTube Short** title: `Stop chasing followers. Talk to ten people who'd buy.` · description: `Day 27. One simple idea a day.`
 
 ## Day 28 · Wed Nov 18 · AI use-case
 
