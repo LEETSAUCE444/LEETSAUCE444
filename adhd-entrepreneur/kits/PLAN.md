@@ -34,7 +34,7 @@ This is modeled on the challenge offer Alex Hormozi used to launch gym clients (
 2. The buyer pays the full price up front.
 3. **Hit the goal by the deadline and show the proof: full refund.**
 4. **Miss it: we keep the payment, and the kit stays theirs.**
-5. **After a miss, a follow-up email makes a private offer** (Wil, Oct 27). It's a discount on the next kit, or on a continuation of the same kit that helps them reach the goal. The size is still open: 50% or 75% (`q-miss-offer`). The draft is in `kits/emails/miss-followup.md`.
+5. **After a miss, a follow-up email makes a private offer** (Wil, Oct 27). It's a discount on the next kit, or on a continuation of the same kit that helps them reach the goal. Wil picked **50% off a continuation of the same kit, with a fresh deadline** (`q-miss-offer`, Oct 27). The draft is in `kits/emails/miss-followup.md`.
    - The offer is **never shown on the site, the quiz or the policies.** Wil wants it to land only for people who missed.
    - Buyers still see, before paying, that **a miss means no refund.** That's a term of the purchase. The follow-up offer is not.
 

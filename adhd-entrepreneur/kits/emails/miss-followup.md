@@ -11,9 +11,9 @@
 - Nothing about income. The goal stays something built.
 - Plain text, from the brand inbox, faceless.
 
+**Decided (Wil, Oct 27):** 50% off a continuation of the same kit, with a fresh deadline.
+
 **Open:**
-- the discount: 50% or 75% (`q-miss-offer` on the Questions tab)
-- what it applies to: the next kit, or a continuation of the same kit
 - how long the offer lasts
 - whether the continuation carries the money-back guarantee
 
@@ -27,7 +27,7 @@ The deadline on your {kit name} passed before the goal was done. That happens. T
 
 If you want another run at it, here's an offer that's only for people in your spot:
 
-**{discount}% off {the continuation of your kit / your next kit}**, with a fresh deadline. It picks up where you stopped: {one line on what it covers, e.g. "the follow-up and review steps you hadn't set up yet"}.
+**50% off the continuation of your kit**, with a fresh deadline. It picks up where you stopped: {one line on what it covers, e.g. "the follow-up and review steps you hadn't set up yet"}.
 
 Use code **{code}** by **{date}**: {link}
 

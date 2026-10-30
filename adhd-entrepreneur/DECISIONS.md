@@ -2,6 +2,10 @@
 
 Locked decisions only, newest first. Claude and Zucc build on these and don't reopen them unless Wil does. Anything still open is listed at the bottom.
 
+## Oct 27, 2026: the private offer after a missed goal (Wil, on the Questions tab)
+
+- **50% off a continuation of the same kit, with a fresh deadline** (`q-miss-offer`, option a). It goes only in the follow-up email after a miss, never on the site, quiz or policies. Logged Oct 30, when the check-in found the pick.
+
 ## Oct 29, 2026 (evening): calendar rewrites, Days 11–27 (Wil)
 
 - **8 calendar lines rewritten to the new quote bar,** approved as a set ("approve all"):
@@ -137,13 +141,19 @@ Locked decisions only, newest first. Claude and Zucc build on these and don't re
   - set prices, deadlines and proof per kit
   - have someone qualified read the policies
   - optionally, buy the domain
-- **Starter-kit plan check-in, around Fri Oct 30.** Claude reminds Wil and Zucc that day. The open items are in `kits/PLAN.md`:
-  - the price
+- **Starter kits (checked Fri Oct 30):**
+  - the price per kit
   - the deadline length per kit
-  - cash-back vs store-credit option
-  - the Hims & Hers quiz breakdown (Zucc to post)
-  - which AI tools run referral programs
-- **Domain.** `adhdentrepreneurhq.com` was unregistered on Oct 23 (.com registry lookup). It isn't held until someone registers it.
+  - cash back vs 150% store credit for finishers
+  - which AI tools run referral programs (Zucc researching)
+  - Meta AI's real capabilities per kit (Zucc researching)
+  - Kit 01's timed build goal (proposed: "a test lead gets a reply within 5 minutes")
+  - GoHighLevel vs Claude-native for Kit 01
+- **Content process (Wil's call):**
+  - collages: Zucc owns them and Claude checks after posting, or Claude renders the images
+  - a weekly Instagram Insights screenshot
+  - follow-unfollow vs the Oct 26 follow experiment
+- **Domain.** `adhdentrepreneurhq.com` was still unregistered on Oct 30 (.com registry lookup, RDAP 404). It isn't held until someone registers it.
 - **From Zucc.**
   - his daily analytics log columns, for the scorecard
   - a screenshot of the quote-card template, for the dark and story variants
