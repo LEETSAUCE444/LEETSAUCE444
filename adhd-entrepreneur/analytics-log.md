@@ -224,3 +224,16 @@ OBSERVATION (Day 7 evening): YouTube is still the only platform with real reach,
 **OBSERVATION:** The week's two best single posts are both "finish" lines: YouTube Day 2 ("finish the last one") and the Threads Day 4 post ("Finishing is the only part anyone remembers"), 390 views each. That they show the same number is a coincidence worth a second look in the apps. Day 6 also drew the first on-topic Instagram comment, on the collage's this-or-that vote.
 
 **Adjustment into Day 9:** none. Two posts is a hunch, not data (7-post rule). Watch whether "finish/ship" lines keep leading once the 35h reads are in.
+
+## Day 8 — Thu 2026-10-29 (nightly log, ~23:33 MDT, Claude, public pages, signed out)
+Run by hand because tonight's 9:37pm routine couldn't reach the repo. Zucc hadn't logged Day 8 yet, so nothing was skipped.
+- YouTube: Day 8 https://youtube.com/shorts/KXvkrSPOfN0 76 views (~13h). Day 7 ~35h re-read: 85 (was 84 at 15h).
+- Instagram: Day 8 reel https://www.instagram.com/p/DfFb1jKoTMb/ 1 like, 0 comments (13h) · Day 8 collage https://www.instagram.com/p/DfF0D-WgaBa/ 1 like, 2 comments (one asks for a 3:4 image ratio, one spam). Day 7 re-reads: reel 0 comments, collage 1 spam comment, likes not shown on either.
+- Threads: Day 8 https://www.threads.com/@adhdentrepreneurhq/post/DfFbzE8FdVZ 12 views (13h). Day 7 re-read: 3 views.
+- TikTok: profile grid won't load signed out, so the Day 8 video and collage URLs couldn't be found. Day 7 video re-read: 0 likes, comments, saves, shares; plays not shown.
+- Evening Reel 2: not found on IG, YouTube or Threads at 23:33, though the Day 8 cadence calls for one in the 6–9 PM window.
+- Not read: X, follower counts on IG, TikTok Day 8, Day 7 TikTok collage, every app-only field.
+
+**OBSERVATION:** Day 8's reel1 ("Your head is a terrible filing cabinet") is pacing with Day 7 on YouTube (76 at ~13h vs 84 at 15h) and is Threads' best same-day start since Day 4 (12 views at 13h). Day 7's Short has flattened at 85, so a 15h read is close to its final number. The collage got its first format feedback.
+
+**Adjustment into Day 9:** none from the numbers (7-post rule). Fix first: confirm whether the Day 8 evening Reel 2 posted, since the Week 2 experiment needs it.
