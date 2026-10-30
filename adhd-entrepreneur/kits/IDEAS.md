@@ -124,7 +124,13 @@ Every goal is a **draft until Wil approves it**. Goals are always about somethin
 
 | Date | Idea / claim | Source (link) | Added by | Checked? |
 |---|---|---|---|---|
-| | | | | |
+| 2026-10-30 | Kit 01 stays narrow and do-it-yourself: missed-call text-back, lead capture with a notification, follow-up and a review request. Sell the outcome ("every missed call gets a text back fast"), not the tool names. | [Owen Rensland agency course, YouTube, Jul 19 2026](https://www.youtube.com/watch?v=t_8L-TKMq2s) | Zucc | Claude: Fits the approved Kit 01. Planning input. |
+| 2026-10-30 | Speed to lead: reply to a new lead within about 5 minutes. | [Owen Rensland agency course, YouTube, Jul 19 2026](https://www.youtube.com/watch?v=t_8L-TKMq2s) | Zucc | Claude: Proposal: make a timed reply part of Kit 01's build goal, e.g. "a test lead gets a reply within 5 minutes." Wil to approve. |
+| 2026-10-30 | Micro-niche beats broad: one business type per kit. | [Owen Rensland agency course, YouTube, Jul 19 2026](https://www.youtube.com/watch?v=t_8L-TKMq2s) | Zucc | Claude: Matches the catalog. Later variants per trade (e.g. Local Service Kit: cleaning). |
+| 2026-10-30 | Proof vault: collect real, recent proof (screenshots, reviews, buyer results). | [Owen Rensland agency course, YouTube, Jul 19 2026](https://www.youtube.com/watch?v=t_8L-TKMq2s) | Zucc | Claude: OK, with real proof only and faceless. Never fake or borrowed proof. |
+| 2026-10-30 | Build the delivery before selling it. | [Owen Rensland agency course, YouTube, Jul 19 2026](https://www.youtube.com/watch?v=t_8L-TKMq2s) | Zucc | Claude: Matches our build gates. |
+| 2026-10-30 | GoHighLevel as the CRM (about $97/mo, his figure). | [Owen Rensland agency course, YouTube, Jul 19 2026](https://www.youtube.com/watch?v=t_8L-TKMq2s) | Zucc | Claude: **Open, Wil's call.** The course is a GoHighLevel affiliate funnel (his own disclaimer), so the pick isn't neutral. My lean: stay Claude-native and use tools buyers already have. Disclose any affiliate link. The price is unverified. |
+| 2026-10-30 | Income figures, client stories and ad-budget numbers in the course. | [Owen Rensland agency course, YouTube, Jul 19 2026](https://www.youtube.com/watch?v=t_8L-TKMq2s) | Zucc | Claude: **Rejected.** Unverified income claims. Never used in brand or kit copy. |
 
 ## Referral programs to verify
 
