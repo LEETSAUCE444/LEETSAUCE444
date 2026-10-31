@@ -256,3 +256,16 @@ OBSERVATION (Day 8 evening, partial): The follower count is the one moving numbe
 OBSERVATION CORRECTION (Day 8 evening): YouTube Day 8's 52 views same-day put it between Day 7's 77 and Day 5's 2 — the "filing cabinet" hook is performing, not stalling, and TikTok's review flag is now confirmed cleared on both Day 8 formats while plays stay at 0, so distribution, not the flag, remains the TikTok problem. The day's real engagement signal is the genuine @ahmad.eltawil collage comment (3:4 ratio tip) against a second spam send-request — saves + shares per reach are still 0/unread everywhere. Adjustment into Day 9 stands: concrete hook, judge the collage on saves not comments, and consider the 3:4 ratio note when building Day 9's cards.
 
 - Day 8 evening verification read (20:11–20:20 MDT, independent of the session's own snapshot): IG 14 posts / 8 followers / 9 following (agrees); Day 8 reel 1 like / 0 comments (agrees); Day 8 collage 2 comments — @ahmad.eltawil (3:4 ratio tip) + @nexora.health.community (spam send-request) (agrees); TikTok 0/0/0, Day 8 video 0 across the board (agrees), Day 8 collage 0 plays / 0 likes / 0 comments / 0 favorites / 0 shares, no review flag (fills the previously unread collage counts); X 11 posts / 4 followers / 15 following (agrees). DISCREPANCY NOTED, not resolved: YouTube Day 8 Short read 52 views / 1 like in the session snapshot (~20:05) vs 51 views / 3 likes in this verification read (~20:11–20:20) — both are recorded as read; neither is treated as the single final number. No Instagram warning in either read.
+
+## Day 9 — Fri 2026-10-30 (nightly log, ~22:50 MDT, Claude, public pages, signed out)
+Run by hand because tonight's routine couldn't reach the repo. Zucc's Day 8 entry was already in; nothing for Day 9 yet, so nothing was skipped.
+- Threads: Day 9 https://www.threads.com/@adhdentrepreneurhq/post/DfH-w9qlacq 198 views at ~12h, the best same-day Threads read so far. Day 8 ~35h re-read: 12 views (unchanged).
+- YouTube: Day 9 https://youtube.com/shorts/9gkndfLnQMk 88 views (same-day). Day 8 ~35h re-read: 79 (76 the night before).
+- Instagram: Day 9 reel https://www.instagram.com/p/DfH91xAIF7w/ 0 comments, likes not shown (12h) · Day 9 collage https://www.instagram.com/p/DfIZBXUAcMF/ 1 like, 0 comments (8h). Day 8 reel re-read: 1 like, 0 comments.
+- TikTok: Day 8 video re-read 0 likes, comments, saves, shares; plays not shown. Day 9 TikTok URLs not found (profile grid won't load signed out).
+- Evening Reel 2: not found on IG, YouTube or Threads for Day 9 either.
+- Not read: X, IG followers, TikTok Day 9, the Day 8 TikTok and IG collage re-reads, every app-only field.
+
+**OBSERVATION:** Day 9 is the AI line ("AI won't replace the entrepreneur. It replaces the excuse 'I don't have a team'"), and it has the best Threads start on record (198 at 12h vs Day 8's 12) plus the best same-day YouTube read since Day 6. That's one post, so it's a hint that AI-type lines travel on Threads, not a finding.
+
+**Adjustment into Day 10:** none from the numbers (7-post rule). Still open: the evening Reel 2 hasn't appeared on Day 8 or Day 9, so the Week 2 experiment has no data yet.
