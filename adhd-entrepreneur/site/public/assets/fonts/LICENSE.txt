@@ -1,0 +1,9 @@
+Fonts in this folder, self-hosted so the site makes no third-party requests:
+
+- Inter (c) The Inter Project Authors (https://github.com/rsms/inter)
+- Space Grotesk (c) The Space Grotesk Project Authors (https://github.com/floriankarsten/space-grotesk)
+- JetBrains Mono (c) The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)
+
+All three are licensed under the SIL Open Font License, Version 1.1:
+https://openfontlicense.org/open-font-license-official-text/
+Latin subsets as served by Google Fonts.

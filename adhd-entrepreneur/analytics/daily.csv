@@ -1,0 +1,71 @@
+date,day,platform,format,post_url,read_at,hours_after_post,source,views,reach,likes,comments,saves,shares,profile_visits,follows,followers_total,notes
+2026-10-22,1,instagram,reel,https://www.instagram.com/p/De0hZHXo-BC/,2026-10-23T20:24-06:00,24,public,,,2,0,,,,,0,views/reach/saves/shares not public
+2026-10-22,1,tiktok,reel,https://www.tiktok.com/@adhdentrepreneurhq/video/7699702990520782111,2026-10-23T10:05-06:00,12,studio,55,,,,,,,,,56 plays on a later public read
+2026-10-22,1,youtube,reel,,2026-10-22T20:57-06:00,4,public,5,,,,,,,,,first check only
+2026-10-23,2,instagram,reel,https://www.instagram.com/p/De18MecIa3o/,2026-10-23T20:24-06:00,10,public,,,3,0,,,,,0,views/reach/saves/shares not public
+2026-10-23,2,youtube,reel,https://youtube.com/shorts/9WXZmhbPAtY,2026-10-23T20:24-06:00,10,public,301,,11,0,,,,,1,channel subscribers
+2026-10-23,2,tiktok,reel,https://www.tiktok.com/@adhdentrepreneurhq/video/7699894937537596703,2026-10-23T21:40-06:00,12,public,0,,0,0,0,0,,,0,public read may be stale; check Studio for a muted-audio or restriction notice
+2026-10-23,2,x,text,,2026-10-23T20:24-06:00,,public,,,,,,,,,3,account totals: 3 followers / 4 posts
+2026-10-24,3,instagram,reel,https://www.instagram.com/p/De4hiu8ILUn/,2026-10-24T20:00-06:00,10,public,,,3,0,,,,,0,views/reach/saves/shares not shown on web
+2026-10-24,3,instagram,collage,https://www.instagram.com/p/De5BTLlgeca/,2026-10-24T20:00-06:00,5,public,,,,1,,,,,0,"the 1 comment is a spam send-request, not signal"
+2026-10-24,3,youtube,reel,https://www.youtube.com/shorts/9ywx0x6oay4,2026-10-24T20:00-06:00,10,public,21,,3,0,,,,,1,views from the channel listing; followers_total = subscribers
+2026-10-24,3,tiktok,reel,https://www.tiktok.com/@adhdentrepreneurhq/video/7700272324670491934,2026-10-24T20:00-06:00,10,public,,,,,,0,,,0,other counts not shown on the public page
+2026-10-24,3,tiktok,collage,https://www.tiktok.com/@adhdentrepreneurhq/photo/7700334093770198303,2026-10-24T20:00-06:00,6,public,,,0,0,0,0,,,0,plays not shown
+2026-10-24,3,x,text,,2026-10-24T20:00-06:00,,public,,,,,,,,,4,account totals: 4 followers / 5 posts; per-post numbers unread
+2026-10-25,4,instagram,reel,https://www.instagram.com/p/De7I687I_8p/,2026-10-25T20:15-06:00,10,public,,,0,0,,,,,,followers unread tonight
+2026-10-25,4,instagram,collage,https://www.instagram.com/p/De7xttNgZ2r/,2026-10-25T20:15-06:00,4,public,,,0,1,,,,,,comment text not shown; not counted as signal
+2026-10-25,4,youtube,reel,https://www.youtube.com/shorts/L80LrdLv4ss,2026-10-25T20:15-06:00,9,public,,,,,,,,,,all counts unread (text fetch)
+2026-10-25,4,tiktok,reel,https://www.tiktok.com/@adhdentrepreneurhq/video/7700657924221177118,2026-10-25T20:15-06:00,9,public,0,,0,0,0,0,,,0,public page read
+2026-10-25,4,tiktok,collage,https://www.tiktok.com/@adhdentrepreneurhq/photo/7700709091454291231,2026-10-25T20:15-06:00,,public,,,,,,,,,0,counts not shown in text fetch
+2026-10-26,5,instagram,reel,https://www.instagram.com/reel/De9ztPAoYYz/,2026-10-26T20:23-06:00,9,public,,,2,0,,,,,1,first follower on record
+2026-10-26,5,instagram,collage,https://www.instagram.com/p/De-GFqTAYl3/,2026-10-26T20:23-06:00,,public,,,,0,,,,,1,likes/saves/shares unread; Insights not available on web
+2026-10-26,5,youtube,reel,https://youtube.com/shorts/Qstp88yBzXA,2026-10-26T20:23-06:00,9,public,2,,,0,,,,,1,
+2026-10-26,5,tiktok,reel,https://www.tiktok.com/@adhdentrepreneurhq/video/7701030700585110814,2026-10-26T20:23-06:00,9,public,0,,0,0,0,0,,,0,public page read; confirmed public
+2026-10-26,5,tiktok,collage,https://www.tiktok.com/@adhdentrepreneurhq/photo/7701069445476764958,2026-10-26T20:23-06:00,,public,0,,0,0,0,0,,,0,public page read
+2026-10-26,5,threads,text,https://www.threads.com/@adhdentrepreneurhq/post/De9rfUXlUsh,2026-10-26T20:23-06:00,10,public,1,,,0,,,,,0,
+2026-10-26,5,x,text,,2026-10-26T20:23-06:00,,public,,,,,,,,,4,account totals: 4 followers / 8 posts
+2026-10-27,6,instagram,reel,https://www.instagram.com/p/DfAQwr0o2fX/,2026-10-27T20:03-06:00,10,public,,,1,0,,,,,1,
+2026-10-27,6,instagram,collage,https://www.instagram.com/p/DfAy7IRAcIj/,2026-10-27T20:03-06:00,5,public,,,,1,,,,,1,"the 1 comment is a spam send-request, not signal"
+2026-10-27,6,youtube,reel,https://youtube.com/shorts/O4Wt2-OKg94,2026-10-27T20:03-06:00,4,public,130,,,0,,,,,1,posted 16:10 after the sign-in fix
+2026-10-27,6,tiktok,reel,https://www.tiktok.com/@adhdentrepreneurhq/video/7701381606925274398,2026-10-27T20:03-06:00,10,public,0,,0,0,0,0,,,0,public page read; no review flag
+2026-10-27,6,tiktok,collage,https://www.tiktok.com/@adhdentrepreneurhq/photo/7701456083533008159,2026-10-27T20:03-06:00,,public,0,,0,0,0,0,,,0,public page read
+2026-10-27,6,threads,text,https://www.threads.com/@adhdentrepreneurhq/post/DfAPTOFm-QJ,2026-10-27T20:03-06:00,10,public,14,,1,0,,,,,0,
+2026-10-27,6,x,text,,2026-10-27T20:03-06:00,,public,,,,,,,,,4,account totals: 4 followers / 9 posts
+2026-10-28,7,instagram,reel,https://www.instagram.com/p/DfC0o5SodGE/,,,public,,,,0,,,,,4,"evening read, time not given; likes unread"
+2026-10-28,7,instagram,collage,https://www.instagram.com/p/DfDTzGpAQNa/,,,public,,,,1,,,,,4,"the 1 comment is a spam send-request, not signal"
+2026-10-28,7,youtube,reel,https://youtube.com/shorts/UmuPC0pEC0s,,,public,77,,,0,,,,,1,Content ID claim on the music (Louise); no visible restriction
+2026-10-28,7,tiktok,reel,https://www.tiktok.com/@adhdentrepreneurhq/video/7701750827685334302,,,public,,,0,0,0,0,,,0,plays unread
+2026-10-28,7,tiktok,collage,https://www.tiktok.com/@adhdentrepreneurhq/photo/7701821057744899359,,,public,,,0,0,0,0,,,0,
+2026-10-28,7,threads,text,https://www.threads.com/@adhdentrepreneurhq/post/DfC0EO9FdI-,,,public,3,,,0,,,,,0,
+2026-10-28,7,x,text,,,,public,,,,,,,,,4,account totals: 4 followers / 9 posts; Day 7 X post not confirmed
+2026-10-22,1,youtube,reel,https://youtube.com/shorts/_SEgiJJMYN8,2026-10-29T01:05-06:00,,public,101,,,,,,,,1,"late re-read (~6.5 days) from the public Shorts list; Day 1 URL was missing from the first row"
+2026-10-23,2,youtube,reel,https://youtube.com/shorts/9WXZmhbPAtY,2026-10-29T01:05-06:00,,public,390,,,,,,,,1,late re-read (~5.5 days) from the public Shorts list
+2026-10-24,3,youtube,reel,https://www.youtube.com/shorts/9ywx0x6oay4,2026-10-29T01:05-06:00,,public,27,,,,,,,,1,late re-read (~4.5 days) from the public Shorts list
+2026-10-25,4,youtube,reel,https://www.youtube.com/shorts/L80LrdLv4ss,2026-10-29T01:05-06:00,,public,14,,,,,,,,1,"late re-read (~3.5 days); first view count on record for Day 4"
+2026-10-26,5,youtube,reel,https://youtube.com/shorts/Qstp88yBzXA,2026-10-29T01:05-06:00,62,public,10,,,,,,,,1,late re-read from the public Shorts list
+2026-10-27,6,youtube,reel,https://youtube.com/shorts/O4Wt2-OKg94,2026-10-29T01:05-06:00,33,public,161,,,,,,,,1,"the ~35h re-read (posted 16:10); shares need Studio"
+2026-10-28,7,youtube,reel,https://youtube.com/shorts/UmuPC0pEC0s,2026-10-29T01:05-06:00,15,public,84,,,,,,,,1,"early read; the ~35h read is due about 9pm Thu"
+2026-10-25,4,threads,text,https://www.threads.com/@adhdentrepreneurhq/post/De8oqaTFaGQ,2026-10-29T01:05-06:00,,public,390,,5,,,,,,0,"missing from the log until now; found on the public profile (posted ~3 days ago, time not logged)"
+2026-10-26,5,threads,text,https://www.threads.com/@adhdentrepreneurhq/post/De9rfUXlUsh,2026-10-29T01:05-06:00,63,public,2,,,,,,,,0,late re-read; no like count shown
+2026-10-27,6,threads,text,https://www.threads.com/@adhdentrepreneurhq/post/DfAPTOFm-QJ,2026-10-29T01:05-06:00,39,public,14,,1,,,,,,0,the ~35h re-read; unchanged since the same-day read
+2026-10-27,6,instagram,reel,https://www.instagram.com/p/DfAQwr0o2fX/,2026-10-29T01:05-06:00,,public,,,1,0,,,,,,"~35h re-read (post time not logged); views/reach/saves/shares need Insights"
+2026-10-27,6,instagram,collage,https://www.instagram.com/p/DfAy7IRAcIj/,2026-10-29T01:05-06:00,34,public,,,1,2,,,,,,"the ~35h re-read; 1 on-topic reply to the poll (start messy) plus the earlier spam send-request"
+2026-10-27,6,tiktok,reel,https://www.tiktok.com/@adhdentrepreneurhq/video/7701381606925274398,2026-10-29T01:05-06:00,,public,,,0,0,0,0,,,0,"~35h re-read (post time not logged); plays not shown on the public page; original sound"
+2026-10-27,6,tiktok,collage,https://www.tiktok.com/@adhdentrepreneurhq/photo/7701456083533008159,2026-10-29T01:05-06:00,,public,,,0,0,,,,,0,"~35h re-read; plays, saves and shares not shown"
+2026-10-28,7,youtube,reel,https://youtube.com/shorts/UmuPC0pEC0s,2026-10-29T23:33-06:00,,public,85,,,,,,,,1,"~35h re-read (about 37h; exact post time not logged); 84 at 15h, so it has stalled"
+2026-10-28,7,threads,text,https://www.threads.com/@adhdentrepreneurhq/post/DfC0EO9FdI-,2026-10-29T23:33-06:00,38,public,3,,,,,,,,0,~35h re-read; no like count shown
+2026-10-28,7,instagram,reel,https://www.instagram.com/p/DfC0o5SodGE/,2026-10-29T23:33-06:00,,public,,,,0,,,,,,"~35h re-read; no like count shown; views/reach/saves/shares need Insights"
+2026-10-28,7,instagram,collage,https://www.instagram.com/p/DfDTzGpAQNa/,2026-10-29T23:33-06:00,33,public,,,,1,,,,,,"~35h re-read; the 1 comment is the spam send-request; no like count shown"
+2026-10-28,7,tiktok,reel,https://www.tiktok.com/@adhdentrepreneurhq/video/7701750827685334302,2026-10-29T23:33-06:00,,public,,,0,0,0,0,,,0,"~35h re-read; plays not shown signed out"
+2026-10-29,8,youtube,reel1,https://youtube.com/shorts/KXvkrSPOfN0,2026-10-29T23:33-06:00,,public,76,,,,,,,,1,"same-day read (~13h); no evening Reel 2 on the channel"
+2026-10-29,8,threads,reel1,https://www.threads.com/@adhdentrepreneurhq/post/DfFbzE8FdVZ,2026-10-29T23:33-06:00,13,public,12,,,,,,,,0,"same-day read; no like count shown; no evening Reel 2 post found"
+2026-10-29,8,instagram,reel1,https://www.instagram.com/p/DfFb1jKoTMb/,2026-10-29T23:33-06:00,13,public,,,1,0,,,,,,"same-day read; no evening Reel 2 found on the profile"
+2026-10-29,8,instagram,collage,https://www.instagram.com/p/DfF0D-WgaBa/,2026-10-29T23:33-06:00,9,public,,,1,2,,,,,,"same-day read; 1 format note (asks for a 3:4 image ratio) plus the usual spam send-request"
+2026-10-29,8,youtube,reel1,https://youtube.com/shorts/KXvkrSPOfN0,2026-10-30T22:50-06:00,32,public,79,,,,,,,,1,"~35h re-read (posted 14:29 after a sign-in retry); 76 the night before"
+2026-10-29,8,threads,reel1,https://www.threads.com/@adhdentrepreneurhq/post/DfFbzE8FdVZ,2026-10-30T22:50-06:00,36,public,12,,,,,,,,0,~35h re-read; unchanged; no like count shown
+2026-10-29,8,instagram,reel1,https://www.instagram.com/p/DfFb1jKoTMb/,2026-10-30T22:50-06:00,,public,,,1,0,,,,,,"~35h re-read (posted in the morning run); views/reach/saves/shares need Insights"
+2026-10-29,8,tiktok,reel1,https://www.tiktok.com/@adhdentrepreneurhq/video/7702127564512431391,2026-10-30T22:50-06:00,36,public,,,0,0,0,0,,,0,"~35h re-read (Studio listed it 10:28); plays not shown signed out"
+2026-10-30,9,youtube,reel1,https://youtube.com/shorts/9gkndfLnQMk,2026-10-30T22:50-06:00,,public,88,,,,,,,,1,"same-day read; no evening Reel 2 on the channel"
+2026-10-30,9,threads,reel1,https://www.threads.com/@adhdentrepreneurhq/post/DfH-w9qlacq,2026-10-30T22:50-06:00,12,public,198,,,,,,,,0,"same-day read; best Threads start yet; no like count shown"
+2026-10-30,9,instagram,reel1,https://www.instagram.com/p/DfH91xAIF7w/,2026-10-30T22:50-06:00,12,public,,,,0,,,,,,"same-day read; no like count shown; no evening Reel 2 on the profile"
+2026-10-30,9,instagram,collage,https://www.instagram.com/p/DfIZBXUAcMF/,2026-10-30T22:50-06:00,8,public,,,1,0,,,,,,same-day read
