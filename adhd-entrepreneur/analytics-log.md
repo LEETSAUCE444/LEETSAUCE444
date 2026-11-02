@@ -349,7 +349,7 @@ OBSERVATION (Day 10 evening): The follower count moved again (10 → 11) on a da
 
 OBSERVATION (Day 10 evening, corrected): YouTube subscribers doubled (1 → 2) and Threads delivered the day's best reach by far (299 views, 0 likes/replies — reach without conversion), while TikTok stayed at 0 on both formats despite confirmed public visibility, so distribution — not the review flag — remains the TikTok problem. Instagram's follower count held at 11 and the collage's only comments are spam send-requests, not signal. Adjustment into Day 11: keep the concrete hook and the fresh-account rotation, but treat Threads as a reach channel worth watching (views without likes means the hook travels but the close doesn't land) and keep judging the collage on saves, not its spam comment count.
 
-## Day 11 — Sun 2026-11-01 (nightly log, ~21:50 MST, Claude, public pages, signed out)
+## Day 11 — Sun 2026-11-01 (nightly log, ~21:41 MST, Claude, public pages, signed out)
 Run by hand: the nightly routine has paused itself after missing three nights (it can't reach the repo). No log ran on Oct 31, so Day 9's 35h re-read was missed and is logged late. Zucc's Day 9 and Day 10 entries were already in; nothing for Day 11 yet.
 - Threads: Day 10 https://www.threads.com/@adhdentrepreneurhq/post/DfKiiqelU1P 301 views at ~37h, the best Threads post on record · Day 9 203 at ~60h (198 at 12h) · Day 11 https://www.threads.com/@adhdentrepreneurhq/post/DfNPItaFecn 72 at 11h.
 - YouTube: Day 10 https://youtube.com/shorts/WHFYPQeXNmk 35 at ~37h (lowest since Day 5) · Day 9 90 at ~60h · Day 11 https://youtube.com/shorts/cgX9Zb_VbQA 65 same-day. The channel list shows Day 6 at 160 (161 before).
