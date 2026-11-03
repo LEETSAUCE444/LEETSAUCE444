@@ -91,7 +91,7 @@ Locked decisions only, newest first. Claude and Zucc build on these and don't re
 
 ## Oct 24, 2026: first-$100 goal moved (Wil, relayed by Zucc on PR #1)
 
-- **The first-$100 goal now runs from the first kit's launch.** The target is the first $100 earned within 30 days after the first starter kit goes on sale, with the exact date set on launch day.
+- **The first-$100 goal now runs from the first kit's launch.** The target is the first $100 earned within 30 days after the first starter kit goes on sale, with the exact date set on launch day. Wil confirmed this again on Nov 3 in Command HQ: the clock hasn't started, because nothing is for sale yet.
 - **Nov 20 no longer has a goal attached.** The posting calendar is unchanged: Day 30 is still Fri Nov 20.
 - **Until a kit is on sale,** the account is judged by the weekly scorecard (`analytics/SCORECARD.md`).
 
