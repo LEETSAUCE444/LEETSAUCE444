@@ -131,6 +131,7 @@ Every goal is a **draft until Wil approves it**. Goals are always about somethin
 | 2026-10-30 | Build the delivery before selling it. | [Owen Rensland agency course, YouTube, Jul 19 2026](https://www.youtube.com/watch?v=t_8L-TKMq2s) | Zucc | Claude: Matches our build gates. |
 | 2026-10-30 | GoHighLevel as the CRM (about $97/mo, his figure). | [Owen Rensland agency course, YouTube, Jul 19 2026](https://www.youtube.com/watch?v=t_8L-TKMq2s) | Zucc | Claude: **Open, Wil's call.** The course is a GoHighLevel affiliate funnel (his own disclaimer), so the pick isn't neutral. My lean: stay Claude-native and use tools buyers already have. Disclose any affiliate link. The price is unverified. |
 | 2026-10-30 | Income figures, client stories and ad-budget numbers in the course. | [Owen Rensland agency course, YouTube, Jul 19 2026](https://www.youtube.com/watch?v=t_8L-TKMq2s) | Zucc | Claude: **Rejected.** Unverified income claims. Never used in brand or kit copy. |
+| 2026-11-04 | Add-on idea: a simple, secure lead database that kit buyers own (forms, pipeline, follow-ups). Not necessarily called a CRM. | Wil, via Zucc on PR #1 | Zucc | Claude: parked. Only after an in-house version proves itself in real daily use. Cards stay with Stripe, never in our database. |
 
 ## Referral programs to verify
 
