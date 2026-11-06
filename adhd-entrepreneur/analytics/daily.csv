@@ -97,3 +97,10 @@ date,day,platform,format,post_url,read_at,hours_after_post,source,views,reach,li
 2026-11-04,14,tiktok,reel1,https://www.tiktok.com/@adhdentrepreneurhq/video/7704363783614975263,,,public,0,,0,0,,,,,0,public page read
 2026-11-04,14,tiktok,collage,https://www.tiktok.com/@adhdentrepreneurhq/photo/7704426007096216862,,,public,,,0,0,,,,,0,views unread
 2026-11-04,14,threads,reel1,https://www.threads.com/@adhdentrepreneurhq/post/DfU9OKOlTAM,,,public,2,,0,0,,,,,,same-day read
+2026-11-05,15,instagram,reel1,https://www.instagram.com/p/DfXhsV6IMej/,2026-11-05T20:03-07:00,10,public,,,,0,,,,,20,same-day read; views/likes/saves/shares not shown on web; Insights unavailable on desktop
+2026-11-05,15,instagram,collage,https://www.instagram.com/p/DfX8oYoAf0V/,2026-11-05T20:03-07:00,6,public,,,,0,,,,,20,same-day read
+2026-11-05,15,youtube,reel1,https://youtube.com/shorts/nFnGzB1_9h4,2026-11-05T20:03-07:00,10,public,6,,,0,,,,,2,same-day read; likes unread
+2026-11-05,15,tiktok,reel1,https://www.tiktok.com/@adhdentrepreneurhq/video/7704735974735088926,2026-11-05T20:03-07:00,10,public,0,,0,0,0,0,,,0,public page read; review flag cleared
+2026-11-05,15,tiktok,collage,https://www.tiktok.com/@adhdentrepreneurhq/photo/7704796013411945759,2026-11-05T20:03-07:00,6,public,0,,0,0,0,0,,,0,public page read; review flag cleared
+2026-11-05,15,threads,reel1,https://www.threads.com/@adhdentrepreneurhq/post/DfXio93Fetq,2026-11-05T20:03-07:00,10,public,12,,,0,,,10,0,0,same-day read; profile visits 10 (higher)
+2026-11-05,15,x,text,,2026-11-05T20:03-07:00,,public,,,,,,,,,4,"account totals: 4 followers / 18 posts; Day 15 post 1 view, 0 likes/replies/reposts"
