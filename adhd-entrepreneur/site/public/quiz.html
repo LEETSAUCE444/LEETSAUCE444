@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Find your kit · ADHD Entrepreneur</title>
+<meta name="description" content="A few quick taps to match you with one AI starter kit and one build goal.">
+<meta name="theme-color" content="#04050c">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="quiz.css">
+<script src="site.js" defer></script>
+<script src="quiz.js" defer></script>
+</head>
+<body>
+<div class="sky" aria-hidden="true"><span class="orb warm"></span><span class="orb cyan"></span><span class="orb blue"></span></div>
+
+<div class="wrap qwrap">
+  <header class="qbar glass">
+    <a class="brand" href="./"><img src="assets/favicon.png" alt="" width="30" height="30"><span>ADHD Entrepreneur</span></a>
+    <a class="btn glass small" href="./">Exit</a>
+  </header>
+  <div class="progress" id="progress" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="bar"></i></div>
+
+  <main class="stage" id="stage" aria-live="polite">
+    <noscript><p class="qsub">The quiz needs JavaScript. You can still <a href="./#kits">see all four kits</a>.</p></noscript>
+  </main>
+
+  <p class="privacy">Your answers stay on this device. Nothing is sent anywhere, and closing the tab clears them. <a href="policies.html#privacy">Privacy</a></p>
+</div>
+</body>
+</html>
