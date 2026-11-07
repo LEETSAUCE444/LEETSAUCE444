@@ -104,3 +104,7 @@ date,day,platform,format,post_url,read_at,hours_after_post,source,views,reach,li
 2026-11-05,15,tiktok,collage,https://www.tiktok.com/@adhdentrepreneurhq/photo/7704796013411945759,2026-11-05T20:03-07:00,6,public,0,,0,0,0,0,,,0,public page read; review flag cleared
 2026-11-05,15,threads,reel1,https://www.threads.com/@adhdentrepreneurhq/post/DfXio93Fetq,2026-11-05T20:03-07:00,10,public,12,,,0,,,10,0,0,same-day read; profile visits 10 (higher)
 2026-11-05,15,x,text,,2026-11-05T20:03-07:00,,public,,,,,,,,,4,"account totals: 4 followers / 18 posts; Day 15 post 1 view, 0 likes/replies/reposts"
+2026-11-06,16,instagram,reel2,https://www.instagram.com/p/DfbDKJFokwC/,2026-11-06T19:05-07:00,0,public,,,,,,,,,,,posted ~19:00 MST; silent (no music offered in web flow); no Story share per Reel 2 spec
+2026-11-06,16,youtube,reel2,https://youtube.com/shorts/4jrg_CyUXag,2026-11-06T19:05-07:00,0,public,,,,,,,,,,,posted ~19:07 MST; checks "No issues found", no copyright claim
+2026-11-06,16,threads,reel2,https://www.threads.com/@adhdentrepreneurhq/post/DfbELpWFXcK,2026-11-06T19:05-07:00,0,public,,,,,,,,,,,posted 19:03 MST; plain text, no hashtags/links
+2026-11-06,16,x,reel2,,2026-11-06T19:05-07:00,0,public,,,,,,,,,,,"Wil's phone step, unconfirmed; text sent in run report"
