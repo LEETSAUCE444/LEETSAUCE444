@@ -2,6 +2,19 @@
 
 Locked decisions only, newest first. Claude and Zucc build on these and don't reopen them unless Wil does. Anything still open is listed at the bottom.
 
+## Nov 6, 2026: evening second reel live; second Louise claim
+
+- **The evening second reel started on Day 16 (Fri Nov 6).**
+  - Zucc made the call, under Wil's Oct 28 cadence decision (below), which already included an evening reel.
+  - Lines come from `content/reel2-week3.md`. Day 15's pair is dropped.
+  - **Wil can stop it.** Claude had asked for Wil's go first. That's now a confirmation, not a gate.
+- **A second YouTube copyright claim on "Louise"** hit the Day 16 morning Short. The video stays up.
+  - **The cause:** YouTube's web upload can't add library music, so a claim means the song was in the video file. The morning run still bakes in the calendar's song.
+  - **The fix (Wil's no-baked-songs rule):**
+    - The calendar's sound line now says to add the song in each app at upload and never put it in the file.
+    - YouTube uploads go out silent.
+    - The evening reel's silent render passed ("No issues found").
+
 ## Oct 27, 2026: the private offer after a missed goal (Wil, on the Questions tab)
 
 - **50% off a continuation of the same kit, with a fresh deadline** (`q-miss-offer`, option a). It goes only in the follow-up email after a miss, never on the site, quiz or policies. Logged Oct 30, when the check-in found the pick.

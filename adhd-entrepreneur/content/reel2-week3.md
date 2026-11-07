@@ -1,6 +1,6 @@
 # Second daily reel: Days 15–21 (build source)
 
-**Status:** draft by Claude on Thu Nov 5, for the Week 3 experiment (Reel 2 vs Reel 1, carried over from Week 2). Zucc peer-edits it before each post. Wil has final say on any line. **Nothing here posts until Wil says go on the evening run.**
+**Status:** written by Claude on Thu Nov 5, for the Week 3 experiment (Reel 2 vs Reel 1, carried over from Week 2). **Live from Day 16's evening (Fri Nov 6).** Zucc started it under Wil's Oct 28 cadence decision. Day 15's pair is dropped. Zucc peer-edits each line before it posts. Wil has final say on any line and can stop the evening run.
 
 **This file is what the evening run reads.** Read it from the branch at run time, never from a saved copy, and name the SHA in the post-post.
 

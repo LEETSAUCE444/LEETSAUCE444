@@ -127,7 +127,7 @@ def write_md(cal, rows, path):
     for r in rows:
         o.append(f'## Day {r["day"]} · {r["date_label"]} · {r["slot_name"]}')
         o.append("")
-        meta = [f'Music: {r["music"]}', f'Links: {r["links"]}']
+        meta = [f'Sound: {r["music"]} (add it in each app at upload, never in the video file; YouTube uploads go silent)', f'Links: {r["links"]}']
         if r["source"] != "live":
             meta.insert(0, f'Source: {r["source"]}')
         if r.get("status"):

@@ -5,7 +5,7 @@ X = the line as plain text, no music, no hashtags. Links: On hold since Oct 23: 
 
 ## Day 1 · Thu Oct 22 · Reminder / relatable truth
 
-**LIVE** · Music: She (instrumental) from 0:35 · Links: no
+**LIVE** · Sound: She (instrumental) from 0:35 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no
 
 **Card / X**
 
@@ -13,7 +13,7 @@ X = the line as plain text, no music, no hashtags. Links: On hold since Oct 23: 
 
 ## Day 2 · Fri Oct 23 · Reminder / relatable truth
 
-**SCHEDULED** · Music: She (instrumental) from 0:35 · Links: no
+**SCHEDULED** · Sound: She (instrumental) from 0:35 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no
 
 **Card / X**
 
@@ -22,7 +22,7 @@ X = the line as plain text, no music, no hashtags. Links: On hold since Oct 23: 
 
 ## Day 3 · Sat Oct 24 · Reminder / relatable truth
 
-Source: bank 7 · Music: She (instrumental) from 0:35 · Links: no · Pattern: negation reframe
+Source: bank 7 · Sound: She (instrumental) from 0:35 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: negation reframe
 
 **Card / X**
 
@@ -56,7 +56,7 @@ You were never lazy. You were unscheduled. Day 3. What's one thing you keep mean
 
 ## Day 4 · Sun Oct 25 · Reminder / relatable truth
 
-Source: bank 1 · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: identity mirror
+Source: bank 1 · Sound: Potato Salad (instrumental) from 0:10 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: identity mirror
 
 **Card / X**
 
@@ -87,7 +87,7 @@ Starting is your superpower. Finishing is the skill. Practice the skill. Day 4. 
 
 ## Day 5 · Mon Oct 26 · Business tip
 
-Source: bank 11 · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: negation reframe
+Source: bank 11 · Sound: Potato Salad (instrumental) from 0:10 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: negation reframe
 
 **Card / X**
 
@@ -121,7 +121,7 @@ The business doesn't pay for what you started this week. It pays for what you sh
 
 ## Day 6 · Tue Oct 27 · Business tip
 
-Source: bank 9 · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: old way / new way
+Source: bank 9 · Sound: Potato Salad (instrumental) from 0:10 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: old way / new way
 
 **Card / X**
 
@@ -150,7 +150,7 @@ Old way: wait until you feel focused. New way: start for 10 minutes and let focu
 
 ## Day 7 · Wed Oct 28 · Founder story
 
-Source: new · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: story (first person)
+Source: new · Sound: Louise (instrumental) from 0:53 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: story (first person)
 
 **Card / X**
 
@@ -181,7 +181,7 @@ One week in. Seven posts. None felt ready. All of them went out. Day 7. What are
 
 ## Day 8 · Thu Oct 29 · Reminder / relatable truth
 
-Source: bank 4 · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: identity mirror
+Source: bank 4 · Sound: Louise (instrumental) from 0:53 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: identity mirror
 
 **Card / X**
 
@@ -210,7 +210,7 @@ Your head is a terrible filing cabinet. Paper remembers so you can build. Day 8.
 
 ## Day 9 · Fri Oct 30 · AI use-case
 
-Source: bank 13 · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: negation reframe
+Source: bank 13 · Sound: Louise (instrumental) from 0:53 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: negation reframe
 
 **Card / X**
 
@@ -244,7 +244,7 @@ AI won't replace the entrepreneur. It replaces the excuse "I don't have a team."
 
 ## Day 10 · Sat Oct 31 · Reminder / relatable truth
 
-Source: bank 3 · Music: She (instrumental) from 0:35 · Links: no · Pattern: setup / kicker
+Source: bank 3 · Sound: She (instrumental) from 0:35 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: setup / kicker
 
 **Card / X**
 
@@ -280,7 +280,7 @@ Busy is easy. Done is rare. Be rare. Day 10. What's one thing you got done today
 
 ## Day 11 · Sun Nov 1 · Reminder / relatable truth
 
-Source: bank 5 · Music: She (instrumental) from 0:35 · Links: no · Pattern: setup / kicker
+Source: bank 5 · Sound: She (instrumental) from 0:35 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: setup / kicker
 
 **Card / X**
 
@@ -314,7 +314,7 @@ Every unfinished project charges rent in your head. Finish one and stop paying. 
 
 ## Day 12 · Mon Nov 2 · Business tip
 
-Source: new · Music: She (instrumental) from 0:35 · Links: no · Pattern: X beats Y
+Source: new · Sound: She (instrumental) from 0:35 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: X beats Y
 
 **Card / X**
 
@@ -343,7 +343,7 @@ Posting daily beats building in secret. Nobody buys what they never saw. Day 12.
 
 ## Day 13 · Tue Nov 3 · Reminder / relatable truth
 
-Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: setup / kicker
+Source: new · Sound: Potato Salad (instrumental) from 0:10 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: setup / kicker
 
 **Card / X**
 
@@ -372,7 +372,7 @@ Mood decides if you feel like it. The plan decides if you do it. Day 13. What's 
 
 ## Day 14 · Wed Nov 4 · AI use-case
 
-Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: setup / kicker
+Source: new · Sound: Potato Salad (instrumental) from 0:10 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: setup / kicker
 
 **Card / X**
 
@@ -401,7 +401,7 @@ Give AI the boring jobs. Keep the decisions. Day 14. What's the most boring task
 
 ## Day 15 · Thu Nov 5 · Founder story
 
-Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: story (first person)
+Source: new · Sound: Potato Salad (instrumental) from 0:10 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: story (first person)
 
 **Card / X**
 
@@ -432,7 +432,7 @@ Two weeks of posting to almost nobody. That's what starting looks like. I'm not 
 
 ## Day 16 · Fri Nov 6 · Business tip
 
-Source: bank 10 · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: old way / new way
+Source: bank 10 · Sound: Louise (instrumental) from 0:53 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: old way / new way
 
 **Card / X**
 
@@ -461,7 +461,7 @@ Old way: another app, another system, another reset. New way: one list, one prio
 
 ## Day 17 · Sat Nov 7 · Reminder / relatable truth
 
-Source: bank 6 · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: identity mirror
+Source: bank 6 · Sound: Louise (instrumental) from 0:53 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: identity mirror
 
 **Card / X**
 
@@ -490,7 +490,7 @@ Ideas are everywhere. Finished ones aren't. Day 17. How many ideas are sitting i
 
 ## Day 18 · Sun Nov 8 · Reminder / relatable truth
 
-Source: bank 8 · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: negation reframe
+Source: bank 8 · Sound: Louise (instrumental) from 0:53 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: negation reframe
 
 **Card / X**
 
@@ -517,7 +517,7 @@ A shorter list beats more willpower. Day 18. What can come off your list today? 
 
 ## Day 19 · Mon Nov 9 · AI use-case
 
-Source: new · Music: She (instrumental) from 0:35 · Links: no · Pattern: you don't need more A
+Source: new · Sound: She (instrumental) from 0:35 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: you don't need more A
 
 **Card / X**
 
@@ -546,7 +546,7 @@ You don't need ten AI tools. You need one set up for your business. Day 19. How 
 
 ## Day 20 · Tue Nov 10 · Business tip
 
-Source: new · Music: She (instrumental) from 0:35 · Links: no · Pattern: negation reframe
+Source: new · Sound: She (instrumental) from 0:35 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: negation reframe
 
 **Card / X**
 
@@ -575,7 +575,7 @@ Every yes costs you a finish. Say no to one thing today. Day 20. What's one thin
 
 ## Day 21 · Wed Nov 11 · Reminder / relatable truth
 
-Source: bank 2 · Music: She (instrumental) from 0:35 · Links: no · Pattern: X beats Y
+Source: bank 2 · Sound: She (instrumental) from 0:35 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: X beats Y
 
 **Card / X**
 
@@ -609,7 +609,7 @@ Motivation gets you a new project. A schedule gets you a finished one. Day 21. W
 
 ## Day 22 · Thu Nov 12 · AI use-case
 
-Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: negation reframe
+Source: new · Sound: Potato Salad (instrumental) from 0:10 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: negation reframe
 
 **Card / X**
 
@@ -638,7 +638,7 @@ AI doesn't fix a messy business. It makes the mess faster. Day 22. What's one pr
 
 ## Day 23 · Fri Nov 13 · Business tip
 
-Source: bank 12 · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: setup / kicker
+Source: bank 12 · Sound: Potato Salad (instrumental) from 0:10 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: setup / kicker
 
 **Card / X**
 
@@ -673,7 +673,7 @@ Nobody is coming to sort your ideas. Write them down. Pick one. Finish it. Day 2
 
 ## Day 24 · Sat Nov 14 · Reminder / relatable truth
 
-Source: new · Music: Potato Salad (instrumental) from 0:10 · Links: no · Pattern: the gate
+Source: new · Sound: Potato Salad (instrumental) from 0:10 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: the gate
 
 **Card / X**
 
@@ -702,7 +702,7 @@ If you can't be bad at it in public, you can't get good at it. Day 24. What are 
 
 ## Day 25 · Sun Nov 15 · Business tip
 
-Source: new · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: setup / kicker
+Source: new · Sound: Louise (instrumental) from 0:53 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: setup / kicker
 
 **Card / X**
 
@@ -731,7 +731,7 @@ Talent is a head start. Reps are the race. Day 25. What are you counting reps on
 
 ## Day 26 · Mon Nov 16 · AI use-case
 
-Source: new · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: negation reframe
+Source: new · Sound: Louise (instrumental) from 0:53 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: negation reframe
 
 **Card / X**
 
@@ -760,7 +760,7 @@ AI can make the plan. It can't make you start. Day 26. What are you starting thi
 
 ## Day 27 · Tue Nov 17 · Business tip
 
-Source: new · Music: Louise (instrumental) from 0:53 · Links: no · Pattern: you don't need more A
+Source: new · Sound: Louise (instrumental) from 0:53 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: you don't need more A
 
 **Card / X**
 
@@ -789,7 +789,7 @@ Stop chasing followers. Talk to ten people who'd buy. Day 27. Who are your ten? 
 
 ## Day 28 · Wed Nov 18 · AI use-case
 
-Source: new · Music: She (instrumental) from 0:35 · Links: no · Pattern: setup / kicker
+Source: new · Sound: She (instrumental) from 0:35 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: setup / kicker
 
 **Card / X**
 
@@ -820,7 +820,7 @@ Do it once by hand. Write it down. Then hand it to AI. Day 28. What's a task you
 
 ## Day 29 · Thu Nov 19 · Business tip
 
-Source: new · Music: She (instrumental) from 0:35 · Links: no · Pattern: X beats Y
+Source: new · Sound: She (instrumental) from 0:35 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: X beats Y
 
 **Card / X**
 
@@ -849,7 +849,7 @@ One offer, sold well, beats five offers explained badly. Day 29. If you could on
 
 ## Day 30 · Fri Nov 20 · Founder story
 
-Source: new · Music: She (instrumental) from 0:35 · Links: no · Pattern: story (first person)
+Source: new · Sound: She (instrumental) from 0:35 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: story (first person)
 
 **Card / X**
 
