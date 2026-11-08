@@ -115,3 +115,14 @@ date,day,platform,format,post_url,read_at,hours_after_post,source,views,reach,li
 2026-11-06,16,youtube,reel2,https://youtube.com/shorts/4jrg_CyUXag,2026-11-06T20:10-07:00,1,public,2,,0,0,,,,,,"posted ~19:07 MST; checks ""No issues found"", no copyright claim; numbers from the ~8:10 PM snapshot (1h)"
 2026-11-06,16,threads,reel2,https://www.threads.com/@adhdentrepreneurhq/post/DfbELpWFXcK,2026-11-06T20:10-07:00,1,public,7,,,0,,,0,0,,"posted 19:03 MST; plain text, no hashtags/links; numbers from the ~8:10 PM snapshot (1h)"
 2026-11-06,16,x,reel2,,2026-11-06T19:05-07:00,,public,,,,,,,,,,"Wil's phone step, unconfirmed; text sent in run report"
+2026-11-07,17,instagram,reel1,https://www.instagram.com/p/Dfcq4_6oHgy/,2026-11-07T20:06-07:00,10,public,,,,0,,,,,21,same-day read; views/likes/saves/shares not shown on web; Insights unavailable on desktop
+2026-11-07,17,instagram,collage,https://www.instagram.com/p/DfdF_6xgTLB/,2026-11-07T20:06-07:00,6,public,,,,1,,,,,21,"same-day read; 1 comment, spam send-request (not signal)"
+2026-11-07,17,youtube,reel1,https://youtube.com/shorts/bXpWJyeCCNs,2026-11-07T20:06-07:00,10,public,21,,1,0,,,,,2,"same-day read; silent render, ffprobe no audio stream; Copyright None, no claim"
+2026-11-07,17,tiktok,reel1,https://www.tiktok.com/@adhdentrepreneurhq/video/7705477417078459678,2026-11-07T20:06-07:00,10,public,0,,0,0,0,0,,,0,public page read; review flag cleared (Everyone)
+2026-11-07,17,tiktok,collage,https://www.tiktok.com/@adhdentrepreneurhq/photo/7705537555781143838,2026-11-07T20:06-07:00,6,public,0,,0,0,0,0,,,0,public page read; review flag cleared (Everyone)
+2026-11-07,17,threads,reel1,https://www.threads.com/@adhdentrepreneurhq/post/Dfcr2_6FcKF,2026-11-07T20:06-07:00,10,public,8,,,0,,,,,,same-day read; likes unread
+2026-11-07,17,x,text,,2026-11-07T20:06-07:00,,public,,,,,,,,,4,"account totals: 4 followers / 20 posts; Day 17 post 1 view (public profile read)"
+2026-11-07,17,instagram,reel2,https://www.instagram.com/reel/DfdoKbXIYOe/,2026-11-07T20:06-07:00,1,public,,,,0,,,,,,"posted ~18:57 MST; silent, no music option in web flow; no Story share per Reel 2 spec; numbers from the ~8:06 PM snapshot (1h)"
+2026-11-07,17,youtube,reel2,https://youtube.com/shorts/17b4txf4Vi0,2026-11-07T20:06-07:00,1,public,59,,0,0,,,,,,"posted ~19:00 MST; checks No issues found, no copyright claim; numbers from the ~8:06 PM snapshot (1h)"
+2026-11-07,17,threads,reel2,https://www.threads.com/@adhdentrepreneurhq/post/Dfdo0I5FfLx,2026-11-07T20:06-07:00,1,public,14,,,0,,,,,,"posted 19:02 MST; plain text, no hashtags/links; numbers from the ~8:06 PM snapshot (1h)"
+2026-11-07,17,x,reel2,,2026-11-07T19:05-07:00,,public,,,,,,,,,,"Wil's phone step, unconfirmed; text sent in run report"
