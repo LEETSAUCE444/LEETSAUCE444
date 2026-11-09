@@ -51,10 +51,11 @@ Question: What's getting a start time this week?
 | Sound | Each platform's own library, or silent. Nothing baked into the file. |
 | Caption | The line, a blank line, the question, the usual hashtags. No "Day N" tagline, no links, no "quiz in bio". |
 | Log | `daily.csv`: format `reel1` for the morning reel and `reel2` for the evening reel, with the post time in notes. |
-| Read | **YouTube Studio at about 35 hours,** for both reels: views and shares. This is the comparison. Other platforms are logged as usual but don't decide it. |
+| Read | **YouTube Studio at about 24 hours, the same age for both reels** (changed Nov 9: the runs couldn't land both reels at 35 hours). The 10 AM run reads the previous day's Reel 1, at about 24h. The evening run reads the previous day's Reel 2, at about 25h. Log views and shares with the real age in `hours_after_post`. This is the comparison. Other platforms are logged as usual but don't decide it. |
 
 **The call (at the Nov 19 review, or the first review with 5+ pairs):**
-- Reel 2 wins if its median 35-hour YouTube views **and** median shares both beat Reel 1's. Anything closer is a tie.
+- Reel 2 wins if its median ~24-hour YouTube views **and** median shares both beat Reel 1's. Anything closer is a tie.
+- **Only pairs read at matched ages count,** starting with Day 18's pair. Days 16–17 were read at mismatched ages (10h vs 1h, then a missed read and a 49h read), so they're logged but left out of the call.
 - **Caveat:** the post time differs too, so a Reel 2 win could be the slot, not the wording. If Reel 2 wins, the next test puts a concrete line in the morning slot.
 - A missed evening doesn't get made up the next day. The pair just drops.
 
