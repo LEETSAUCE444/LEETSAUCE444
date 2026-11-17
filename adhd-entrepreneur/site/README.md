@@ -13,10 +13,11 @@
   - the AI crew
   - the guarantee
   - the quiz call-out, FAQ, about and contact
-- `public/kits.html` + `catalog.js`: the kit catalog
-  - Categories: Service & trades, Stores & products, Content & audience, Digital products, and Custom.
-  - Filter chips show one category at a time. Without JavaScript, every category stays visible.
-  - New kits slot into their category.
+- `public/kits.html` + `kits.css` + `kits.js`: the kit storefront, themed as an early-2000s console startup menu (Wil, Nov 17; see the kit page design below)
+  - Four kit tiles (Service & trades, Stores & products, Content & audience, Digital products), plus a "doesn't fit?" bar (`#custom`).
+  - Each tile opens a detail sheet with the price and every item inside, before any checkout.
+  - Home-page links like `kits.html#service` open that kit's sheet.
+  - Without JavaScript, tiles still open their sheets through the URL hash.
 - `public/quiz.html` + `quiz.js` + `quiz.css`: the kit quiz
 - `public/policies.html`: refund and guarantee, terms, privacy
 - `public/404.html`
@@ -40,6 +41,39 @@ Netlify publishes only `public/`. This README and `extras/` are never served.
   - A picked answer fills with its color.
 - **Icons** on every quiz answer, kit, category, crew role and guarantee step.
 - **Fonts:** Space Grotesk, Inter and JetBrains Mono, self-hosted under the SIL Open Font License.
+
+## Kit page design (Wil, Nov 17)
+
+The kit page has its own look, separate from the rest of the site. The reference is the preview at https://claude.ai/artifact/5NVdjExFHeDiH7pPi2g2Fh. Zucc's full brief is in the shared sheet, Handoffs tab, row 46.
+
+- **The look:**
+  - a black canvas with a faint 48 px grid
+  - a floating glass cube whose faces are the section nav: Kits, How it works, What's inside, FAQ
+  - a PRESS START pixel button
+  - item-shop kit tiles with a white triangle cursor
+  - a glass detail sheet
+- **Colors:**
+  - violet `#7B61FF` (primary)
+  - green `#22C55E` (confirm; only the buy button)
+  - red `#EF4444` (back)
+  - supporting blue `#2E4BFF` → `#1E3A8A` (tile borders and the contents bar)
+- **Fonts:** Nunito and Press Start 2P, self-hosted under the SIL Open Font License. Pixel type appears only on the start button, eyebrows and small tags.
+- **Fully original:**
+  - No console maker's name, logo, cube-in-cube mark, sounds, fonts or art.
+  - No game-store assets.
+  - Confirm and back are plain green and red dots, not lettered buttons.
+- **Motion:**
+  - The cube turns once every 14 seconds and eases to a face when picked.
+  - A boot screen of about 1 second plays once per browser session. It's skippable, and it's skipped on deep links.
+  - No audio, ever.
+  - With reduced motion: no boot screen, a still cube, and no blinking or bobbing.
+- **Phones:** a small spinning cube sits above a swipeable row of sections. Tiles go 2 across, and the detail sheet goes full screen.
+- **Placeholders to replace before launch:**
+  - the price ($49)
+  - the 30-day deadline
+
+  Both are in `kits.html` and are marked PLACEHOLDER on the page.
+- **The buy button doesn't check out.** Until checkout exists, it shows "Kits aren't on sale yet" with an email-at-launch link.
 
 ## The quiz
 

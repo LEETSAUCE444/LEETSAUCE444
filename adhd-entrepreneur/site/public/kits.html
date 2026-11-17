@@ -3,159 +3,158 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Kit catalog · ADHD Entrepreneur</title>
-<meta name="description" content="AI starter kits by category: service and trades, stores and products, content and audience, digital products, or custom.">
-<meta name="theme-color" content="#04050c">
+<title>Kits · ADHD Entrepreneur</title>
+<meta name="description" content="AI starter kits: setup guides for the AI you already pay for. Each kit has one build goal, one deadline, and its price and full contents shown up front.">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css">
-<script src="site.js" defer></script>
-<script src="catalog.js" defer></script>
+<link rel="preload" href="assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/press-start-2p-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="kits.css">
+<script src="kits.js" defer></script>
 </head>
 <body>
-<div class="sky" aria-hidden="true"><span class="orb warm"></span><span class="orb cyan"></span><span class="orb blue"></span></div>
+<svg class="defs" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-mark" viewBox="0 0 64 64"><path d="M32 6 56 19v26L32 58 8 45V19Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M8 19l24 13 24-13M32 32v26" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></symbol>
+    <symbol id="i-service" viewBox="0 0 32 32"><path d="M6 26l9-9M19 5a6 6 0 0 0-5 8l-9 9a2 2 0 0 0 3 3l9-9a6 6 0 0 0 8-5l-4 1-3-3z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-store" viewBox="0 0 32 32"><path d="M5 10l11-5 11 5v12l-11 5-11-5zM5 10l11 5 11-5M16 15v12M10.5 7.5l11 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-content" viewBox="0 0 32 32"><rect x="9" y="3" width="14" height="26" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M14 12v8l6-4z" fill="currentColor"/></symbol>
+    <symbol id="i-digital" viewBox="0 0 32 32"><path d="M8 3h11l6 6v20H8zM19 3v6h6M16 13v9M12 18l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 32 32"><path d="M5 5h9v9H5zM18 5h9v9h-9zM5 18h9v9H5zM18 18h9v9h-9z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-steps" viewBox="0 0 32 32"><path d="M4 26h8v-7h8v-7h8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="i-box" viewBox="0 0 32 32"><path d="M4 10l12-6 12 6v13l-12 6-12-6zM4 10l12 6 12-6M16 16v13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-faq" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12.5 12.5a3.5 3.5 0 1 1 5 3.2c-1 .5-1.5 1.2-1.5 2.3v.8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="23" r="1.4" fill="currentColor"/></symbol>
+    <symbol id="r-ceo" viewBox="0 0 32 32"><path d="M16 4l3.5 7 7.5 1-5.5 5.3 1.3 7.7L16 21.4 9.2 25l1.3-7.7L5 12l7.5-1z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+    <symbol id="r-research" viewBox="0 0 32 32"><circle cx="14" cy="14" r="8" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M20 20l7 7" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+    <symbol id="r-build" viewBox="0 0 32 32"><path d="M4 26h24M7 26V14h8v12M15 26V8h10v18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+    <symbol id="r-copy" viewBox="0 0 32 32"><path d="M6 26l2-7L22 5l5 5-14 14zM19 8l5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="r-market" viewBox="0 0 32 32"><path d="M5 13v6h4l11 6V7L9 13zM24 12a5 5 0 0 1 0 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="r-analyst" viewBox="0 0 32 32"><path d="M5 27V5M5 27h22M10 21l5-6 4 3 7-9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<div id="boot" hidden aria-hidden="true">
+  <svg viewBox="0 0 120 120">
+    <defs><linearGradient id="boot-side" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C4B5FD"/><stop offset="1" stop-color="#4C1D95"/></linearGradient></defs>
+    <path class="fl" d="M60 12 102 34 60 56 18 34Z" fill="#C4B5FD" opacity=".9"/>
+    <path class="fl" d="M18 34 60 56v52L18 86Z" fill="#7B61FF"/>
+    <path class="fl" d="M102 34 60 56v52l42-22Z" fill="url(#boot-side)"/>
+    <path class="ln" d="M60 12 102 34v52l-42 22-42-22V34Z M18 34l42 22 42-22 M60 56v52"/>
+  </svg>
+  <div class="boot-word">LOADING LOADOUT</div>
+  <button class="skip" type="button" tabindex="-1">Skip</button>
+</div>
 
 <div class="wrap">
-  <header class="topbar">
-    <div class="inner glass">
-      <a class="brand" href="./"><img src="assets/favicon.png" alt="" width="30" height="30"><span>ADHD Entrepreneur</span></a>
-      <nav aria-label="Sections">
-        <a class="hide-sm" href="./">Home</a>
-        <a class="hide-sm" href="./#guarantee">Guarantee</a>
-        <a class="btn-split small" href="quiz.html"><span class="fx" aria-hidden="true"><i></i><i></i><i></i></span><span class="lbl">Take the quiz</span></a>
-      </nav>
-    </div>
+  <header class="strip">
+    <a class="brand" href="./"><img src="assets/favicon.png" alt="" width="26" height="26"><span>ADHD Entrepreneur</span></a>
+    <nav class="strip-nav" aria-label="Site">
+      <a href="./">Home</a>
+      <a href="quiz.html">Quiz</a>
+      <span class="tag-soon">NOTHING FOR SALE YET</span>
+    </nav>
   </header>
 
-  <main>
-    <div class="cat-hero">
-      <span class="label"><span class="dot"></span>Kit catalog · nothing for sale yet</span>
-      <h1>Pick a category. Find your kit.</h1>
-      <p>Every kit has one build goal, one deadline and copy-paste AI setups. Finish on time and get your money back.</p>
+  <div class="hero">
+    <div>
+      <p class="eyebrow">AI STARTER KITS</p>
+      <h1>Your AI can already do the work. <em>Load the setup.</em></h1>
+      <p class="sub">Each kit is a setup guide for the AI you already pay for. Instructions you paste in, not a new app, tool or subscription.</p>
+      <a class="start" href="#kits" id="press-start"><span class="blink" aria-hidden="true"></span>PRESS START</a>
     </div>
-
-    <nav class="filters glass" aria-label="Filter by category">
-      <a class="filter" href="#all" data-filter="all" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#layers"/></svg>All kits</a>
-      <a class="filter t-warm" href="#service" data-filter="service" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#wrench"/></svg>Service &amp; trades</a>
-      <a class="filter t-gold" href="#stores" data-filter="stores" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#store"/></svg>Stores &amp; products</a>
-      <a class="filter t-cyan" href="#content" data-filter="content" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#megaphone"/></svg>Content &amp; audience</a>
-      <a class="filter t-violet" href="#digital" data-filter="digital" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#laptop"/></svg>Digital products</a>
-      <a class="filter t-green" href="#custom" data-filter="custom" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#puzzle"/></svg>Custom</a>
-    </nav>
-
-    <div class="catgrid">
-    <section class="category t-warm" id="service" data-cat="service" aria-labelledby="service-title">
-      <div class="cathead">
-        <span class="chip"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#wrench"/></svg></span>
-        <div><h2 id="service-title">Service &amp; trades</h2><p>Cleaning, washing, landscaping, detailing, handyman.</p></div>
-        <span class="label count">1 kit</span>
-      </div>
-      <div class="kits catalog">
-        <article class="kitcard glass tinted">
-          <div class="top"><span class="chip"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#spray-can"/></svg></span><span class="tag">Physical</span></div>
-          <h3>Local Service Kit</h3>
-          <p class="for">Your AI handles the messages, quotes and follow-ups that pile up after the work.</p>
-          <div class="goal"><span class="label">Build goal</span>A test lead goes from first message to a quote, a follow-up and a review request. Then you switch it on for real leads.</div>
-          <ul class="inside">
-            <li><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#message-square"/></svg>Reply and quote templates in your voice</li>
-            <li><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#star"/></svg>Follow-up and review-request scripts</li>
-            <li><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#calendar"/></svg>Daily scheduling notes</li>
-            <li><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#users"/></svg>The six-role AI crew</li>
-          </ul>
-          <div class="foot"><span>Price at launch</span><a href="quiz.html">Is it for me? Take the quiz</a></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="category t-gold" id="stores" data-cat="stores" aria-labelledby="stores-title">
-      <div class="cathead">
-        <span class="chip"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#store"/></svg></span>
-        <div><h2 id="stores-title">Stores &amp; products</h2><p>Selling physical products online.</p></div>
-        <span class="label count">1 kit</span>
-      </div>
-      <div class="kits catalog">
-        <article class="kitcard glass tinted">
-          <div class="top"><span class="chip"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#package"/></svg></span><span class="tag">Physical</span></div>
-          <h3>Product Store Kit</h3>
-          <p class="for">Test a product with the numbers and your spending limits worked out first.</p>
-          <div class="goal"><span class="label">Build goal</span>Your store is live with one product page, your cost sheet and written spending limits, and a test order goes through.</div>
-          <ul class="inside">
-            <li><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#list-checks"/></svg>Product checklist and cost sheet</li>
-            <li><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#search"/></svg>Product research in public ad libraries</li>
-            <li><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#shield-check"/></svg>Spending limits and stop rules</li>
-            <li><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#users"/></svg>The six-role AI crew</li>
-          </ul>
-          <div class="foot"><span>Price at launch</span><a href="quiz.html">Is it for me? Take the quiz</a></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="category t-cyan" id="content" data-cat="content" aria-labelledby="content-title">
-      <div class="cathead">
-        <span class="chip"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#megaphone"/></svg></span>
-        <div><h2 id="content-title">Content &amp; audience</h2><p>Building an account people follow. Faceless works.</p></div>
-        <span class="label count">1 kit</span>
-      </div>
-      <div class="kits catalog">
-        <article class="kitcard glass tinted">
-          <div class="top"><span class="chip"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#clapperboard"/></svg></span><span class="tag">Digital</span></div>
-          <h3>Content Brand Kit</h3>
-          <p class="for">Post every day and keep it up. This brand runs on the same setup.</p>
-          <div class="goal"><span class="label">Build goal</span>14 posts in 14 days on your own accounts, with your weekly scorecard filled in.</div>
-          <ul class="inside">
-            <li><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#pencil"/></svg>Line bank and 30-day calendar builder</li>
-            <li><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#message-circle"/></svg>Captions for each platform</li>
-            <li><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#chart-column"/></svg>The weekly scorecard</li>
-            <li><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#users"/></svg>The six-role AI crew</li>
-          </ul>
-          <div class="foot"><span>Price at launch</span><a href="quiz.html">Is it for me? Take the quiz</a></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="category t-violet" id="digital" data-cat="digital" aria-labelledby="digital-title">
-      <div class="cathead">
-        <span class="chip"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#laptop"/></svg></span>
-        <div><h2 id="digital-title">Digital products</h2><p>Selling what you know: templates, guides, newsletters.</p></div>
-        <span class="label count">1 kit</span>
-      </div>
-      <div class="kits catalog">
-        <article class="kitcard glass tinted">
-          <div class="top"><span class="chip"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#file-down"/></svg></span><span class="tag">Digital</span></div>
-          <h3>Digital Product Kit</h3>
-          <p class="for">Turn what you know into something people can buy, with checkout and delivery set up.</p>
-          <div class="goal"><span class="label">Build goal</span>Your product is live with a working checkout, and a test purchase gets delivered automatically.</div>
-          <ul class="inside">
-            <li><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#layout-template"/></svg>Product build setups</li>
-            <li><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#mail"/></svg>Sales page and email sequence</li>
-            <li><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#credit-card"/></svg>Checkout and delivery guide</li>
-            <li><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#users"/></svg>The six-role AI crew</li>
-          </ul>
-          <div class="foot"><span>Price at launch</span><a href="quiz.html">Is it for me? Take the quiz</a></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="category t-green" id="custom" data-cat="custom" aria-labelledby="custom-title">
-      <div class="cathead">
-        <span class="chip"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#puzzle"/></svg></span>
-        <div><h2 id="custom-title">Custom</h2><p>Building something that doesn't fit a category?</p></div>
-      </div>
-      <div class="custom glass tinted">
-        <div>
-          <h3>Tell us what you're building</h3>
-          <p>New kits get added to the catalog based on what people ask for.</p>
+    <div class="stage">
+      <div class="scene" aria-hidden="true">
+        <div class="cube" id="cube">
+          <button class="face f0" type="button" data-face="0" tabindex="-1"><svg><use href="#i-grid"/></svg><span>Kits</span></button>
+          <button class="face f1" type="button" data-face="1" tabindex="-1"><svg><use href="#i-steps"/></svg><span>How it works</span></button>
+          <button class="face f2" type="button" data-face="2" tabindex="-1"><svg><use href="#i-box"/></svg><span>What's inside</span></button>
+          <button class="face f3" type="button" data-face="3" tabindex="-1"><svg><use href="#i-faq"/></svg><span>FAQ</span></button>
+          <div class="face top"></div>
+          <div class="face bot"></div>
         </div>
-        <a class="btn glass" href="mailto:adhdentrepreneurhq@gmail.com?subject=Kit%20idea">Suggest a kit</a>
       </div>
-    </section>
+      <div class="shadow" aria-hidden="true"></div>
+      <nav class="facenav glass" aria-label="Sections">
+        <a href="#kits" data-face="0" aria-current="true">Kits</a>
+        <a href="#how" data-face="1">How it works</a>
+        <a href="#inside" data-face="2">What's inside</a>
+        <a href="#faq" data-face="3">FAQ</a>
+      </nav>
     </div>
+  </div>
+
+  <main>
+    <section class="block" id="kits" aria-labelledby="kits-h">
+      <div class="head">
+        <div><p class="eyebrow">SELECT A KIT</p><h2 id="kits-h">Four kits. One build goal each.</h2></div>
+        <p>The price and everything inside are on each kit before you ever reach checkout. Prices marked placeholder aren't final.</p>
+      </div>
+      <div class="tiles" id="tiles">
+        <a class="tile" href="#service" data-kit="service">
+          <span class="ico" aria-hidden="true"><svg><use href="#i-service"/></svg></span>
+          <span><span class="cat">Service &amp; trades</span><span class="nm">Local Service Kit</span></span>
+          <span class="price">$49 <small class="ph">PLACEHOLDER</small></span>
+        </a>
+        <a class="tile" href="#stores" data-kit="stores">
+          <span class="ico" aria-hidden="true"><svg><use href="#i-store"/></svg></span>
+          <span><span class="cat">Stores &amp; products</span><span class="nm">Product Store Kit</span></span>
+          <span class="price">$49 <small class="ph">PLACEHOLDER</small></span>
+        </a>
+        <a class="tile" href="#content" data-kit="content">
+          <span class="ico" aria-hidden="true"><svg><use href="#i-content"/></svg></span>
+          <span><span class="cat">Content &amp; audience</span><span class="nm">Content Brand Kit</span></span>
+          <span class="price">$49 <small class="ph">PLACEHOLDER</small></span>
+        </a>
+        <a class="tile" href="#digital" data-kit="digital">
+          <span class="ico" aria-hidden="true"><svg><use href="#i-digital"/></svg></span>
+          <span><span class="cat">Digital products</span><span class="nm">Digital Product Kit</span></span>
+          <span class="price">$49 <small class="ph">PLACEHOLDER</small></span>
+        </a>
+      </div>
+      <div class="custom glass" id="custom">
+        <p><strong>Building something that doesn't fit?</strong> New kits get added based on what people ask for. <a href="mailto:adhdentrepreneurhq@gmail.com?subject=Kit%20idea">Send us the idea</a>.</p>
+      </div>
+      <p class="hint">Use <kbd>←</kbd> <kbd>→</kbd> <kbd>↑</kbd> <kbd>↓</kbd> to move the cursor and <kbd>Enter</kbd> to open a kit.</p>
+    </section>
+
+    <section class="block" id="how" aria-labelledby="how-h">
+      <div class="head"><div><p class="eyebrow">HOW IT WORKS</p><h2 id="how-h">Three steps, in this order</h2></div></div>
+      <ol class="steps">
+        <li class="step glass"><span class="n">STEP 1</span><h3>Pick a kit</h3><p>Choose the one that matches what you're building. Not sure? <a href="quiz.html">The quiz can pick for you</a>.</p></li>
+        <li class="step glass"><span class="n">STEP 2</span><h3>Paste it into your AI</h3><p>Each setup is copy and paste. No code, and no new account beyond the AI you already use.</p></li>
+        <li class="step glass"><span class="n">STEP 3</span><h3>Hit the build goal</h3><p>Finish by the deadline, show the proof, and get your money back.</p></li>
+      </ol>
+    </section>
+
+    <section class="block" id="inside" aria-labelledby="inside-h">
+      <div class="head"><div><p class="eyebrow">WHAT'S INSIDE</p><h2 id="inside-h">Every kit loads the same six-role crew</h2></div><p>Each role is a paste-ready setup for your AI, with its first tasks and a worked example.</p></div>
+      <ul class="parts">
+        <li class="part"><svg aria-hidden="true"><use href="#r-ceo"/></svg><b>Strategist</b></li>
+        <li class="part"><svg aria-hidden="true"><use href="#r-research"/></svg><b>Researcher</b></li>
+        <li class="part"><svg aria-hidden="true"><use href="#r-build"/></svg><b>Builder</b></li>
+        <li class="part"><svg aria-hidden="true"><use href="#r-copy"/></svg><b>Copywriter</b></li>
+        <li class="part"><svg aria-hidden="true"><use href="#r-market"/></svg><b>Marketer</b></li>
+        <li class="part"><svg aria-hidden="true"><use href="#r-analyst"/></svg><b>Analyst</b></li>
+      </ul>
+      <ul class="also"><li>Build-goal checklist</li><li>Proof step</li><li>Kit-specific templates</li></ul>
+    </section>
+
+    <section class="block" id="faq" aria-labelledby="faq-h">
+      <div class="head"><div><p class="eyebrow">OPTIONS</p><h2 id="faq-h">Questions</h2></div></div>
+      <dl class="options glass">
+        <div class="opt"><dt>What is it</dt><dd>Setup guides for the AI you already pay for. <b>Not an app, a tool or a model.</b></dd></div>
+        <div class="opt"><dt>Which AI</dt><dd>The kits are written for Claude. If you use ChatGPT or Gemini, each kit lists what carries over before you buy. You pay for your own AI plan, directly.</dd></div>
+        <div class="opt"><dt>Finish on time</dt><dd>Hit the build goal by the deadline, show the proof, <b>get a full refund.</b></dd></div>
+        <div class="opt"><dt>Miss the deadline</dt><dd>No refund. <b>The kit stays yours.</b></dd></div>
+        <div class="opt"><dt>Income</dt><dd>None promised. The goal is always something you build, never money earned.</dd></div>
+      </dl>
+    </section>
   </main>
 
   <footer>
-    <div class="row">
+    <div class="foot-row">
       <span>© 2026 ADHD Entrepreneur · When kits go on sale, payments are processed by Stripe.</span>
       <nav aria-label="Footer">
         <a href="./">Home</a>
@@ -165,7 +164,156 @@
         <a href="policies.html#privacy">Privacy</a>
       </nav>
     </div>
+    <div class="legend" aria-hidden="true"><span><span class="dot go"></span>Confirm</span><span><span class="dot back"></span>Back</span></div>
   </footer>
 </div>
+
+<dialog class="detail" id="service" aria-labelledby="service-name">
+  <div class="sheet">
+    <div class="sheet-top">
+      <span class="ico" aria-hidden="true"><svg><use href="#i-service"/></svg></span>
+      <div>
+        <div class="caps">Service &amp; trades</div>
+        <h2 id="service-name">Local Service Kit</h2>
+        <div class="price">$49 <span class="ph">PLACEHOLDER PRICE</span></div>
+      </div>
+    </div>
+    <p class="for">Your AI handles the messages, quotes and follow-ups that pile up after the work.</p>
+    <div class="infobar">
+      <div class="meta">Local Service Kit · $49 · 5 parts · 6 crew roles</div>
+      <ul>
+          <li>Reply and quote templates in your voice</li>
+          <li>Follow-up and review-request scripts</li>
+          <li>Daily scheduling notes</li>
+          <li>The six-role AI crew</li>
+          <li>Build-goal checklist and proof step</li>
+      </ul>
+    </div>
+    <dl class="terms">
+      <div><dt>Build goal</dt><dd>A test lead goes from first message to a quote, a follow-up and a review request. Then you switch it on for real leads.</dd></div>
+      <div><dt>Deadline</dt><dd>30 days from purchase <span class="ph">PLACEHOLDER</span></dd></div>
+      <div><dt>Proof</dt><dd>Screenshots or a short screen recording of the finished build.</dd></div>
+      <div><dt>Finish</dt><dd>Full refund of the kit price.</dd></div>
+      <div><dt>Miss</dt><dd>No refund. The kit stays yours.</dd></div>
+    </dl>
+    <div class="actions">
+      <button class="buy" type="button"><span class="dot" aria-hidden="true"></span>Get the kit · $49</button>
+      <a class="backlink" href="#kits" data-close><span class="dot back" aria-hidden="true"></span>Back to all kits</a>
+    </div>
+    <p class="notice" role="status" hidden>Kits aren't on sale yet, so checkout isn't open and nothing was charged. <a href="mailto:adhdentrepreneurhq@gmail.com?subject=Tell%20me%20when%20the%20Local%20Service%20Kit%20launches">Get an email at launch</a>.</p>
+    <p class="fine">You pay for your own AI plan separately. Full terms: <a href="policies.html#refunds">refund policy</a>.</p>
+  </div>
+</dialog>
+
+<dialog class="detail" id="stores" aria-labelledby="stores-name">
+  <div class="sheet">
+    <div class="sheet-top">
+      <span class="ico" aria-hidden="true"><svg><use href="#i-store"/></svg></span>
+      <div>
+        <div class="caps">Stores &amp; products</div>
+        <h2 id="stores-name">Product Store Kit</h2>
+        <div class="price">$49 <span class="ph">PLACEHOLDER PRICE</span></div>
+      </div>
+    </div>
+    <p class="for">Test a product with the numbers and your spending limits worked out first.</p>
+    <div class="infobar">
+      <div class="meta">Product Store Kit · $49 · 5 parts · 6 crew roles</div>
+      <ul>
+          <li>Product checklist and cost sheet</li>
+          <li>Product research in public ad libraries</li>
+          <li>Spending limits and stop rules</li>
+          <li>The six-role AI crew</li>
+          <li>Build-goal checklist and proof step</li>
+      </ul>
+    </div>
+    <dl class="terms">
+      <div><dt>Build goal</dt><dd>Your store is live with one product page, your cost sheet and written spending limits, and a test order goes through.</dd></div>
+      <div><dt>Deadline</dt><dd>30 days from purchase <span class="ph">PLACEHOLDER</span></dd></div>
+      <div><dt>Proof</dt><dd>Screenshots or a short screen recording of the finished build.</dd></div>
+      <div><dt>Finish</dt><dd>Full refund of the kit price.</dd></div>
+      <div><dt>Miss</dt><dd>No refund. The kit stays yours.</dd></div>
+    </dl>
+    <div class="actions">
+      <button class="buy" type="button"><span class="dot" aria-hidden="true"></span>Get the kit · $49</button>
+      <a class="backlink" href="#kits" data-close><span class="dot back" aria-hidden="true"></span>Back to all kits</a>
+    </div>
+    <p class="notice" role="status" hidden>Kits aren't on sale yet, so checkout isn't open and nothing was charged. <a href="mailto:adhdentrepreneurhq@gmail.com?subject=Tell%20me%20when%20the%20Product%20Store%20Kit%20launches">Get an email at launch</a>.</p>
+    <p class="fine">You pay for your own AI plan separately. Full terms: <a href="policies.html#refunds">refund policy</a>.</p>
+  </div>
+</dialog>
+
+<dialog class="detail" id="content" aria-labelledby="content-name">
+  <div class="sheet">
+    <div class="sheet-top">
+      <span class="ico" aria-hidden="true"><svg><use href="#i-content"/></svg></span>
+      <div>
+        <div class="caps">Content &amp; audience</div>
+        <h2 id="content-name">Content Brand Kit</h2>
+        <div class="price">$49 <span class="ph">PLACEHOLDER PRICE</span></div>
+      </div>
+    </div>
+    <p class="for">Post every day and keep it up. This brand runs on the same setup.</p>
+    <div class="infobar">
+      <div class="meta">Content Brand Kit · $49 · 5 parts · 6 crew roles</div>
+      <ul>
+          <li>Line bank and 30-day calendar builder</li>
+          <li>Captions for each platform</li>
+          <li>The weekly scorecard</li>
+          <li>The six-role AI crew</li>
+          <li>Build-goal checklist and proof step</li>
+      </ul>
+    </div>
+    <dl class="terms">
+      <div><dt>Build goal</dt><dd>14 posts in 14 days on your own accounts, with your weekly scorecard filled in.</dd></div>
+      <div><dt>Deadline</dt><dd>30 days from purchase <span class="ph">PLACEHOLDER</span></dd></div>
+      <div><dt>Proof</dt><dd>Screenshots or a short screen recording of the finished build.</dd></div>
+      <div><dt>Finish</dt><dd>Full refund of the kit price.</dd></div>
+      <div><dt>Miss</dt><dd>No refund. The kit stays yours.</dd></div>
+    </dl>
+    <div class="actions">
+      <button class="buy" type="button"><span class="dot" aria-hidden="true"></span>Get the kit · $49</button>
+      <a class="backlink" href="#kits" data-close><span class="dot back" aria-hidden="true"></span>Back to all kits</a>
+    </div>
+    <p class="notice" role="status" hidden>Kits aren't on sale yet, so checkout isn't open and nothing was charged. <a href="mailto:adhdentrepreneurhq@gmail.com?subject=Tell%20me%20when%20the%20Content%20Brand%20Kit%20launches">Get an email at launch</a>.</p>
+    <p class="fine">You pay for your own AI plan separately. Full terms: <a href="policies.html#refunds">refund policy</a>.</p>
+  </div>
+</dialog>
+
+<dialog class="detail" id="digital" aria-labelledby="digital-name">
+  <div class="sheet">
+    <div class="sheet-top">
+      <span class="ico" aria-hidden="true"><svg><use href="#i-digital"/></svg></span>
+      <div>
+        <div class="caps">Digital products</div>
+        <h2 id="digital-name">Digital Product Kit</h2>
+        <div class="price">$49 <span class="ph">PLACEHOLDER PRICE</span></div>
+      </div>
+    </div>
+    <p class="for">Turn what you know into something people can buy, with checkout and delivery set up.</p>
+    <div class="infobar">
+      <div class="meta">Digital Product Kit · $49 · 5 parts · 6 crew roles</div>
+      <ul>
+          <li>Product build setups</li>
+          <li>Sales page and email sequence</li>
+          <li>Checkout and delivery guide</li>
+          <li>The six-role AI crew</li>
+          <li>Build-goal checklist and proof step</li>
+      </ul>
+    </div>
+    <dl class="terms">
+      <div><dt>Build goal</dt><dd>Your product is live with a working checkout, and a test purchase gets delivered automatically.</dd></div>
+      <div><dt>Deadline</dt><dd>30 days from purchase <span class="ph">PLACEHOLDER</span></dd></div>
+      <div><dt>Proof</dt><dd>Screenshots or a short screen recording of the finished build.</dd></div>
+      <div><dt>Finish</dt><dd>Full refund of the kit price.</dd></div>
+      <div><dt>Miss</dt><dd>No refund. The kit stays yours.</dd></div>
+    </dl>
+    <div class="actions">
+      <button class="buy" type="button"><span class="dot" aria-hidden="true"></span>Get the kit · $49</button>
+      <a class="backlink" href="#kits" data-close><span class="dot back" aria-hidden="true"></span>Back to all kits</a>
+    </div>
+    <p class="notice" role="status" hidden>Kits aren't on sale yet, so checkout isn't open and nothing was charged. <a href="mailto:adhdentrepreneurhq@gmail.com?subject=Tell%20me%20when%20the%20Digital%20Product%20Kit%20launches">Get an email at launch</a>.</p>
+    <p class="fine">You pay for your own AI plan separately. Full terms: <a href="policies.html#refunds">refund policy</a>.</p>
+  </div>
+</dialog>
 </body>
 </html>

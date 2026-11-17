@@ -2,6 +2,20 @@
 
 Locked decisions only, newest first. Claude and Zucc build on these and don't reopen them unless Wil does. Anything still open is listed at the bottom.
 
+## Nov 17, 2026: kit storefront theme (Wil, relayed from the kit-site chat)
+
+- **The kit page (`site/public/kits.html`) gets the console-startup-menu theme.** The reference is the preview at https://claude.ai/artifact/5NVdjExFHeDiH7pPi2g2Fh; Zucc's brief is in the shared sheet, Handoffs row 46. The rest of the site keeps its midnight liquid-glass look.
+- **Phones:** a small spinning cube above a swipeable row of sections.
+- **Fully original:**
+  - No Nintendo or GameCube name, logo, cube-in-cube mark, sounds, fonts or art.
+  - No Fortnite assets.
+  - Confirm and back are plain green and red dots, not circled A/B letters.
+- **Before checkout:** the price and the full contents are visible.
+- **No autoplay audio.**
+- **Reduced motion is respected.**
+- **Still placeholders:** the $49 price and the 30-day deadline. The open kit decisions below still set them.
+- **Not deployed until Wil looks it over.** Claude rebuilt the page on Nov 17 (on the branch, not live).
+
 ## Nov 6, 2026: evening second reel live; second Louise claim
 
 - **The evening second reel started on Day 16 (Fri Nov 6).**
