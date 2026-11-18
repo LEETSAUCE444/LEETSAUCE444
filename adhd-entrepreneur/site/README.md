@@ -68,6 +68,7 @@ The kit page has its own look, separate from the rest of the site. The reference
   - No audio, ever.
   - With reduced motion: no boot screen, a still cube, and no blinking or bobbing.
 - **Phones:** a small spinning cube sits above a swipeable row of sections. Tiles go 2 across, and the detail sheet goes full screen.
+- **Live since Nov 18, 2026** (Netlify deploy `6afd10b2fa5505a9c3aa915c`).
 - **Placeholders to replace before launch:**
   - the price ($49)
   - the 30-day deadline

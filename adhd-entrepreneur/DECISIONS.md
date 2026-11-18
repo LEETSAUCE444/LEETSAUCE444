@@ -14,7 +14,7 @@ Locked decisions only, newest first. Claude and Zucc build on these and don't re
 - **No autoplay audio.**
 - **Reduced motion is respected.**
 - **Still placeholders:** the $49 price and the 30-day deadline. The open kit decisions below still set them.
-- **Not deployed until Wil looks it over.** Claude rebuilt the page on Nov 17 (on the branch, not live).
+- **Live since Nov 18.** Claude rebuilt the page on Nov 17. Wil looked it over and said "Deploy the kits page" (Netlify deploy `6afd10b2fa5505a9c3aa915c`).
 
 ## Nov 6, 2026: evening second reel live; second Louise claim
 
