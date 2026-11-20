@@ -849,21 +849,21 @@ One offer, sold well, beats five offers explained badly. Day 29. If you could on
 
 ## Day 30 · Fri Nov 20 · Founder story
 
-Source: new · Sound: She (instrumental) from 0:35 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: story (first person)
+Source: new · Sound: She (instrumental) from 0:35 (add it in each app at upload, never in the video file; YouTube uploads go silent) · Links: no · Pattern: one action + story kicker
 
 **Card / X**
 
-> Thirty days ago I promised myself one post a day.
-> Promise kept.
+> Make yourself one small promise today. Keep it.
+> I kept mine for thirty days.
 
 **Instagram caption**
 
 ```
-Thirty days ago I promised myself one post a day.
-Promise kept.
+Make yourself one small promise today. Keep it.
+I kept mine for thirty days.
 
 Day 30. One simple idea a day.
-What promise to yourself are you keeping this month?
+What's the one promise you're making yourself today?
 
 #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
@@ -871,9 +871,10 @@ What promise to yourself are you keeping this month?
 **TikTok caption**
 
 ```
-Thirty days ago I promised myself one post a day. Promise kept. Day 30. What promise to yourself are you keeping this month? #entrepreneur #adhd #businessowner #mindset #smallbusiness
+Make yourself one small promise today. Keep it. I kept mine for thirty days. Day 30. What's the one promise you're making yourself today? #entrepreneur #adhd #businessowner #mindset #smallbusiness
 ```
 
-**YouTube Short** title: `Thirty days ago I promised myself one post a day. Promise kept.` · description: `Day 30. One simple idea a day.`
+**YouTube Short** title: `Make yourself one small promise today. Keep it. I kept mine for thirty days.` · description: `Day 30. One simple idea a day.`
 
-**Condition:** Callback to Day 1. Post only if all 30 went out. If not, use: "Thirty days in. I missed [N]. I didn't quit. That's the whole trick."
+**Condition:** Callback to Day 1. Post only if all 30 went out. If not, use: "Post today, even if you missed a day.
+I missed [N] in thirty. I didn't quit." (was: "Thirty days in. I missed [N]. I didn't quit. That's the whole trick.")

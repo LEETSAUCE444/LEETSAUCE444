@@ -2,6 +2,17 @@
 
 Locked decisions only, newest first. Claude and Zucc build on these and don't reopen them unless Wil does. Anything still open is listed at the bottom.
 
+## Nov 20, 2026: morning lines are one concrete action (Wil)
+
+- **Every morning reel line is now one concrete action the viewer can do today, verb first,** instead of a principle line. This is the Week 4 scorecard's experiment: concrete-action lines beat principle lines 4 to 0 (best of the week: the Day 24 evening Short "Ask one person what confused them", 134 YouTube views). Wil: "Yes, switch them."
+- **Only Day 30 was left to change.** Days 1–29 had already posted, and the 30-day calendar ends on Day 30 (Fri Nov 20).
+  - New Day 30 line: "Make yourself one small promise today. Keep it. / I kept mine for thirty days." It keeps the Day 1 callback as the kicker.
+  - New question: "What's the one promise you're making yourself today?"
+  - The missed-a-day fallback became "Post today, even if you missed a day. / I missed [N] in thirty. I didn't quit."
+  - The old wording is kept as `was` in `content/calendar-30.json`.
+- **Evening lines and posted days are unchanged.**
+- **This carries forward:** any morning lines written after Day 30 follow the same rule.
+
 ## Nov 17, 2026: kit storefront theme (Wil, relayed from the kit-site chat)
 
 - **The kit page (`site/public/kits.html`) gets the console-startup-menu theme.** The reference is the preview at https://claude.ai/artifact/5NVdjExFHeDiH7pPi2g2Fh; Zucc's brief is in the shared sheet, Handoffs row 46. The rest of the site keeps its midnight liquid-glass look.
