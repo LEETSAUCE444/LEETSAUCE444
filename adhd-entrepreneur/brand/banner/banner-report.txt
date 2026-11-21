@@ -1,0 +1,12 @@
+source: youtube-banner-live-2560x1440.jpg  2560x1440
+background: min 0 / median 0 (0 = pure black)
+wordmark incl. echo strokes: x 694-1863, y 656-733  (1170x78 px)
+solid white letters: x 711-1861, y 661-726  (cap height 66 px)
+solid letters center: (1286.0, 693.5)  vs strip center (1279.5, 719.5)
+TV (full image)      2560x1440: wordmark fully inside = True; margins L/T/R/B = 694/656/697/707
+Desktop              2560x423: wordmark fully inside = True; margins L/T/R/B = 694/148/697/198
+Tablet               1855x423: wordmark fully inside = True; margins L/T/R/B = 342/148/344/198
+Mobile = safe area   1546x423: wordmark fully inside = True; margins L/T/R/B = 187/148/190/198
+stray mark outside wordmark: x 560-1999, y 1000-1005, peak brightness 37/255; visible on: TV (full image)
+clean rebuild: wordmark moved +26 px vertically (now centered in the safe strip), everything else pure black
+X header: wordmark scaled x0.730, occupies x 317-1171, y 222-279; clearance above the avatar zone 54 px; inside the mobile-safe band (y 60-440) = True
