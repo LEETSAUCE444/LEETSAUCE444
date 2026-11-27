@@ -1,0 +1,11 @@
+source: youtube-avatar-live-980.jpg  980x980
+white circle: center (489.4, 487.7)  radius 489.8  diameter 979.5 px  (fit residual 1.44 px)
+circle offset from frame center: x -0.1  y -1.8 px
+circle diameter as % of frame width: 99.9%
+circle fill RGB (239, 239, 239)   outside RGB (7, 6, 12)
+solid letters center vs circle center: x +1.6  y -3.2 px  (+0.16% / -0.33% of diameter)
+ink centroid (incl. echo strokes) vs circle center: x +3.6  y +1.4 px
+farthest ink from center: 72.9% of radius  (crop clearance 27.1% of radius)
+scale to 1080px canvas: x1.103  (UPSCALE - send the original file for a sharper master)
+applied: solid letters centered exactly; circle diameter = canvas width; outside-circle area = circle fill (full-bleed)
+safe variant: circle 92% of width, black ring 4% per side
